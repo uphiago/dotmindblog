@@ -1,4 +1,4 @@
-baseURL = "dotmindblog.vercel.app"
+baseURL = "/"
 defaultContentLanguage = "en"
 disqusShortname = ""
 languageCode = "en-us"
