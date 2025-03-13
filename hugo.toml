@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "dotmindblog.vercel.app"
 defaultContentLanguage = "en"
 disqusShortname = ""
 languageCode = "en-us"
@@ -110,7 +110,7 @@ url = "/posts/"
 weight = 4
 
 [languages.pt.params]
-languageCode = "pl-pl"
+languageCode = "pt-br"
 
 [taxonomies]
 author = "authors"
@@ -135,7 +135,7 @@ datacache = false
 dnt = false 
 enabled = true 
 id = "eca2615c-7bd6-4020-bc35-45b4c213d04f" # Website ID
-shareUrl = "https://umami.xtra.science/share/Fy0goUn0b9rrxxGe/hugo-theme-anubis2.netlify.app" 
+shareUrl = "https://cloud.umami.is/share/vHjEvAi9HY40mUCZ/dotmindblog.vercel.app" 
 url = "https://cloud.umami.is/script.js" 
 
 [params.GoogleAnalytics]
