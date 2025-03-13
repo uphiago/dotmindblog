@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Anubis2 Demo Site</title>
+    <title>dotmind it</title>
     <link>/</link>
-    <description>Anubis2 Demo Site</description>
+    <description>dotmind it</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
       
-        <managingEditor>me@junyi.dev
+        <managingEditor>me@dotmindblog.io
           
             (Volks)
           
@@ -28,7 +28,7 @@
       <title>Markdown Syntax Guide</title>
       <link>/posts/markdown-syntax/</link>
       <pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate>
-      <author>me@junyi.dev (Volks)</author>
+      <author>me@dotmindblog.io (Volks)</author>
       <guid>/posts/markdown-syntax/</guid>
       <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;
 &lt;h2 id=&#34;headings&#34; &gt;
@@ -212,13 +212,13 @@ Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatu
 &lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; style=&#34;color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex; color:#51576d&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;html&lt;/span&gt; &lt;span style=&#34;color:#8caaee&#34;&gt;lang&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;head&lt;/span&gt;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; color:#51576d&#34;&gt;&lt;span&gt;    &amp;lt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;meta&lt;/span&gt; &lt;span style=&#34;color:#8caaee&#34;&gt;charset&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;UTF-8&amp;#34;&lt;/span&gt; /&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; color:#51576d&#34;&gt;&lt;span&gt;    &amp;lt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;title&lt;/span&gt;&amp;gt;Example HTML5 Document&amp;lt;/&lt;span style=&#34;color:#ca9ee6&#34;&gt;title&lt;/span&gt;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;/&lt;span style=&#34;color:#ca9ee6&#34;&gt;head&lt;/span&gt;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;body&lt;/span&gt;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; color:#51576d&#34;&gt;&lt;span&gt;    &amp;lt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;p&lt;/span&gt;&amp;gt;Test&amp;lt;/&lt;span style=&#34;color:#ca9ee6&#34;&gt;p&lt;/span&gt;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;/&lt;span style=&#34;color:#ca9ee6&#34;&gt;body&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;head&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; color:#51576d&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;meta&lt;/span&gt; &lt;span style=&#34;color:#8caaee&#34;&gt;charset&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;UTF-8&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; color:#51576d&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;title&lt;/span&gt;&amp;gt;Example HTML5 Document&amp;lt;/&lt;span style=&#34;color:#ca9ee6&#34;&gt;title&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#ca9ee6&#34;&gt;head&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;body&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; color:#51576d&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;p&lt;/span&gt;&amp;gt;Test&amp;lt;/&lt;span style=&#34;color:#ca9ee6&#34;&gt;p&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#ca9ee6&#34;&gt;body&lt;/span&gt;&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#ca9ee6&#34;&gt;html&lt;/span&gt;&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
@@ -339,7 +339,7 @@ Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatu
       <title>Demo - Support for Diagrams</title>
       <link>/posts/demo-diagram/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
-      <author>me@junyi.dev (Volks)</author>
+      <author>me@dotmindblog.io (Volks)</author>
       <guid>/posts/demo-diagram/</guid>
       <description>&lt;p&gt;Feel free to switch between the light and dark themes to see how the diagram adapts its colors accordingly.&lt;/p&gt;
 &lt;h2 id=&#34;mermaid-diagrams&#34; &gt;
@@ -540,7 +540,7 @@ Pumped heat,&#34;Heating and cooling, &#34;&#34;commercial&#34;&#34;&#34;,70.672
       <title>Demo - Social Icons</title>
       <link>/posts/icons/</link>
       <pubDate>Sun, 05 May 2024 00:00:00 +0000</pubDate>
-      <author>me@junyi.dev (Volks)</author>
+      <author>me@dotmindblog.io (Volks)</author>
       <guid>/posts/icons/</guid>
       <description>&lt;p&gt;To use an icon, simply copy its shortcode and paste it into your content where you want the icon to appear. The shortcode must be enclosed in &lt;code&gt;{{&amp;lt;   &amp;gt;}}&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Here is a list of available icons, their shortcodes, and what they look like when rendered:&lt;/p&gt;
@@ -553,6 +553,12 @@ Pumped heat,&#34;Heating and cooling, &#34;&#34;commercial&#34;&#34;&#34;,70.672
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;4chan&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;{{&amp;lt; icon &amp;quot;4chan&amp;quot; &amp;gt;}}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;svg  xmlns=&#34;http://www.w3.org/2000/svg&#34;  width=&#34;24&#34;  height=&#34;24&#34;  viewBox=&#34;0 0 24 24&#34;  fill=&#34;none&#34;  stroke=&#34;currentColor&#34;  stroke-width=&#34;2&#34;  stroke-linecap=&#34;round&#34;  stroke-linejoin=&#34;round&#34;  class=&#34;icon icon-tabler icons-tabler-outline icon-tabler-brand-4chan&#34;&gt;&lt;path stroke=&#34;none&#34; d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M14 11s6.054 -1.05 6 -4.5c-.038 -2.324 -2.485 -3.19 -3.016 -1.5c0 0 -.502 -2 -2.01 -2c-1.508 0 -2.984 3 -.974 8z&#34; /&gt;&lt;path d=&#34;M13.98 11s6.075 -1.05 6.02 -4.5c-.038 -2.324 -2.493 -3.19 -3.025 -1.5c0 0 -.505 -2 -2.017 -2c-1.513 0 -3 3 -.977 8z&#34; /&gt;&lt;path d=&#34;M13 13.98l.062 .309l.081 .35l.075 .29l.092 .328l.11 .358l.061 .188l.139 .392c.64 1.73 1.841 3.837 3.88 3.805c2.324 -.038 3.19 -2.493 1.5 -3.025l.148 -.045l.165 -.058a4.13 4.13 0 0 0 .098 -.039l.222 -.098c.586 -.28 1.367 -.832 1.367 -1.777c0 -1.513 -3 -3 -8 -.977z&#34; /&gt;&lt;path d=&#34;M10.02 13l-.309 .062l-.35 .081l-.29 .075l-.328 .092l-.358 .11l-.188 .061l-.392 .139c-1.73 .64 -3.837 1.84 -3.805 3.88c.038 2.324 2.493 3.19 3.025 1.5l.045 .148l.058 .165l.039 .098l.098 .222c.28 .586 .832 1.367 1.777 1.367c1.513 0 3 -3 .977 -8z&#34; /&gt;&lt;path d=&#34;M11 10.02l-.062 -.309l-.081 -.35l-.075 -.29l-.092 -.328l-.11 -.358l-.128 -.382l-.148 -.399c-.658 -1.687 -1.844 -3.634 -3.804 -3.604c-2.324 .038 -3.19 2.493 -1.5 3.025l-.148 .045l-.164 .058a4.13 4.13 0 0 0 -.1 .039l-.22 .098c-.588 .28 -1.368 .832 -1.368 1.777c0 1.513 3 3 8 .977z&#34; /&gt;&lt;/svg&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;leetcode&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;{{&amp;lt; icon &amp;quot;leetcode&amp;quot; &amp;gt;}}&lt;/code&gt;&lt;/td&gt;
@@ -777,7 +783,7 @@ Pumped heat,&#34;Heating and cooling, &#34;&#34;commercial&#34;&#34;&#34;,70.672
       <title>Demo - Support for code, pre, kbd, mark</title>
       <link>/posts/demo-code-pre-kbd-mark/</link>
       <pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate>
-      <author>me@junyi.dev (Volks)</author>
+      <author>me@dotmindblog.io (Volks)</author>
       <guid>/posts/demo-code-pre-kbd-mark/</guid>
       <description>&lt;h2 id=&#34;individual-support-for-code-pre-kbd-mark&#34; &gt;
 &lt;div&gt;
@@ -955,7 +961,7 @@ Most &lt;mark&gt;salamanders&lt;/mark&gt; are nocturnal, and hunt for insects, w
       <title>Demo - Multiline Codes</title>
       <link>/posts/demo-multiline-codes/</link>
       <pubDate>Tue, 23 Apr 2024 00:00:00 +0000</pubDate>
-      <author>me@junyi.dev (Volks)</author>
+      <author>me@dotmindblog.io (Volks)</author>
       <guid>/posts/demo-multiline-codes/</guid>
       <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;
 &lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
@@ -1327,22 +1333,19 @@ Those are trash codes.
       <title>About</title>
       <link>/about/</link>
       <pubDate>Tue, 09 Apr 2024 00:00:00 +0000</pubDate>
-      <author>me@junyi.dev (Volks)</author>
+      <author>me@dotmindblog.io (Volks)</author>
       <guid>/about/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/Junyi-99/hugo-theme-anubis2&#34;&gt;Anubis2&lt;/a&gt; is another simple minimalist theme for Hugo blog engine.&lt;/p&gt;
-&lt;p&gt;Written in Go, Hugo is an open source static site generator available under the &lt;a href=&#34;https://github.com/gohugoio/hugo/blob/master/LICENSE&#34;&gt;Apache License 2.0.&lt;/a&gt; Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.&lt;/p&gt;
-&lt;p&gt;Hugo makes use of a variety of open source projects including:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/yuin/goldmark&#34;&gt;https://github.com/yuin/goldmark&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/alecthomas/chroma&#34;&gt;https://github.com/alecthomas/chroma&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/muesli/smartcrop&#34;&gt;https://github.com/muesli/smartcrop&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cobra&#34;&gt;https://github.com/spf13/cobra&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/viper&#34;&gt;https://github.com/spf13/viper&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.&lt;/p&gt;
-&lt;p&gt;Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.&lt;/p&gt;
-&lt;p&gt;Websites built with Hugo are extremely fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.&lt;/p&gt;
-&lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://dotmindblog.vercel.app&#34;&gt;dotmindblog&lt;/a&gt; it&amp;rsquo;s a simple, minimalist blog to keep the essentials.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/about.pt/</link>
+      <pubDate>Tue, 09 Apr 2024 00:00:00 +0000</pubDate>
+      <author>me@dotmindblog.io (Volks)</author>
+      <guid>/about.pt/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://dotmindblog.vercel.app&#34;&gt;dotmindblog&lt;/a&gt; é um blog simples e minimalista para guardar o essencial.&lt;/p&gt;
 </description>
     </item>
     
@@ -1350,7 +1353,7 @@ Those are trash codes.
       <title>Advanced Style</title>
       <link>/posts/advancedstyle/</link>
       <pubDate>Tue, 09 Apr 2024 00:00:00 +0000</pubDate>
-      <author>me@junyi.dev (Volks)</author>
+      <author>me@dotmindblog.io (Volks)</author>
       <guid>/posts/advancedstyle/</guid>
       <description>&lt;p&gt;There are examples of how to use custom &lt;code&gt;global-wise style&lt;/code&gt; or &lt;code&gt;page-wise style&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&#34;anubis-custom-style&#34;&gt;
@@ -1396,7 +1399,7 @@ This page is affected by &lt;code&gt;assets/css/custom1.scss&lt;/code&gt; and &l
       <title>Rich Content</title>
       <link>/posts/rich-content/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-      <author>me@junyi.dev (Volks)</author>
+      <author>me@dotmindblog.io (Volks)</author>
       <guid>/posts/rich-content/</guid>
       <description>&lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes&#34;&gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;&gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;
 &lt;hr&gt;
@@ -1475,7 +1478,7 @@ This page is affected by &lt;code&gt;assets/css/custom1.scss&lt;/code&gt; and &l
       <title>Placeholder Text</title>
       <link>/posts/placeholder-text/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-      <author>me@junyi.dev (Volks)</author>
+      <author>me@dotmindblog.io (Volks)</author>
       <guid>/posts/placeholder-text/</guid>
       <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de
 pectora summo. Redit teque digerit hominumque toris verebor lumina non cervice
@@ -1532,7 +1535,7 @@ Propoetides &lt;strong&gt;parte&lt;/strong&gt;.&lt;/p&gt;</description>
       <title>Math Typesetting</title>
       <link>/posts/math-typesetting/</link>
       <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
-      <author>me@junyi.dev (Volks)</author>
+      <author>me@dotmindblog.io (Volks)</author>
       <guid>/posts/math-typesetting/</guid>
       <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;
 &lt;ul&gt;
@@ -1558,7 +1561,7 @@ $$&lt;/p&gt;
       <title>Emoji Support</title>
       <link>/posts/emoji-support/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      <author>me@junyi.dev (Volks)</author>
+      <author>me@dotmindblog.io (Volks)</author>
       <guid>/posts/emoji-support/</guid>
       <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;
 &lt;p&gt;The &lt;a href=&#34;https://gohugo.io/functions/emojify/&#34;&gt;&lt;code&gt;emojify&lt;/code&gt;&lt;/a&gt; function can be called directly in templates or &lt;a href=&#34;https://gohugo.io/templates/shortcode-templates/#inline-shortcodes&#34;&gt;Inline Shortcodes&lt;/a&gt;.&lt;/p&gt;
@@ -1573,6 +1576,36 @@ $$&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 </description>
+    </item>
+    
+    <item>
+      <title>Emoji 支持</title>
+      <link>/posts/emoji-support.zh/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      <author>me@dotmindblog.io (Volks)</author>
+      <guid>/posts/emoji-support.zh/</guid>
+      <description>&lt;p&gt;在 Hugo 博客里，你可以用多种方式使用 Emoji：&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://gohugo.io/functions/emojify/&#34;&gt;&lt;code&gt;emojify&lt;/code&gt;&lt;/a&gt; function can be called directly in templates or &lt;a href=&#34;https://gohugo.io/templates/shortcode-templates/#inline-shortcodes&#34;&gt;Inline Shortcodes&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To enable emoji globally, set &lt;code&gt;enableEmoji&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; in your site’s &lt;a href=&#34;https://gohugo.io/getting-started/configuration/&#34;&gt;configuration&lt;/a&gt; and then you can type emoji shorthand codes directly in content files; e.g.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;nowrap&#34;&gt;&lt;span class=&#34;emojify&#34;&gt;🙈&lt;/span&gt; &lt;code&gt;:see_no_evil:&lt;/code&gt;&lt;/span&gt;  &lt;span class=&#34;nowrap&#34;&gt;&lt;span class=&#34;emojify&#34;&gt;🙉&lt;/span&gt; &lt;code&gt;:hear_no_evil:&lt;/code&gt;&lt;/span&gt;  &lt;span class=&#34;nowrap&#34;&gt;&lt;span class=&#34;emojify&#34;&gt;🙊&lt;/span&gt; &lt;code&gt;:speak_no_evil:&lt;/code&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;The &lt;a href=&#34;http://www.emoji-cheat-sheet.com/&#34;&gt;Emoji cheat sheet&lt;/a&gt; is a useful reference for emoji shorthand codes.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;N.B.&lt;/strong&gt; The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.emoji {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;font-family: Apple Color Emoji,Segoe UI Emoji,NotoColorEmoji,Segoe UI Symbol,Android Emoji,EmojiSymbols;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/_index.pt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>me@dotmindblog.io (Volks)</author>
+      <guid>/_index.pt/</guid>
+      <description></description>
     </item>
     
   </channel>
