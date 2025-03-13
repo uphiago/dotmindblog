@@ -16,10 +16,8 @@ To use an icon, simply copy its shortcode and paste it into your content where y
 
 Here is a list of available icons, their shortcodes, and what they look like when rendered:
 
-
 | name       | shortcode                          | icon                         |
 | ---------- | ---------------------------------- | ---------------------------- |
-| 4chan      | `{{</* icon "4chan" */>}}`         | {{< icon "4chan" >}}         |
 | leetcode   | `{{</* icon "leetcode" */>}}`      | {{< icon "leetcode" >}}      |
 | qq         | `{{</* icon "qq" */>}}`            | {{< icon "qq" >}}            |
 | spotify    | `{{</* icon "spotify" */>}}`       | {{< icon "spotify" >}}       |
