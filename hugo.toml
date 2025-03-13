@@ -42,17 +42,16 @@ GiscusRepoId = "R_kgDOOHsFIA"
 customCSS = ["custom-css/custom1.scss", "custom-css/custom2.css"]
 
 social = [
-  {id = "docs", url = "https://gohugo.io/documentation/"},
-  {id = "github", url = "https://github.com/Junyi-99/hugo-theme-anubis2"},
-  {id = "linkedin", url = "https://www.linkedin.com/"},
-  {id = "email", url = "example@example.com"},
-  {id = "facebook", url = "#"},
-  {id = "instagram", url = "#"},
-  {id = "netease-music", url = "#"},
-  {id = "telegram", url = "#"},
-  {id = "x", url = "#"},
-  {id = "youtube", url = "#"},
-  {id = "bluesky", url = "#"},
+  #   {id = "docs", url = "https://gohugo.io/documentation/"},
+  {id = "github", url = "https://github.com/uphiago/dotmindblog"}, #   {id = "linkedin", url = "https://www.linkedin.com/"},
+  #   {id = "email", url = "example@example.com"},
+  #   {id = "facebook", url = "#"},
+  {id = "linkedin", url = "https://www.linkedin.com/in/uphiago"},
+  {id = "instagram", url = "https://instagram.com/uphiago"}, #   {id = "netease-music", url = "#"},
+  #   {id = "telegram", url = "#"},
+  #   {id = "x", url = "#"},
+  #   {id = "youtube", url = "#"},
+  #   {id = "bluesky", url = "#"},
 ]
 
 [[menu.main]]
@@ -83,34 +82,34 @@ weight = 4
 [languages.en]
 languageName = "English"
 
-[languages.pl]
-languageName = "Polski"
+[languages.pt]
+languageName = "Portuguese"
 
-[[languages.pl.menu.main]]
+[[languages.pt.menu.main]]
 identifier = "home"
-name = "Strona Główna"
+name = "home"
 url = "/"
 weight = 1
 
-[[languages.pl.menu.main]]
+[[languages.pt.menu.main]]
 identifier = "about"
-name = "O Hugo"
+name = "about"
 url = "/about/"
 weight = 2
 
-[[languages.pl.menu.main]]
+[[languages.pt.menu.main]]
 identifier = "tags"
-name = "Tagi"
+name = "about"
 url = "/tags/"
 weight = 3
 
-[[languages.pl.menu.main]]
+[[languages.pt.menu.main]]
 identifier = "archive"
-name = "Archiwum"
+name = "about"
 url = "/posts/"
 weight = 4
 
-[languages.pl.params]
+[languages.pt.params]
 languageCode = "pl-pl"
 
 [taxonomies]
@@ -135,9 +134,9 @@ tabWidth = 4
 datacache = false 
 dnt = false 
 enabled = true 
-id = "d01ce82c-c8f4-4714-ba37-ba4899f2a885" # Website ID
+id = "eca2615c-7bd6-4020-bc35-45b4c213d04f" # Website ID
 shareUrl = "https://umami.xtra.science/share/Fy0goUn0b9rrxxGe/hugo-theme-anubis2.netlify.app" 
-url = "https://umami.xtra.science/script.js" 
+url = "https://cloud.umami.is/script.js" 
 
 [params.GoogleAnalytics]
 enabled = true

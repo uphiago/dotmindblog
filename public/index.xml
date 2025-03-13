@@ -1340,16 +1340,6 @@ Those are trash codes.
     </item>
     
     <item>
-      <title>About</title>
-      <link>/about.pt/</link>
-      <pubDate>Tue, 09 Apr 2024 00:00:00 +0000</pubDate>
-      <author>me@dotmindblog.io (Volks)</author>
-      <guid>/about.pt/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://dotmindblog.vercel.app&#34;&gt;dotmindblog&lt;/a&gt; é um blog simples e minimalista para guardar o essencial.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Advanced Style</title>
       <link>/posts/advancedstyle/</link>
       <pubDate>Tue, 09 Apr 2024 00:00:00 +0000</pubDate>
@@ -1600,11 +1590,11 @@ $$&lt;/p&gt;
     </item>
     
     <item>
-      <title></title>
-      <link>/_index.pt/</link>
+      <title>Posts</title>
+      <link>/posts/_index.pl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>me@dotmindblog.io (Volks)</author>
-      <guid>/_index.pt/</guid>
+      <guid>/posts/_index.pl/</guid>
       <description></description>
     </item>
     
