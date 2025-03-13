@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Meu Site com Anubis2</title>
+    <title>Tags on Anubis2 Demo Site</title>
     <link>/tags/</link>
-    <description>Meu Site com Anubis2 (Tags)</description>
+    <description>Anubis2 Demo Site (Tags)</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     
+      
+        <managingEditor>me@junyi.dev
+          
+            (Junyi)
+          
+        </managingEditor>
       
 
       
     
 
     
+    <lastBuildDate>Tue, 07 May 2024 00:00:00 +0000</lastBuildDate>
     
     <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
