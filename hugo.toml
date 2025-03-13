@@ -1,0 +1,13 @@
+baseURL = 'http://localhost:1313/'
+languageCode = 'en-us'
+title = 'Meu Site com Anubis2'
+theme = 'anubis2'
+
+[params.author]
+  name = 'Seu nome'
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.highlight]
+style = 'base16-snazzy'
