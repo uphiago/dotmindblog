@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://dotmindblog.vercel.app/"
 defaultContentLanguage = "en"
 disqusShortname = ""
 languageCode = "en-us"
@@ -34,7 +34,7 @@ graphcommentId = ""
 
 GiscusCategory = "General"
 GiscusCategoryId = "DIC_kwDOOHsFIM4CoAP8"
-GiscusDataMapping = "pathname"
+GiscusDataMapping = "url"
 GiscusLazyLoad = false
 GiscusRepo = "uphiago/dotmindblog"
 GiscusRepoId = "R_kgDOOHsFIA"
