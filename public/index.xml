@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>dotmind it</title>
+    <title>Dotmind it</title>
     <link>/</link>
-    <description>dotmind it</description>
+    <description>Dotmind it</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
       
         <managingEditor>me@dotmindblog.io
           
-            (Volks)
+            (Dotmind it)
           
         </managingEditor>
       
@@ -28,7 +28,7 @@
       <title>Markdown Syntax Guide</title>
       <link>/posts/markdown-syntax/</link>
       <pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate>
-      <author>me@dotmindblog.io (Volks)</author>
+      <author>me@dotmindblog.io (Dotmind it)</author>
       <guid>/posts/markdown-syntax/</guid>
       <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;
 &lt;h2 id=&#34;headings&#34; &gt;
@@ -339,7 +339,7 @@ Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatu
       <title>Demo - Support for Diagrams</title>
       <link>/posts/demo-diagram/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
-      <author>me@dotmindblog.io (Volks)</author>
+      <author>me@dotmindblog.io (Dotmind it)</author>
       <guid>/posts/demo-diagram/</guid>
       <description>&lt;p&gt;Feel free to switch between the light and dark themes to see how the diagram adapts its colors accordingly.&lt;/p&gt;
 &lt;h2 id=&#34;mermaid-diagrams&#34; &gt;
@@ -540,7 +540,7 @@ Pumped heat,&#34;Heating and cooling, &#34;&#34;commercial&#34;&#34;&#34;,70.672
       <title>Demo - Social Icons</title>
       <link>/posts/icons/</link>
       <pubDate>Sun, 05 May 2024 00:00:00 +0000</pubDate>
-      <author>me@dotmindblog.io (Volks)</author>
+      <author>me@dotmindblog.io (Dotmind it)</author>
       <guid>/posts/icons/</guid>
       <description>&lt;p&gt;To use an icon, simply copy its shortcode and paste it into your content where you want the icon to appear. The shortcode must be enclosed in &lt;code&gt;{{&amp;lt;   &amp;gt;}}&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Here is a list of available icons, their shortcodes, and what they look like when rendered:&lt;/p&gt;
@@ -783,7 +783,7 @@ Pumped heat,&#34;Heating and cooling, &#34;&#34;commercial&#34;&#34;&#34;,70.672
       <title>Demo - Support for code, pre, kbd, mark</title>
       <link>/posts/demo-code-pre-kbd-mark/</link>
       <pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate>
-      <author>me@dotmindblog.io (Volks)</author>
+      <author>me@dotmindblog.io (Dotmind it)</author>
       <guid>/posts/demo-code-pre-kbd-mark/</guid>
       <description>&lt;h2 id=&#34;individual-support-for-code-pre-kbd-mark&#34; &gt;
 &lt;div&gt;
@@ -961,7 +961,7 @@ Most &lt;mark&gt;salamanders&lt;/mark&gt; are nocturnal, and hunt for insects, w
       <title>Demo - Multiline Codes</title>
       <link>/posts/demo-multiline-codes/</link>
       <pubDate>Tue, 23 Apr 2024 00:00:00 +0000</pubDate>
-      <author>me@dotmindblog.io (Volks)</author>
+      <author>me@dotmindblog.io (Dotmind it)</author>
       <guid>/posts/demo-multiline-codes/</guid>
       <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;
 &lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
@@ -1333,9 +1333,9 @@ Those are trash codes.
       <title>About</title>
       <link>/about/</link>
       <pubDate>Tue, 09 Apr 2024 00:00:00 +0000</pubDate>
-      <author>me@dotmindblog.io (Volks)</author>
+      <author>me@dotmindblog.io (Dotmind it)</author>
       <guid>/about/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://dotmindblog.vercel.app&#34;&gt;dotmindblog&lt;/a&gt; it&amp;rsquo;s a simple, minimalist blog to keep the essentials.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://dotmindblog.vercel.app&#34;&gt;Dotmind&lt;/a&gt; it&amp;rsquo;s a simple, minimalist blog to keep the essentials.&lt;/p&gt;
 </description>
     </item>
     
@@ -1343,7 +1343,7 @@ Those are trash codes.
       <title>Advanced Style</title>
       <link>/posts/advancedstyle/</link>
       <pubDate>Tue, 09 Apr 2024 00:00:00 +0000</pubDate>
-      <author>me@dotmindblog.io (Volks)</author>
+      <author>me@dotmindblog.io (Dotmind it)</author>
       <guid>/posts/advancedstyle/</guid>
       <description>&lt;p&gt;There are examples of how to use custom &lt;code&gt;global-wise style&lt;/code&gt; or &lt;code&gt;page-wise style&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&#34;anubis-custom-style&#34;&gt;
@@ -1389,7 +1389,7 @@ This page is affected by &lt;code&gt;assets/css/custom1.scss&lt;/code&gt; and &l
       <title>Rich Content</title>
       <link>/posts/rich-content/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-      <author>me@dotmindblog.io (Volks)</author>
+      <author>me@dotmindblog.io (Dotmind it)</author>
       <guid>/posts/rich-content/</guid>
       <description>&lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes&#34;&gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;&gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;
 &lt;hr&gt;
@@ -1468,7 +1468,7 @@ This page is affected by &lt;code&gt;assets/css/custom1.scss&lt;/code&gt; and &l
       <title>Placeholder Text</title>
       <link>/posts/placeholder-text/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-      <author>me@dotmindblog.io (Volks)</author>
+      <author>me@dotmindblog.io (Dotmind it)</author>
       <guid>/posts/placeholder-text/</guid>
       <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de
 pectora summo. Redit teque digerit hominumque toris verebor lumina non cervice
@@ -1525,7 +1525,7 @@ Propoetides &lt;strong&gt;parte&lt;/strong&gt;.&lt;/p&gt;</description>
       <title>Math Typesetting</title>
       <link>/posts/math-typesetting/</link>
       <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
-      <author>me@dotmindblog.io (Volks)</author>
+      <author>me@dotmindblog.io (Dotmind it)</author>
       <guid>/posts/math-typesetting/</guid>
       <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;
 &lt;ul&gt;
@@ -1551,7 +1551,7 @@ $$&lt;/p&gt;
       <title>Emoji Support</title>
       <link>/posts/emoji-support/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      <author>me@dotmindblog.io (Volks)</author>
+      <author>me@dotmindblog.io (Dotmind it)</author>
       <guid>/posts/emoji-support/</guid>
       <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;
 &lt;p&gt;The &lt;a href=&#34;https://gohugo.io/functions/emojify/&#34;&gt;&lt;code&gt;emojify&lt;/code&gt;&lt;/a&gt; function can be called directly in templates or &lt;a href=&#34;https://gohugo.io/templates/shortcode-templates/#inline-shortcodes&#34;&gt;Inline Shortcodes&lt;/a&gt;.&lt;/p&gt;
@@ -1572,7 +1572,7 @@ $$&lt;/p&gt;
       <title>Emoji 支持</title>
       <link>/posts/emoji-support.zh/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      <author>me@dotmindblog.io (Volks)</author>
+      <author>me@dotmindblog.io (Dotmind it)</author>
       <guid>/posts/emoji-support.zh/</guid>
       <description>&lt;p&gt;在 Hugo 博客里，你可以用多种方式使用 Emoji：&lt;/p&gt;
 &lt;p&gt;The &lt;a href=&#34;https://gohugo.io/functions/emojify/&#34;&gt;&lt;code&gt;emojify&lt;/code&gt;&lt;/a&gt; function can be called directly in templates or &lt;a href=&#34;https://gohugo.io/templates/shortcode-templates/#inline-shortcodes&#34;&gt;Inline Shortcodes&lt;/a&gt;.&lt;/p&gt;
@@ -1593,7 +1593,7 @@ $$&lt;/p&gt;
       <title>Posts</title>
       <link>/posts/_index.pl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>me@dotmindblog.io (Volks)</author>
+      <author>me@dotmindblog.io (Dotmind it)</author>
       <guid>/posts/_index.pl/</guid>
       <description></description>
     </item>

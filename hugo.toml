@@ -3,7 +3,7 @@ defaultContentLanguage = "en"
 disqusShortname = ""
 languageCode = "en-us"
 theme = "anubis2"
-title = "dotmind it"
+title = "Dotmind it"
 
 [pagination]
 pagerSize = 5
@@ -11,11 +11,11 @@ pagerSize = 5
 [params.author]
 email = "me@dotmindblog.io"
 location = "Rio de Janeiro"
-name = "Volks"
+name = "Dotmind it"
 
 [params]
 dateFormat = "2006-01-02"
-description = "dotmind indexes the essentials"
+description = "Dotmind indexes the essentials"
 paginationSinglePost = true
 
 colorTheme = "auto"
@@ -32,9 +32,9 @@ toc = true
 # Graphcomment support
 graphcommentId = ""
 
-GiscusCategory = "General"
 GiscusCategoryId = "DIC_kwDOOHsFIM4CoAP8"
-GiscusDataMapping = "url"
+GiscusDataMapping = "pathname"
+GiscusDiscussionCategory = "General"
 GiscusLazyLoad = false
 GiscusRepo = "uphiago/dotmindblog"
 GiscusRepoId = "R_kgDOOHsFIA"
@@ -140,4 +140,4 @@ url = "https://cloud.umami.is/script.js"
 
 [params.GoogleAnalytics]
 enabled = true
-gtag = "G-32F16X8HLF"
+gtag = "G-8TLQ2313W1"

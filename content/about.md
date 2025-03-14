@@ -1,9 +1,9 @@
 +++
 title = "About"
-description = "Hugo, the world’s fastest framework for building websites"
+description = "dotmindblog it's a simple, minimalist blog to keep the essentials"
 date = "2024-04-09"
 aliases = ["about-us", "about-hugo"]
-author = ["Hugo Authors", "Junyi", "Volks"]
+author = ["Hugo Authors", "Junyi", "uphiago"]
 +++
 
-[dotmindblog](https://dotmindblog.vercel.app) it's a simple, minimalist blog to keep the essentials.
+[Dotmind](https://dotmindblog.vercel.app) it's a simple, minimalist blog to keep the essentials.
