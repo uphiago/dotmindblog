@@ -40,7 +40,7 @@ Here is a list of available icons, their shortcodes, and what they look like whe
 | medium     | `{{</* icon "medium" */>}}`        | {{< icon "medium" >}}        |
 | skype      | `{{</* icon "skype" */>}}`         | {{< icon "skype" >}}         |
 | telegram   | `{{</* icon "telegram" */>}}`      | {{< icon "telegram" >}}      |
-| twitter    | `{{</* icon "twitter" */>}}`       | {{< icon "twitter" >}}       |
+| x          | `{{</* icon "x" */>}}`             | {{< icon "x" >}}             |
 | github     | `{{</* icon "github" */>}}`        | {{< icon "github" >}}        |
 | netease    | `{{</* icon "netease-music" */>}}` | {{< icon "netease-music" >}} |
 | slack      | `{{</* icon "slack" */>}}`         | {{< icon "slack" >}}         |

@@ -99,13 +99,13 @@ weight = 2
 
 [[languages.pt.menu.main]]
 identifier = "tags"
-name = "about"
+name = "Tags"
 url = "/tags/"
 weight = 3
 
 [[languages.pt.menu.main]]
 identifier = "archive"
-name = "about"
+name = "Arquivo"
 url = "/posts/"
 weight = 4
 
@@ -136,8 +136,37 @@ dnt = false
 enabled = true 
 id = "eca2615c-7bd6-4020-bc35-45b4c213d04f" # Website ID
 shareUrl = "https://cloud.umami.is/share/vHjEvAi9HY40mUCZ/dotmindblog.vercel.app" 
-url = "https://cloud.umami.is/script.js" 
+url = "https://cloud.umami.is/script.js"
+async = true
+defer = true
+respectDNT = true
 
 [params.GoogleAnalytics]
 enabled = true
 gtag = "G-8TLQ2313W1"
+
+[minify]
+  minifyOutput = true
+
+[imaging]
+  quality = 85
+  resampleFilter = "Lanczos"
+
+[caches]
+  [caches.images]
+    dir = ":resourceDir/_gen"
+    maxAge = "720h"
+
+[module]
+  [[module.mounts]]
+    source = 'content'
+    target = 'content'
+    excludeFiles = ['posts/_drafts/**']
+
+  [[module.mounts]]
+    source = 'node_modules'
+    target = 'assets'
+
+  [[module.mounts]]
+    source = 'assets'
+    target = 'assets'

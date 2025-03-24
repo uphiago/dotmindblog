@@ -4,9 +4,9 @@ title = "Demo - Multiline Codes"
 date = "2024-04-23"
 description = "Codes, Codefences, and Syntax Highlighting."
 tags = [
-    "icons",
-    "anubis2",
-    "hugo"
+    "linux",
+    "secure-boot",
+    "bios"
 ]
 +++
 
