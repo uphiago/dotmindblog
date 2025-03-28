@@ -46,8 +46,7 @@ social = [
   {id = "github", url = "https://github.com/uphiago/dotmindblog"}, #   {id = "linkedin", url = "https://www.linkedin.com/"},
   #   {id = "email", url = "example@example.com"},
   #   {id = "facebook", url = "#"},
-  {id = "linkedin", url = "https://www.linkedin.com/in/uphiago"},
-  {id = "instagram", url = "https://instagram.com/uphiago"}, #   {id = "netease-music", url = "#"},
+  {id = "linkedin", url = "https://www.linkedin.com/in/uphiago"}, # {id = "instagram", url = "https://instagram.com/uphiago"}, #   {id = "netease-music", url = "#"},
   #   {id = "telegram", url = "#"},
   #   {id = "x", url = "#"},
   #   {id = "youtube", url = "#"},
@@ -131,42 +130,43 @@ style = 'catppuccin-frappe' # Find more style at here: https://swapoff.org/chrom
 tabWidth = 4 
 
 [params.UmamiAnalytics]
+async = true 
 datacache = false 
+defer = true 
 dnt = false 
 enabled = true 
 id = "eca2615c-7bd6-4020-bc35-45b4c213d04f" # Website ID
+respectDNT = true 
 shareUrl = "https://cloud.umami.is/share/vHjEvAi9HY40mUCZ/dotmindblog.vercel.app" 
-url = "https://cloud.umami.is/script.js"
-async = true
-defer = true
-respectDNT = true
+url = "https://cloud.umami.is/script.js" 
 
 [params.GoogleAnalytics]
 enabled = true
 gtag = "G-8TLQ2313W1"
 
 [minify]
-  minifyOutput = true
+minifyOutput = true
 
 [imaging]
-  quality = 85
-  resampleFilter = "Lanczos"
+anchor = "Smart"
+quality = 85
+resampleFilter = "Lanczos"
 
 [caches]
-  [caches.images]
-    dir = ":resourceDir/_gen"
-    maxAge = "720h"
+[caches.images]
+dir = ":resourceDir/_gen"
+maxAge = "720h"
 
 [module]
-  [[module.mounts]]
-    source = 'content'
-    target = 'content'
-    excludeFiles = ['posts/_drafts/**']
+[[module.mounts]]
+excludeFiles = ['posts/_drafts/**']
+source = 'content'
+target = 'content'
 
-  [[module.mounts]]
-    source = 'node_modules'
-    target = 'assets'
+[[module.mounts]]
+source = 'node_modules'
+target = 'assets'
 
-  [[module.mounts]]
-    source = 'assets'
-    target = 'assets'
+[[module.mounts]]
+source = 'assets'
+target = 'assets'
