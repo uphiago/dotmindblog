@@ -12,7 +12,7 @@ tags = [
   "debian",
 ]
 authors = ["iceteash"]
-draft = true
+draft = false
 +++
 
 <!--more-->
