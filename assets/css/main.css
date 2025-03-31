@@ -865,45 +865,41 @@ ul.footer-menu>li {
     display: none;
 }
 
-/* Copy code  */
+/* Copy code - new */
 .highlight {
     position: relative;
-    overflow: hidden;
-}
-
-.highlight:hover .highlight-copy-btn {
-    display: inline-block;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    overflow: visible;
 }
 
 .highlight-copy-btn {
     display: none;
     position: absolute;
-    top: 0px;
-    right: 0px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    border-radius: 6px;
-    padding: 1px;
+    top: 4px;
+    right: 12px;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 6px;
     font-size: 0.7em;
-    line-height: 1.8;
+    line-height: 1.2;
     color: #fff;
-    background-color: rgba(255, 255, 255, 0.1);
-    min-width: 22px;
-    text-align: center;
-    transition: border 0.3s;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
     transition: background-color 0.3s;
+    z-index: 10;
+}
+
+.highlight:hover .highlight-copy-btn {
+    display: inline-block;
 }
 
 .highlight-copy-btn:hover {
-    transition-duration: .1s;
-    background-color: rgba(255, 255, 255, 0.3);
-    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .highlight-copy-btn,
 .highlight-copy-btn svg {
     vertical-align: middle;
-    margin: 8px;
+    margin: 0;
 }
 
 /* Others */

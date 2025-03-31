@@ -3,11 +3,13 @@
 {{ if and (ne site.Params.colortheme "auto") (eq site.Params.colorthemeswitcher false) }}
     {{ $dataTheme := site.Params.colortheme }}
 {{ end }}
+
 <html lang="{{ .Site.Params.locale | default .Site.LanguageCode }}" data-theme="{{ $dataTheme }}">
 <head>
     {{ block "head" . }}
         {{ partial "head.html" . }}
     {{ end }}
+
 </head>
 <body>
     <a class="skip-main" href="#main">{{ i18n "skipToContent" }}</a>

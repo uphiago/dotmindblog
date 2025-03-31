@@ -1,64 +1,35 @@
-/*
-This file has been taken from following blogpost with some modifications:
-https://koki-nakamura22.github.io/blog/2019/10/03/hugo-adding-copy-button/
-Many thanks to Koki Nakamura!
-*/
+document.addEventListener("DOMContentLoaded", () => {
+  const svgCopy = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke="#888" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+  </svg>`;
 
-document.addEventListener("DOMContentLoaded", function(event) {
-  'use strict';
+  const svgCopied = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke="#4caf50" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 6 9 17l-5-5"/>
+  </svg>`;
 
-  if(!document.queryCommandSupported('copy')) {
-    return;
-  }
+  const svgFail = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke="#f44336" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+  </svg>`;
 
-  let svgCopyCode = '<svg  xmlns="http://www.w3.org/2000/svg"  width="16"  height="16"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" /><path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" /></svg>';
-  let svgSuccessCode = '<svg  xmlns="http://www.w3.org/2000/svg"  width="16"  height="16"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" /><path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" /><path d="M9 14l2 2l4 -4" /></svg>';
-  let svgFailCode = '<svg  xmlns="http://www.w3.org/2000/svg"  width="16"  height="16"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" /><path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" /><path d="M10 12l4 4m0 -4l-4 4" /></svg>';
+  function addCopyButton(container) {
+    const button = document.createElement('button');
+    button.className = 'highlight-copy-btn';
+    button.innerHTML = svgCopy;
 
-  function changeIcon(el, innerHtml) {
-    el.innerHTML = innerHtml;
-    setTimeout(() => {
-      el.innerHTML = svgCopyCode;
-    }, 1000);
-  }
-
-  function selectText(node) {
-    let selection = window.getSelection();
-    let range = document.createRange();
-    if (node.childElementCount === 2) {
-      // Skip the title.
-      range.selectNodeContents(node.children[1]);
-    } else {
-      range.selectNodeContents(node);
-    }
-    selection.removeAllRanges();
-    selection.addRange(range);
-    return selection;
-  }
-
-  function addCopyButton(containerEl) {
-    let copyBtn = document.createElement("button");
-    copyBtn.className = "highlight-copy-btn";
-    copyBtn.innerHTML = svgCopyCode;
-
-    let codeEl = containerEl.firstElementChild;
-    copyBtn.addEventListener('click', () => {
-      try {
-        let selection = selectText(codeEl);
-        document.execCommand('copy');
-        selection.removeAllRanges();
-
-        changeIcon(copyBtn, svgSuccessCode)
-      } catch(e) {
-        console && console.log(e);
-        changeIcon(copyBtn, svgFailCode)
-      }
+    button.addEventListener('click', () => {
+      navigator.clipboard.writeText(container.innerText).then(() => {
+        button.innerHTML = svgCopied;
+      }).catch(err => {
+        console.error(err);
+        button.innerHTML = svgFail;
+      });
+      setTimeout(() => button.innerHTML = svgCopy, 1500);
     });
 
-    containerEl.appendChild(copyBtn);
+    container.style.position = 'relative';
+    container.appendChild(button);
   }
 
-  // Add copy button to code blocks
-  let highlightBlocks = document.getElementsByClassName('highlight');
-  Array.prototype.forEach.call(highlightBlocks, addCopyButton);
-}, false);
+  document.querySelectorAll('.highlight').forEach(addCopyButton);
+});
