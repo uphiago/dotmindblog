@@ -25,8 +25,8 @@
             dark: "{{ .Site.Params.GiscusThemeDark }}"
         };
 
-        let currentTheme
-        let switchButton
+        let currentTheme  = detectCurrentScheme();
+        // let switchButton
         let autoDefinedScheme = window.matchMedia('(prefers-color-scheme: dark)')
 
         function switchTheme(e) {
