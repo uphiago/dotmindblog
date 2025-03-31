@@ -20,6 +20,11 @@
         const STORAGE_KEY = 'user-color-scheme'
         const defaultTheme = "{{ $colorTheme }}"
 
+        const themeMap = {
+            light: "{{ .Site.Params.GiscusThemeLight }}",
+            dark: "{{ .Site.Params.GiscusThemeDark }}"
+        };
+
         let currentTheme
         let switchButton
         let autoDefinedScheme = window.matchMedia('(prefers-color-scheme: dark)')
@@ -73,6 +78,8 @@
         }
 
         function changeGiscusTheme (theme) {
+            const giscusTheme = themeMap[theme] || theme;
+
             function sendMessage(message) {
               const iframe = document.querySelector('iframe.giscus-frame');
               if (!iframe) return;
@@ -81,7 +88,7 @@
 
             sendMessage({
               setConfig: {
-                theme: theme
+                theme: giscusTheme
               }
             });
         }

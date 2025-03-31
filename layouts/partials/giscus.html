@@ -16,7 +16,9 @@ $category := .Site.Params.GiscusDiscussionCategory | default "Announcements" }} 
                 return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
         }
 
-        let giscusTheme = detectCurrentScheme2();
+        let giscusTheme = detectCurrentScheme2() === "dark"
+                ? "{{ .Site.Params.GiscusThemeDark }}"
+                : "{{ .Site.Params.GiscusThemeLight }}";
         let giscusAttributes = {
                 src: "https://giscus.app/client.js",
                 "data-repo": "{{- .Site.Params.GiscusRepo -}}",

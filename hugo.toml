@@ -38,6 +38,8 @@ GiscusDiscussionCategory = "General"
 GiscusLazyLoad = false
 GiscusRepo = "uphiago/dotmindblog"
 GiscusRepoId = "R_kgDOOHsFIA"
+GiscusThemeLight = "noborder_light"
+GiscusThemeDark = "noborder_dark"
 
 customCSS = ["custom-css/custom1.scss", "custom-css/custom2.css"]
 
