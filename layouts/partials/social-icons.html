@@ -3,7 +3,7 @@
 {{ range $.Site.Params.Social }}
     {{ if and (isset $.Site.Data.social.social_icons .id) (isset . "url") }}
         <li>
-            <a {{ printf "href=%q" .url | safeHTMLAttr }} title="{{ humanize .id }}" rel="me">
+            <a {{ printf "href=%q" .url | safeHTMLAttr }} title="{{ humanize .id }}" rel="me" target="_blank">
             {{ partial "font-awesome.html" (dict "iconName" .id "custom" false) }}
             </a>
         </li>
@@ -11,20 +11,20 @@
         {{ $url := index $.Site.Data.social.social_icons .id }}
         {{ $ref := printf $url .name }}
         <li>
-            <a {{ printf "href=%q" $ref | safeHTMLAttr }} title="{{ humanize .id }}" rel="me">
+            <a {{ printf "href=%q" $ref | safeHTMLAttr }} title="{{ humanize .id }}" rel="me" target="_blank">
             {{ partial "font-awesome.html" (dict "iconName" .id "custom" false) }}
             </a>
         </li>
     {{ else if (isset . "url") }}
         <li>
-            <a href="{{ printf .url }}" title="{{ humanize .id }}" rel="me">
+            <a href="{{ printf .url }}" title="{{ humanize .id }}" rel="me" target="_blank">
                 {{ partial "font-awesome.html" (dict "iconName" .id "custom" true) }}
             </a>
         </li>
     {{ end }}
 {{ end }}
 
-{{ $rssIcon := true }}
+{{ $rssIcon := false }}
 {{ if isset .Site.Params "rssIcon" }}
     {{ $rssIcon = .Site.Params.rssIcon }}
 {{ end }}

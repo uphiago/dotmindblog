@@ -46,7 +46,7 @@ social = [
   {id = "github", url = "https://github.com/uphiago/dotmindblog"}, #   {id = "linkedin", url = "https://www.linkedin.com/"},
   #   {id = "email", url = "example@example.com"},
   #   {id = "facebook", url = "#"},
-  {id = "linkedin", url = "https://www.linkedin.com/in/uphiago"}, # {id = "instagram", url = "https://instagram.com/uphiago"}, #   {id = "netease-music", url = "#"},
+  # {id = "linkedin", url = "https://www.linkedin.com/in/uphiago"}, # {id = "instagram", url = "https://instagram.com/uphiago"}, #   {id = "netease-music", url = "#"},
   #   {id = "telegram", url = "#"},
   #   {id = "x", url = "#"},
   #   {id = "youtube", url = "#"},

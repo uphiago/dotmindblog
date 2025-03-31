@@ -15,7 +15,7 @@ tags = [
 authors = ["iceteash"]
 draft = false
 +++
-
+With the rise of AI applications that 
 <!--more-->
 ----
 With the rise of AI applications that demand high-performance GPUs, it’s becoming increasingly common to require custom modules, including <a href="https://github.com/NVIDIA/open-gpu-kernel-modules" target="_blank">NVIDIA's open-source drivers</a>. These modules need to be manually signed to work correctly on Linux distributions that use Secure Boot.
