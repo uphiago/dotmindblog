@@ -1,6 +1,6 @@
 +++
 author = "iceteash"
-title = "Secure Boot with MOK: Signing Custom Modules in UEFI Environments"
+title = "Secure Boot with MOK: Signing Modules in UEFI Environments"
 date = 2025-03-27T12:10:31-03:00
 description = "Set up Secure Boot on Linux and learn how to sign kernel modules with your own MOK key."
 

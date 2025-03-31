@@ -1,6 +1,6 @@
 +++
 author = "iceteash"
-title = "Secure Boot com MOK: assinando módulos personalizados em ambientes UEFI"
+title = "Secure Boot com MOK: Assinando Módulos em Ambientes UEFI"
 date = 2025-03-27T12:10:31-03:00
 description = "Configure o Secure Boot no Linux e aprenda a assinar módulos do kernel com sua própria chave MOK."
 tags = [
