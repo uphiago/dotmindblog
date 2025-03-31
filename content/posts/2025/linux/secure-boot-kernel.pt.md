@@ -17,6 +17,7 @@ draft = true
 
 <!--more-->
 ----
+
 Com o aumento das aplicações de IA que exigem GPUs de alto desempenho, é comum a necessidade de utilizar módulos personalizados, incluindo <a href="https://github.com/NVIDIA/open-gpu-kernel-modules" target="_blank">drivers open-source como os da NVIDIA</a>. Esses módulos precisam ser assinados manualmente para funcionar corretamente em distribuições Linux que utilizam Secure Boot.
 
 Este guia mostra como criar e cadastrar sua própria chave (MOK) no firmware UEFI, permitindo assinar com segurança esses módulos personalizados sem precisar desativar o Secure Boot.
@@ -25,9 +26,9 @@ Este guia mostra como criar e cadastrar sua própria chave (MOK) no firmware UEF
 
 ## 1. Conceitos de Secure Boot e MOK
 
-- **Secure Boot** é um recurso do firmware que carrega apenas binários assinados com chaves confiáveis. Em várias distribuições Linux, usa-se o binário "shim", já assinado pela Microsoft, garantindo compatibilidade.
+» **Secure Boot** é um recurso do firmware que carrega apenas binários assinados com chaves confiáveis. Em várias distribuições Linux, usa-se o binário "shim", já assinado pela Microsoft, garantindo compatibilidade.
 
-- Verifique o status do Secure Boot:
+» Verifique o status do Secure Boot:
 ```bash
 mokutil --sb-state
 ```
@@ -92,12 +93,14 @@ Ao voltar para o sistema operacional, sua chave já estará inclusa no firmware.
 
 ## 4. Assinando novos Módulos (Ex.: NVIDIA/DKMS)
 
-- Se estiver usando DKMS, configure o arquivo `/etc/dkms/framework.conf` para apontar para sua MOK. Assim, os módulos recompilados serão assinados automaticamente.
+Se estiver usando DKMS, configure o arquivo `/etc/dkms/framework.conf` para apontar para sua MOK. Assim, os módulos recompilados serão assinados automaticamente.
 
 ```bash
 mok_signing_key="/var/lib/shim-signed/mok/MOK.priv"
 mok_certificate="/var/lib/shim-signed/mok/MOK.der"
 ```
+
+Na maioria dos cenários comuns (módulos DKMS), você não precisará realizar a assinatura manual frequentemente. Configure corretamente o framework do DKMS como mostrado acima.
 
 - Para assinar manualmente:
 
@@ -109,14 +112,14 @@ mok_certificate="/var/lib/shim-signed/mok/MOK.der"
    ```bash
    sudo zstd -d /lib/modules/$(uname -r)/updates/dkms/nvidia.ko.zst -o /tmp/nvidia.ko
    ```
-   Assine o módulo recém-descompactado diretamente usando sign-file:
+   Assine o módulo recém-descompactado:
    ```bash
    sudo /usr/src/linux-headers-$(uname -r)/scripts/sign-file sha256 \
       /var/lib/shim-signed/mok/MOK.priv \
       /var/lib/shim-signed/mok/MOK.der \
       /tmp/nvidia.ko
    ```
-   Após a assinatura, sobrescreva novamente o módulo assinado comprimido no sistema original:
+   Sobrescreva novamente o módulo assinado:
    ```bash
    sudo zstd -f --rm /tmp/nvidia.ko -o /lib/modules/$(uname -r)/updates/dkms/nvidia.ko.zst
    ```
@@ -129,7 +132,7 @@ mok_certificate="/var/lib/shim-signed/mok/MOK.der"
    sudo update-initramfs -u -k $(uname -r)
    ```
 
-- (Opcional) Ver todos os módulos e confirmar suas assinaturas:
+- (Opcional) Script para ver todos os módulos e confirmar suas assinaturas:
 
 ```bash
 for mod in /lib/modules/$(uname -r)/updates/dkms/*.ko.zst; do
@@ -146,10 +149,6 @@ done
 - Se você perder essa chave ou esquecer a senha, precisará gerar e importar novamente a MOK.
 - Confira logs (dmesg, journalctl) para erros como “module signature verification failed”.
 - Em algumas placas-mãe ou configuradores de VM (ex.: Hyper-V), é preciso configurar o Secure Boot para aceitar chaves da “Microsoft UEFI Certificate Authority” antes de gerar ou importar a MOK.
-
-## 6. Conclusão
-
-Mantendo o Secure Boot ativo e cadastrando sua própria MOK, você consegue executar drivers e kernels customizados de forma segura. Para cenários mais avançados ou detalhes específicos de cada distro, consulte a documentação oficial.
 
 ![Secure Boot BIOS Screenshot](/images/2025/secure-boot-bios-1.png)
 
