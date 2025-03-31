@@ -1,8 +1,8 @@
 +++
 author = "iceteash"
-title = "Secure Boot BIOS e Linux Distros"
+title = "Secure Boot com MOK: assinando módulos personalizados em ambientes UEFI"
 date = 2025-03-27T12:10:31-03:00
-description = "Entenda como configurar o Secure Boot, cadastrar a MOK no firmware UEFI e assinar módulos personalizados."
+description = "Configure o Secure Boot no Linux e aprenda a assinar módulos do kernel com sua própria chave (MOK)."
 tags = [
   "linux",
   "bios",
@@ -11,49 +11,52 @@ tags = [
   "kernel",
   "debian",
 ]
+authors = ["iceteash"]
 draft = true
 +++
-<br></br>
-Com o crescimento de aplicações de IA exigindo GPUs de alto desempenho, muitos usuários precisam instalar e **assinar** módulos proprietários (como drivers NVIDIA) em suas distros Linux, sem desativar o Secure Boot. Este guia explica como manter o Secure Boot ativo e, ao mesmo tempo, usar kernels e drivers customizados de forma segura.
-<br></br>
-  
+
+<!---->
+<!---->
+<!---->
 <!--more-->
----
-<br></br>
-O Secure Boot é um recurso de segurança importante em sistemas modernos, mas pode causar dificuldades ao usar Linux, especialmente com drivers proprietários. Este guia mostra como manter a segurança do Secure Boot enquanto usa módulos personalizados no Linux.
+----
+Com o aumento das aplicações de IA que exigem GPUs de alto desempenho, é comum a necessidade de utilizar módulos personalizados, incluindo <a href="https://github.com/NVIDIA/open-gpu-kernel-modules" target="_blank">drivers open-source como os da NVIDIA</a>. Esses módulos precisam ser assinados manualmente para funcionar corretamente em distribuições Linux que utilizam Secure Boot.
+
+Este guia mostra como criar e cadastrar sua própria chave (MOK) no firmware UEFI, permitindo assinar com segurança esses módulos personalizados sem precisar desativar o Secure Boot.
 <br></br>
 
 ## 1. Conceitos de Secure Boot e MOK
 
-- **Secure Boot** é um recurso do firmware UEFI que carrega apenas binários assinados com chaves confiáveis (geralmente as da Microsoft). Em várias distros Linux, utiliza-se o binário "shim", que já vem assinado pela Microsoft, para garantir compatibilidade.
+- **Secure Boot** é um recurso do firmware que carrega apenas binários assinados com chaves confiáveis. Em várias distribuições Linux, usa-se o binário "shim", já assinado pela Microsoft, garantindo compatibilidade.
 
-- **MOK (Machine Owner Key)** é a chave que você mesmo pode gerar e cadastrar no firmware, permitindo assinar kernels e módulos customizados (ex.: drivers NVIDIA, DKMS) sem desativar o Secure Boot.
+- **MOK (Machine Owner Key)** chave para assinar kernels/módulos (ex.: drivers NVIDIA, DKMS) no firmware, com Secure Boot ativo.
 
-## 2. Gerando e Enrolando a Chave (MOK)
+## 2. Gerando e cadastrando a MOK
 
-1. Em distros baseadas em Debian/Ubuntu, gere a chave com:
+1. Em distribuições baseadas em Debian/Ubuntu, gere uma nova chave MOK com:
 
 ```bash
 sudo update-secureboot-policy new-key
 ```
-
-Isso criará os seguintes arquivos em /var/lib/shim-signed/mok/:
+Isso criará os seguintes arquivos em `/var/lib/shim-signed/mok/`:
 
 - MOK.der
 - MOK.priv
-- MOK.pem
+- .rnd
 
-2. Importe a chave no firmware:
+2. Importe a chave pública (MOK.der) no firmware UEFI com o comando:
 
 ```bash
 mokutil --import /var/lib/shim-signed/mok/MOK.der
 ```
 
-Será solicitada uma senha que você confirmará no próximo boot.
+Será solicitado que você defina uma senha que será confirmada na próximo boot.
 
-3. Reinicie o PC. Ao reiniciar, o sistema entrará no MOK Manager (Shim UEFI key management console). Siga o passo a passo abaixo para concluir a inclusão da chave:
+3. Faça um reboot. Durante o boot seguinte, o sistema entrará automaticamente no MOK Manager (Shim).
 
-### Passo a passo no MOK Manager
+Siga o passo a passo abaixo para confirmar a inclusão da nova chave no firmware.
+
+## 3. Passo a passo no MOK Manager
 
 1. (Reboot) Assim que a máquina reiniciar, o utilitário de gerenciamento de chaves UEFI "Shim" deve aparecer.  
    ![Tela inicial do MOK Manager exibindo interface de gerenciamento de chaves](/images/2025/secure-boot-bios-2.png)

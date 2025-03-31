@@ -1,2 +1,1421 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dotmind it</title><link>/</link><description>Dotmind it</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>me@dotmindblog.io
-(Dotmind it)</managingEditor><lastBuildDate>Mon, 24 Mar 2025 15:10:31 -0300</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Secure Boot Bios</title><link>/posts/2025/linux/secure-boot-bios/</link><pubDate>Mon, 24 Mar 2025 15:10:31 -0300</pubDate><author>me@dotmindblog.io (Dotmind it)</author><guid>/posts/2025/linux/secure-boot-bios/</guid><description>&lt;p>conteudo en-us&amp;hellip;&lt;/p></description></item><item><title>About</title><link>/about/</link><pubDate>Tue, 09 Apr 2024 00:00:00 +0000</pubDate><author>me@dotmindblog.io (Dotmind it)</author><guid>/about/</guid><description>&lt;p>&lt;a href="https://dotmindblog.vercel.app">Dotmind&lt;/a> it&amp;rsquo;s a simple, minimalist blog to keep the essentials.&lt;/p></description></item></channel></rss>
+(Dotmind it)</managingEditor><lastBuildDate>Mon, 24 Mar 2025 15:10:31 -0300</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Secure Boot Bios</title><link>/posts/2025/linux/secure-boot-kernel/</link><pubDate>Mon, 24 Mar 2025 15:10:31 -0300</pubDate><author>me@dotmindblog.io (Dotmind it)</author><guid>/posts/2025/linux/secure-boot-kernel/</guid><description>&lt;p>conteudo en-us&amp;hellip;&lt;/p></description></item><item><title>Markdown Syntax Guide</title><link>/_drafts/markdown-syntax/</link><pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate><author>me@dotmindblog.io (Dotmind it)</author><guid>/_drafts/markdown-syntax/</guid><description>&lt;p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p>
+&lt;h2 id="headings" >
+&lt;div>
+&lt;a href="#headings">
+#
+&lt;/a>
+Headings
+&lt;/div>
+&lt;/h2>
+&lt;p>The following HTML &lt;code>&amp;lt;h2&amp;gt;&lt;/code>—&lt;code>&amp;lt;h6&amp;gt;&lt;/code> elements represent 5 levels of section headings. &lt;code>&amp;lt;h2&amp;gt;&lt;/code> is the highest section level while &lt;code>&amp;lt;h6&amp;gt;&lt;/code> is the lowest.&lt;/p>
+&lt;h2 id="h2" >
+&lt;div>
+&lt;a href="#h2">
+#
+&lt;/a>
+H2
+&lt;/div>
+&lt;/h2>
+&lt;p>You should using &lt;code>## H2&lt;/code> as your section title, since the file title is &lt;code># H1&lt;/code>&lt;/p>
+&lt;p>If you use &lt;code># H1&lt;/code> as your section title, you will get a warning from linter:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-txt" data-lang="txt">&lt;span style="display:flex;">&lt;span>MD025/single-title/single-h1: Multiple top-level headings in the same document
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="h3" >
+&lt;div>
+&lt;a href="#h3">
+##
+&lt;/a>
+H3
+&lt;/div>
+&lt;/h3>
+&lt;h4 id="h4" >
+&lt;div>
+&lt;a href="#h4">
+###
+&lt;/a>
+H4
+&lt;/div>
+&lt;/h4>
+&lt;h5 id="h5" >
+&lt;div>
+&lt;a href="#h5">
+####
+&lt;/a>
+H5
+&lt;/div>
+&lt;/h5>
+&lt;h6 id="h6" >
+&lt;div>
+&lt;a href="#h6">
+#####
+&lt;/a>
+H6
+&lt;/div>
+&lt;/h6>
+&lt;h2 id="paragraph" >
+&lt;div>
+&lt;a href="#paragraph">
+#
+&lt;/a>
+Paragraph
+&lt;/div>
+&lt;/h2>
+&lt;p>Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur?
+Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga.&lt;/p>
+&lt;p>Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.&lt;/p>
+&lt;h2 id="blockquotes" >
+&lt;div>
+&lt;a href="#blockquotes">
+#
+&lt;/a>
+Blockquotes
+&lt;/div>
+&lt;/h2>
+&lt;p>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a &lt;code>footer&lt;/code> or &lt;code>cite&lt;/code> element, and optionally with in-line changes such as annotations and abbreviations.&lt;/p>
+&lt;h3 id="blockquote-without-attribution" >
+&lt;div>
+&lt;a href="#blockquote-without-attribution">
+##
+&lt;/a>
+Blockquote without attribution
+&lt;/div>
+&lt;/h3>
+&lt;blockquote>
+&lt;p>Tiam, ad mint andaepu dandae nostion secatur sequo quae.&lt;/p>
+&lt;p>&lt;strong>Note&lt;/strong> that you can use &lt;em>Markdown syntax&lt;/em> within a blockquote.&lt;/p>&lt;/blockquote>
+&lt;h3 id="blockquote-with-attribution" >
+&lt;div>
+&lt;a href="#blockquote-with-attribution">
+##
+&lt;/a>
+Blockquote with attribution
+&lt;/div>
+&lt;/h3>
+&lt;blockquote>
+&lt;p>Don&amp;rsquo;t communicate by sharing memory, share memory by communicating.&lt;/p>
+— &lt;cite>Rob Pike&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/cite>&lt;/p>&lt;/blockquote>
+&lt;h2 id="tables" >
+&lt;div>
+&lt;a href="#tables">
+#
+&lt;/a>
+Tables
+&lt;/div>
+&lt;/h2>
+&lt;p>Tables aren&amp;rsquo;t part of the core Markdown spec, but Hugo supports supports them out-of-the-box.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Age&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Bob&lt;/td>
+&lt;td>27&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Alice&lt;/td>
+&lt;td>23&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="inline-markdown-within-tables" >
+&lt;div>
+&lt;a href="#inline-markdown-within-tables">
+##
+&lt;/a>
+Inline Markdown within tables
+&lt;/div>
+&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Inline&lt;/th>
+&lt;th>Markdown&lt;/th>
+&lt;th>In&lt;/th>
+&lt;th>Table&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;em>italics&lt;/em>&lt;/td>
+&lt;td>&lt;strong>bold&lt;/strong>&lt;/td>
+&lt;td>&lt;del>strikethrough&lt;/del>&lt;/td>
+&lt;td>&lt;code>code&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="code-blocks" >
+&lt;div>
+&lt;a href="#code-blocks">
+#
+&lt;/a>
+Code Blocks
+&lt;/div>
+&lt;/h2>
+&lt;h3 id="code-block-with-backticks-and-showing-highlighted-lines" >
+&lt;div>
+&lt;a href="#code-block-with-backticks-and-showing-highlighted-lines">
+##
+&lt;/a>
+Code block with backticks and showing highlighted lines
+&lt;/div>
+&lt;/h3>
+&lt;div class="highlight">&lt;div style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">&lt;code>&lt;span style="background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">199
+&lt;/span>&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">200
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">201
+&lt;/span>&lt;span style="background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">202
+&lt;/span>&lt;/span>&lt;span style="background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">203
+&lt;/span>&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">204
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">205
+&lt;/span>&lt;span style="background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">206
+&lt;/span>&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">207
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">208
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex; background-color:#51576d">&lt;span>&lt;span style="color:#737994;font-style:italic">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ca9ee6">html&lt;/span> &lt;span style="color:#8caaee">lang&lt;/span>&lt;span style="color:#99d1db;font-weight:bold">=&lt;/span>&lt;span style="color:#a6d189">&amp;#34;en&amp;#34;&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ca9ee6">head&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span> &amp;lt;&lt;span style="color:#ca9ee6">meta&lt;/span> &lt;span style="color:#8caaee">charset&lt;/span>&lt;span style="color:#99d1db;font-weight:bold">=&lt;/span>&lt;span style="color:#a6d189">&amp;#34;UTF-8&amp;#34;&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span> &amp;lt;&lt;span style="color:#ca9ee6">title&lt;/span>&amp;gt;Example HTML5 Document&amp;lt;/&lt;span style="color:#ca9ee6">title&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#ca9ee6">head&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ca9ee6">body&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span> &amp;lt;&lt;span style="color:#ca9ee6">p&lt;/span>&amp;gt;Test&amp;lt;/&lt;span style="color:#ca9ee6">p&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#ca9ee6">body&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#ca9ee6">html&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="code-block-indented-with-four-spaces" >
+&lt;div>
+&lt;a href="#code-block-indented-with-four-spaces">
+##
+&lt;/a>
+Code block indented with four spaces
+&lt;/div>
+&lt;/h3>
+&lt;pre>&lt;code>&amp;lt;!doctype html&amp;gt;
+&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+&amp;lt;title&amp;gt;Example HTML5 Document&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;p&amp;gt;Test&amp;lt;/p&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code>&lt;/pre>
+&lt;h3 id="code-block-with-hugos-internal-highlight-shortcode" >
+&lt;div>
+&lt;a href="#code-block-with-hugos-internal-highlight-shortcode">
+##
+&lt;/a>
+Code block with Hugo&amp;rsquo;s internal highlight shortcode
+&lt;/div>
+&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#737994;font-style:italic">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ca9ee6">html&lt;/span> &lt;span style="color:#8caaee">lang&lt;/span>&lt;span style="color:#99d1db;font-weight:bold">=&lt;/span>&lt;span style="color:#a6d189">&amp;#34;en&amp;#34;&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ca9ee6">head&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#ca9ee6">meta&lt;/span> &lt;span style="color:#8caaee">charset&lt;/span>&lt;span style="color:#99d1db;font-weight:bold">=&lt;/span>&lt;span style="color:#a6d189">&amp;#34;UTF-8&amp;#34;&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#ca9ee6">title&lt;/span>&amp;gt;Example HTML5 Document&amp;lt;/&lt;span style="color:#ca9ee6">title&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#ca9ee6">head&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ca9ee6">body&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#ca9ee6">p&lt;/span>&amp;gt;Test&amp;lt;/&lt;span style="color:#ca9ee6">p&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#ca9ee6">body&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#ca9ee6">html&lt;/span>&amp;gt;&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;h2 id="list-types" >
+&lt;div>
+&lt;a href="#list-types">
+#
+&lt;/a>
+List Types
+&lt;/div>
+&lt;/h2>
+&lt;h3 id="ordered-list" >
+&lt;div>
+&lt;a href="#ordered-list">
+##
+&lt;/a>
+Ordered List
+&lt;/div>
+&lt;/h3>
+&lt;ol>
+&lt;li>First item&lt;/li>
+&lt;li>Second item&lt;/li>
+&lt;li>Third item&lt;/li>
+&lt;/ol>
+&lt;h3 id="unordered-list" >
+&lt;div>
+&lt;a href="#unordered-list">
+##
+&lt;/a>
+Unordered List
+&lt;/div>
+&lt;/h3>
+&lt;ul>
+&lt;li>List item&lt;/li>
+&lt;li>Another item&lt;/li>
+&lt;li>And another item&lt;/li>
+&lt;/ul>
+&lt;h3 id="nested-list" >
+&lt;div>
+&lt;a href="#nested-list">
+##
+&lt;/a>
+Nested list
+&lt;/div>
+&lt;/h3>
+&lt;ul>
+&lt;li>Item&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>
+&lt;p>First Sub-item&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Second Sub-item&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="other-elements--abbr-sub-sup-kbd-mark" >
+&lt;div>
+&lt;a href="#other-elements--abbr-sub-sup-kbd-mark">
+#
+&lt;/a>
+Other Elements — abbr, sub, sup, kbd, mark
+&lt;/div>
+&lt;/h2>
+&lt;p>&lt;abbr title="Graphics Interchange Format">GIF&lt;/abbr> is a bitmap image format.&lt;/p>
+&lt;p>H&lt;sub>2&lt;/sub>O&lt;/p>
+&lt;p>X&lt;sup>n&lt;/sup> + Y&lt;sup>n&lt;/sup> = Z&lt;sup>n&lt;/sup>&lt;/p>
+&lt;p>Press &lt;kbd>CTRL&lt;/kbd>+&lt;kbd>ALT&lt;/kbd>+&lt;kbd>Delete&lt;/kbd> to end the session.&lt;/p>
+&lt;p>Most &lt;mark>salamanders&lt;/mark> are nocturnal, and hunt for insects, worms, and other small creatures.&lt;/p>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>The above quote is excerpted from Rob Pike&amp;rsquo;s &lt;a href="https://www.youtube.com/watch?v=PAAkCSZUG1c">talk&lt;/a> during Gopherfest, November 18, 2015.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item><item><title>Demo - Support for Diagrams</title><link>/_drafts/demo-diagram/</link><pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>me@dotmindblog.io (Dotmind it)</author><guid>/_drafts/demo-diagram/</guid><description>&lt;p>Feel free to switch between the light and dark themes to see how the diagram adapts its colors accordingly.&lt;/p>
+&lt;h2 id="mermaid-diagrams" >
+&lt;div>
+&lt;a href="#mermaid-diagrams">
+#
+&lt;/a>
+Mermaid Diagrams
+&lt;/div>
+&lt;/h2>
+&lt;pre class="mermaid">gantt
+title A Gantt Diagram
+dateFormat YYYY-MM-DD
+section Section
+A task :a1, 2014-01-01, 30d
+Another task :after a1, 20d
+section Another
+Task in Another :2014-01-12, 12d
+another task :24d
+&lt;/pre>
+&lt;p>Get more examples at &lt;a href="https://mermaid.js.org/intro/">About Mermaid&lt;/a>&lt;/p>
+&lt;pre class="mermaid">gitGraph:
+commit "Ashish"
+branch newbranch
+checkout newbranch
+commit id:"1111"
+commit tag:"test"
+checkout main
+commit type: HIGHLIGHT
+commit
+merge newbranch
+commit
+branch b2
+commit
+&lt;/pre>
+&lt;pre class="mermaid">stateDiagram
+[*] --> Still
+Still --> [*]
+Still --> Moving
+Moving --> Still
+Moving --> Crash
+Crash --> [*]
+&lt;/pre>
+&lt;pre class="mermaid">sankey-beta
+Pumped heat,"Heating and cooling, ""homes""",193.026
+Pumped heat,"Heating and cooling, ""commercial""",70.672
+&lt;/pre>
+&lt;pre class="mermaid">sequenceDiagram
+loop Daily query
+Alice->>Bob: Hello Bob, how are you?
+alt is sick
+Bob->>Alice: Not so good :(
+else is well
+Bob->>Alice: Feeling fresh like a daisy
+end
+opt Extra response
+Bob->>Alice: Thanks for asking
+end
+end
+&lt;/pre>
+&lt;pre class="mermaid">sequenceDiagram
+participant Alice
+participant Bob
+Alice->>John: Hello John, how are you?
+loop Healthcheck
+John->>John: Fight against hypochondria
+end
+Note right of John: Rational thoughts &lt;br/>prevail!
+John-->>Alice: Great!
+John->>Bob: How about you?
+Bob-->>John: Jolly good!
+&lt;/pre>
+&lt;h2 id="goat" >
+&lt;div>
+&lt;a href="#goat">
+#
+&lt;/a>
+GoAT
+&lt;/div>
+&lt;/h2>
+&lt;div class="goat svg-container ">
+&lt;svg
+xmlns="http://www.w3.org/2000/svg"
+font-family="Menlo,Lucida Console,monospace"
+viewBox="0 0 680 121"
+>
+&lt;g transform='translate(8,16)'>
+&lt;path d='M 440,0 L 464,0' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 576,0 L 584,0' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 408,16 L 440,16' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 552,16 L 560,16' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 144,32 L 176,32' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 176,32 L 208,32' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 296,32 L 312,32' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 312,32 L 328,32' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 440,32 L 464,32' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 576,32 L 584,32' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 384,48 L 408,48' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 512,48 L 536,48' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 128,64 L 144,64' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 144,64 L 160,64' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 192,64 L 208,64' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 208,64 L 224,64' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 440,64 L 464,64' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 576,64 L 584,64' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 408,80 L 440,80' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 552,80 L 560,80' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 440,96 L 464,96' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 576,96 L 584,96' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 128,64 L 128,80' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 144,32 L 144,64' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 160,64 L 160,80' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 176,0 L 176,32' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 192,64 L 192,80' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 208,32 L 208,64' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 224,64 L 224,80' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 280,48 L 280,64' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 312,0 L 312,32' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 344,48 L 344,64' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 408,16 L 408,48' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 408,48 L 408,80' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 440,0 L 440,16' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 440,16 L 440,32' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 440,64 L 440,80' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 440,80 L 440,96' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 536,32 L 536,48' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 536,48 L 536,64' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 8,80 L 24,48' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 24,48 L 48,0' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 56,80 L 72,48' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 624,48 L 640,16' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 640,16 L 648,0' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 640,80 L 648,64' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 24,48 L 40,80' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 48,0 L 72,48' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 72,48 L 88,80' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 624,48 L 640,80' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 640,80 L 648,96' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 640,16 L 648,32' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 576,0 A 16,16 0 0,0 560,16' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 552,16 A 16,16 0 0,0 536,32' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 296,32 A 16,16 0 0,0 280,48' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 328,32 A 16,16 0 0,1 344,48' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 560,16 A 16,16 0 0,0 576,32' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 280,64 A 16,16 0 0,0 264,80' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 280,64 A 16,16 0 0,1 296,80' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 344,64 A 16,16 0 0,0 328,80' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 344,64 A 16,16 0 0,1 360,80' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 576,64 A 16,16 0 0,0 560,80' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 536,64 A 16,16 0 0,0 552,80' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 560,80 A 16,16 0 0,0 576,96' fill='none' stroke='currentColor'>&lt;/path>
+&lt;text text-anchor='middle' x='8' y='100' fill='currentColor' style='font-size:1em'>1&lt;/text>
+&lt;text text-anchor='middle' x='40' y='100' fill='currentColor' style='font-size:1em'>2&lt;/text>
+&lt;text text-anchor='middle' x='56' y='100' fill='currentColor' style='font-size:1em'>3&lt;/text>
+&lt;text text-anchor='middle' x='88' y='100' fill='currentColor' style='font-size:1em'>4&lt;/text>
+&lt;text text-anchor='middle' x='128' y='100' fill='currentColor' style='font-size:1em'>1&lt;/text>
+&lt;text text-anchor='middle' x='160' y='100' fill='currentColor' style='font-size:1em'>2&lt;/text>
+&lt;text text-anchor='middle' x='192' y='100' fill='currentColor' style='font-size:1em'>3&lt;/text>
+&lt;text text-anchor='middle' x='224' y='100' fill='currentColor' style='font-size:1em'>4&lt;/text>
+&lt;text text-anchor='middle' x='264' y='100' fill='currentColor' style='font-size:1em'>1&lt;/text>
+&lt;text text-anchor='middle' x='296' y='100' fill='currentColor' style='font-size:1em'>2&lt;/text>
+&lt;text text-anchor='middle' x='328' y='100' fill='currentColor' style='font-size:1em'>3&lt;/text>
+&lt;text text-anchor='middle' x='360' y='100' fill='currentColor' style='font-size:1em'>4&lt;/text>
+&lt;text text-anchor='middle' x='480' y='4' fill='currentColor' style='font-size:1em'>1&lt;/text>
+&lt;text text-anchor='middle' x='480' y='36' fill='currentColor' style='font-size:1em'>2&lt;/text>
+&lt;text text-anchor='middle' x='480' y='68' fill='currentColor' style='font-size:1em'>3&lt;/text>
+&lt;text text-anchor='middle' x='480' y='100' fill='currentColor' style='font-size:1em'>4&lt;/text>
+&lt;text text-anchor='middle' x='600' y='4' fill='currentColor' style='font-size:1em'>1&lt;/text>
+&lt;text text-anchor='middle' x='600' y='36' fill='currentColor' style='font-size:1em'>2&lt;/text>
+&lt;text text-anchor='middle' x='600' y='68' fill='currentColor' style='font-size:1em'>3&lt;/text>
+&lt;text text-anchor='middle' x='600' y='100' fill='currentColor' style='font-size:1em'>4&lt;/text>
+&lt;text text-anchor='middle' x='664' y='4' fill='currentColor' style='font-size:1em'>1&lt;/text>
+&lt;text text-anchor='middle' x='664' y='36' fill='currentColor' style='font-size:1em'>2&lt;/text>
+&lt;text text-anchor='middle' x='664' y='68' fill='currentColor' style='font-size:1em'>3&lt;/text>
+&lt;text text-anchor='middle' x='664' y='100' fill='currentColor' style='font-size:1em'>4&lt;/text>
+&lt;/g>
+&lt;/svg>
+&lt;/div></description></item><item><title>Demo - Social Icons</title><link>/_drafts/icons/</link><pubDate>Sun, 05 May 2024 00:00:00 +0000</pubDate><author>me@dotmindblog.io (Dotmind it)</author><guid>/_drafts/icons/</guid><description>&lt;p>To use an icon, simply copy its shortcode and paste it into your content where you want the icon to appear. The shortcode must be enclosed in &lt;code>{{&amp;lt; &amp;gt;}}&lt;/code>.&lt;/p>
+&lt;p>Here is a list of available icons, their shortcodes, and what they look like when rendered:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>name&lt;/th>
+&lt;th>shortcode&lt;/th>
+&lt;th>icon&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>4chan&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;4chan&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-4chan">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M14 11s6.054 -1.05 6 -4.5c-.038 -2.324 -2.485 -3.19 -3.016 -1.5c0 0 -.502 -2 -2.01 -2c-1.508 0 -2.984 3 -.974 8z" />&lt;path d="M13.98 11s6.075 -1.05 6.02 -4.5c-.038 -2.324 -2.493 -3.19 -3.025 -1.5c0 0 -.505 -2 -2.017 -2c-1.513 0 -3 3 -.977 8z" />&lt;path d="M13 13.98l.062 .309l.081 .35l.075 .29l.092 .328l.11 .358l.061 .188l.139 .392c.64 1.73 1.841 3.837 3.88 3.805c2.324 -.038 3.19 -2.493 1.5 -3.025l.148 -.045l.165 -.058a4.13 4.13 0 0 0 .098 -.039l.222 -.098c.586 -.28 1.367 -.832 1.367 -1.777c0 -1.513 -3 -3 -8 -.977z" />&lt;path d="M10.02 13l-.309 .062l-.35 .081l-.29 .075l-.328 .092l-.358 .11l-.188 .061l-.392 .139c-1.73 .64 -3.837 1.84 -3.805 3.88c.038 2.324 2.493 3.19 3.025 1.5l.045 .148l.058 .165l.039 .098l.098 .222c.28 .586 .832 1.367 1.777 1.367c1.513 0 3 -3 .977 -8z" />&lt;path d="M11 10.02l-.062 -.309l-.081 -.35l-.075 -.29l-.092 -.328l-.11 -.358l-.128 -.382l-.148 -.399c-.658 -1.687 -1.844 -3.634 -3.804 -3.604c-2.324 .038 -3.19 2.493 -1.5 3.025l-.148 .045l-.164 .058a4.13 4.13 0 0 0 -.1 .039l-.22 .098c-.588 .28 -1.368 .832 -1.368 1.777c0 1.513 3 3 8 .977z" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>leetcode&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;leetcode&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-leetcode">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M12 13h7.5" />&lt;path d="M9.424 7.268l4.999 -4.999" />&lt;path d="M16.633 16.644l-2.402 2.415a3.189 3.189 0 0 1 -4.524 0l-3.77 -3.787a3.223 3.223 0 0 1 0 -4.544l3.77 -3.787a3.189 3.189 0 0 1 4.524 0l2.302 2.313" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>qq&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;qq&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-qq">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M6 9.748a14.716 14.716 0 0 0 11.995 -.052c.275 -9.236 -11.104 -11.256 -11.995 .052z" />&lt;path d="M18 10c.984 2.762 1.949 4.765 2 7.153c.014 .688 -.664 1.346 -1.184 .303c-.346 -.696 -.952 -1.181 -1.816 -1.456" />&lt;path d="M17 16c.031 1.831 .147 3.102 -1 4" />&lt;path d="M8 20c-1.099 -.87 -.914 -2.24 -1 -4" />&lt;path d="M6 10c-.783 2.338 -1.742 4.12 -1.968 6.43c-.217 2.227 .716 1.644 1.16 .917c.296 -.487 .898 -.934 1.808 -1.347" />&lt;path d="M15.898 13l-.476 -2" />&lt;path d="M8 20l-1.5 1c-.5 .5 -.5 1 .5 1h10c1 0 1 -.5 .5 -1l-1.5 -1" />&lt;path d="M13.75 7m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />&lt;path d="M10.25 7m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>spotify&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;spotify&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-spotify">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />&lt;path d="M8 11.973c2.5 -1.473 5.5 -.973 7.5 .527" />&lt;path d="M9 15c1.5 -1 4 -1 5 .5" />&lt;path d="M7 9c2 -1 6 -2 10 .5" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>tinder&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;tinder&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-tinder">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M18.918 8.174c2.56 4.982 .501 11.656 -5.38 12.626c-7.702 1.687 -12.84 -7.716 -7.054 -13.229c.309 -.305 1.161 -1.095 1.516 -1.349c0 .528 .27 3.475 1 3.167c3 0 4 -4.222 3.587 -7.389c2.7 1.411 4.987 3.376 6.331 6.174z" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>youtube&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;youtube&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" />&lt;path d="M10 9l5 3l-5 3z" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>docs&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;docs&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-doc">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M14 3v4a1 1 0 0 0 1 1h4" />&lt;path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />&lt;path d="M5 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z" />&lt;path d="M20 16.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" />&lt;path d="M12.5 15a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1 -3 0v-3a1.5 1.5 0 0 1 1.5 -1.5z" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>linkedin&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;linkedin&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />&lt;path d="M8 11l0 5" />&lt;path d="M8 8l0 .01" />&lt;path d="M12 16l0 -5" />&lt;path d="M16 16v-3a2 2 0 0 0 -4 0" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>reddit&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;reddit&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-reddit">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M12 8c2.648 0 5.028 .826 6.675 2.14a2.5 2.5 0 0 1 2.326 4.36c0 3.59 -4.03 6.5 -9 6.5c-4.875 0 -8.845 -2.8 -9 -6.294l-1 -.206a2.5 2.5 0 0 1 2.326 -4.36c1.646 -1.313 4.026 -2.14 6.674 -2.14z" />&lt;path d="M12 8l1 -5l6 1" />&lt;path d="M19 4m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />&lt;circle cx="9" cy="13" r=".5" fill="currentColor" />&lt;circle cx="15" cy="13" r=".5" fill="currentColor" />&lt;path d="M10 17c.667 .333 1.333 .5 2 .5s1.333 -.167 2 -.5" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>steam&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;steam&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-steam">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M16.5 5a4.5 4.5 0 1 1 -.653 8.953l-4.347 3.009l0 .038a3 3 0 0 1 -2.824 3l-.176 0a3 3 0 0 1 -2.94 -2.402l-2.56 -1.098v-3.5l3.51 1.755a2.989 2.989 0 0 1 2.834 -.635l2.727 -3.818a4.5 4.5 0 0 1 4.429 -5.302z" />&lt;circle cx="16.5" cy="9.5" r="1" fill="currentColor" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>tumblr&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;tumblr&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-tumblr">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M14 21h4v-4h-4v-6h4v-4h-4v-4h-4v1a3 3 0 0 1 -3 3h-1v4h4v6a4 4 0 0 0 4 4" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>zhihu&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;zhihu&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-zhihu">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M14 6h6v12h-2l-2 2l-1 -2h-1z" />&lt;path d="M4 12h6.5" />&lt;path d="M10.5 6h-5" />&lt;path d="M6 4c-.5 2.5 -1.5 3.5 -2.5 4.5" />&lt;path d="M8 6v7c0 4.5 -2 5.5 -4 7" />&lt;path d="M11 18l-3 -5" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>email&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;email&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-mail">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />&lt;path d="M3 7l9 6l9 -6" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>mastodon&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;mastodon&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-mastodon">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M18.648 15.254c-1.816 1.763 -6.648 1.626 -6.648 1.626a18.262 18.262 0 0 1 -3.288 -.256c1.127 1.985 4.12 2.81 8.982 2.475c-1.945 2.013 -13.598 5.257 -13.668 -7.636l-.026 -1.154c0 -3.036 .023 -4.115 1.352 -5.633c1.671 -1.91 6.648 -1.666 6.648 -1.666s4.977 -.243 6.648 1.667c1.329 1.518 1.352 2.597 1.352 5.633s-.456 4.074 -1.352 4.944z" />&lt;path d="M12 11.204v-2.926c0 -1.258 -.895 -2.278 -2 -2.278s-2 1.02 -2 2.278v4.722m4 -4.722c0 -1.258 .895 -2.278 2 -2.278s2 1.02 2 2.278v4.722" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>rss&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;rss&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-rss">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />&lt;path d="M4 4a16 16 0 0 1 16 16" />&lt;path d="M4 11a9 9 0 0 1 9 9" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>teams&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;teams&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-teams">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M3 7h10v10h-10z" />&lt;path d="M6 10h4" />&lt;path d="M8 10v4" />&lt;path d="M8.104 17c.47 2.274 2.483 4 4.896 4a5 5 0 0 0 5 -5v-7h-5" />&lt;path d="M18 18a4 4 0 0 0 4 -4v-5h-4" />&lt;path d="M13.003 8.83a3 3 0 1 0 -1.833 -1.833" />&lt;path d="M15.83 8.36a2.5 2.5 0 1 0 .594 -4.117" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>twitch&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;twitch&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-twitch">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M4 5v11a1 1 0 0 0 1 1h2v4l4 -4h5.584c.266 0 .52 -.105 .707 -.293l2.415 -2.414c.187 -.188 .293 -.442 .293 -.708v-8.585a1 1 0 0 0 -1 -1h-14a1 1 0 0 0 -1 1z" />&lt;path d="M16 8l0 4" />&lt;path d="M12 8l0 4" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>facebook&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;facebook&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>medium&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;medium&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-medium">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />&lt;path d="M8 9h1l3 3l3 -3h1" />&lt;path d="M8 15l2 0" />&lt;path d="M14 15l2 0" />&lt;path d="M9 9l0 6" />&lt;path d="M15 9l0 6" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>skype&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;skype&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-skype">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M12 3a9 9 0 0 1 8.603 11.65a4.5 4.5 0 0 1 -5.953 5.953a9 9 0 0 1 -11.253 -11.253a4.5 4.5 0 0 1 5.953 -5.954a8.987 8.987 0 0 1 2.65 -.396z" />&lt;path d="M8 14.5c.5 2 2.358 2.5 4 2.5c2.905 0 4 -1.187 4 -2.5c0 -1.503 -1.927 -2.5 -4 -2.5s-4 -1 -4 -2.5c0 -1.313 1.095 -2.5 4 -2.5c1.642 0 3.5 .5 4 2.5" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>telegram&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;telegram&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-telegram">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>x&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;x&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M4 4l11.733 16h4.267l-11.733 -16z" />&lt;path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>github&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;github&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>netease&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;netease-music&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-netease-music">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M9 4c-2.93 1.346 -5 5.046 -5 8.492c0 4.508 4 7.508 8 7.508s8 -3 8 -7c0 -3.513 -3.5 -5.513 -6 -5.513s-5 1.513 -5 4.513c0 2 1.5 3 3 3s3 -1 3 -3c0 -3.513 -2 -4.508 -2 -6.515c0 -3.504 3.5 -2.603 4 -1.502" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>slack&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;slack&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-slack">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M12 12v-6a2 2 0 0 1 4 0v6m0 -2a2 2 0 1 1 2 2h-6" />&lt;path d="M12 12h6a2 2 0 0 1 0 4h-6m2 0a2 2 0 1 1 -2 2v-6" />&lt;path d="M12 12v6a2 2 0 0 1 -4 0v-6m0 2a2 2 0 1 1 -2 -2h6" />&lt;path d="M12 12h-6a2 2 0 0 1 0 -4h6m-2 0a2 2 0 1 1 2 -2v6" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>theme&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;theme-dark&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-moon">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>vk&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;vk&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-vk">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M14 19h-4a8 8 0 0 1 -8 -8v-5h4v5a4 4 0 0 0 4 4h0v-9h4v4.5l.03 0a4.531 4.531 0 0 0 3.97 -4.496h4l-.342 1.711a6.858 6.858 0 0 1 -3.658 4.789h0a5.34 5.34 0 0 1 3.566 4.111l.434 2.389h0h-4a4.531 4.531 0 0 0 -3.97 -4.496v4.5z" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>gitlab&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;gitlab&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-gitlab">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M21 14l-9 7l-9 -7l3 -11l3 7h6l3 -7z" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>notion&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;notion&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-notion">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M11 17.5v-6.5h.5l4 6h.5v-6.5" />&lt;path d="M19.077 20.071l-11.53 .887a1 1 0 0 1 -.876 -.397l-2.471 -3.294a1 1 0 0 1 -.2 -.6v-10.741a1 1 0 0 1 .923 -.997l11.389 -.876a2 2 0 0 1 1.262 .33l1.535 1.023a2 2 0 0 1 .891 1.664v12.004a1 1 0 0 1 -.923 .997z" />&lt;path d="M4.5 5.5l2.5 2.5" />&lt;path d="M20 7l-13 1v12.5" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>snapchat&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;snapchat&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-snapchat">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M16.882 7.842a4.882 4.882 0 0 0 -9.764 0c0 4.273 -.213 6.409 -4.118 8.118c2 .882 2 .882 3 3c3 0 4 2 6 2s3 -2 6 -2c1 -2.118 1 -2.118 3 -3c-3.906 -1.709 -4.118 -3.845 -4.118 -8.118zm-13.882 8.119c4 -2.118 4 -4.118 1 -7.118m17 7.118c-4 -2.118 -4 -4.118 -1 -7.118" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>theme&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;theme-light&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-sun-high">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z" />&lt;path d="M6.343 17.657l-1.414 1.414" />&lt;path d="M6.343 6.343l-1.414 -1.414" />&lt;path d="M17.657 6.343l1.414 -1.414" />&lt;path d="M17.657 17.657l1.414 1.414" />&lt;path d="M4 12h-2" />&lt;path d="M12 4v-2" />&lt;path d="M20 12h2" />&lt;path d="M12 20v2" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>weibo&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;weibo&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-weibo">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M19 14.127c0 3.073 -3.502 5.873 -8 5.873c-4.126 0 -8 -2.224 -8 -5.565c0 -1.78 .984 -3.737 2.7 -5.567c2.362 -2.51 5.193 -3.687 6.551 -2.238c.415 .44 .752 1.39 .749 2.062c2 -1.615 4.308 .387 3.5 2.693c1.26 .557 2.5 .538 2.5 2.742z" />&lt;path d="M15 4h1a5 5 0 0 1 5 5v1" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>instagram&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;instagram&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />&lt;path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />&lt;path d="M16.5 7.5l0 .01" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>patreon&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;patreon&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-patreon">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M20 8.408c-.003 -2.299 -1.746 -4.182 -3.79 -4.862c-2.54 -.844 -5.888 -.722 -8.312 .453c-2.939 1.425 -3.862 4.545 -3.896 7.656c-.028 2.559 .22 9.297 3.92 9.345c2.75 .036 3.159 -3.603 4.43 -5.356c.906 -1.247 2.071 -1.599 3.506 -1.963c2.465 -.627 4.146 -2.626 4.142 -5.273z" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>soundcloud&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;soundcloud&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-soundcloud">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M17 11h1c1.38 0 3 1.274 3 3c0 1.657 -1.5 3 -3 3l-6 0v-10c3 0 4.5 1.5 5 4z" />&lt;path d="M9 8l0 9" />&lt;path d="M6 17l0 -7" />&lt;path d="M3 16l0 -2" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>tiktok&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;tiktok&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-tiktok">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>x&lt;/td>
+&lt;td>&lt;code>{{&amp;lt; icon &amp;quot;x&amp;quot; &amp;gt;}}&lt;/code>&lt;/td>
+&lt;td>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x">&lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>&lt;path d="M4 4l11.733 16h4.267l-11.733 -16z" />&lt;path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />&lt;/svg>
+&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Demo - Support for code, pre, kbd, mark</title><link>/_drafts/demo-code-pre-kbd-mark/</link><pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate><author>me@dotmindblog.io (Dotmind it)</author><guid>/_drafts/demo-code-pre-kbd-mark/</guid><description>&lt;h2 id="individual-support-for-code-pre-kbd-mark" >
+&lt;div>
+&lt;a href="#individual-support-for-code-pre-kbd-mark">
+#
+&lt;/a>
+Individual support for code, pre, kbd, mark
+&lt;/div>
+&lt;/h2>
+&lt;p>&lt;code>code&lt;/code> &lt;pre>pre&lt;/pre>&lt;/p>
+&lt;p>&lt;kbd>CRTL&lt;/kbd> + &lt;kbd>K&lt;/kbd> + &lt;kbd>B&lt;/kbd> + &lt;kbd>D&lt;/kbd>&lt;/p>
+&lt;p>Feel free to switch between the light and dark themes to see the rendering differences.&lt;/p>
+&lt;h3 id="support-for-code-tag" >
+&lt;div>
+&lt;a href="#support-for-code-tag">
+##
+&lt;/a>
+Support for &amp;lt;code&amp;gt; tag
+&lt;/div>
+&lt;/h3>
+&lt;p>&lt;code>Direct Code&lt;/code>&lt;/p>
+&lt;p>&lt;code>A verrrrrryyyyy llloooonnnggg coooodeeee&lt;/code>&lt;/p>
+&lt;p>&lt;code>code&lt;/code> &lt;code>is&lt;/code> &lt;code>here&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-plain" data-lang="plain">&lt;span style="display:flex;">&lt;span>multiline
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>code
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>here
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-typescript" data-lang="typescript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#737994;font-style:italic">// ```typescript
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#737994;font-style:italic">&lt;/span>&lt;span style="color:#ca9ee6">interface&lt;/span> User {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> id: &lt;span style="color:#e78284">number&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> firstName: &lt;span style="color:#e78284">string&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> lastName: &lt;span style="color:#e78284">string&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> role: &lt;span style="color:#e78284">string&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-typescript" data-lang="typescript">&lt;span style="display:flex;">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1&lt;/span>&lt;span>&lt;span style="color:#737994;font-style:italic">// ```typescript {linenos=inline}
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2&lt;/span>&lt;span>&lt;span style="color:#737994;font-style:italic">&lt;/span>&lt;span style="color:#e78284">function&lt;/span> updateUser(id: &lt;span style="color:#e78284">number&lt;/span>, update: &lt;span style="color:#e78284">Partial&lt;/span>&amp;lt;&lt;span style="color:#ca9ee6">User&lt;/span>&amp;gt;) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3&lt;/span>&lt;span> &lt;span style="color:#ca9ee6">const&lt;/span> user &lt;span style="color:#99d1db;font-weight:bold">=&lt;/span> getUser(id)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">4&lt;/span>&lt;span> &lt;span style="color:#ca9ee6">const&lt;/span> newUser &lt;span style="color:#99d1db;font-weight:bold">=&lt;/span> { ...user, ...update }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">5&lt;/span>&lt;span> saveUser(id, newUser)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">6&lt;/span>&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;div style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-typescript" data-lang="typescript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#737994;font-style:italic">// ```typescript {linenos=true}
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#737994;font-style:italic">&lt;/span>&lt;span style="color:#e78284">function&lt;/span> updateUser(id: &lt;span style="color:#e78284">number&lt;/span>, update: &lt;span style="color:#e78284">Partial&lt;/span>&amp;lt;&lt;span style="color:#ca9ee6">User&lt;/span>&amp;gt;) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ca9ee6">const&lt;/span> user &lt;span style="color:#99d1db;font-weight:bold">=&lt;/span> getUser(id)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ca9ee6">const&lt;/span> newUser &lt;span style="color:#99d1db;font-weight:bold">=&lt;/span> { ...user, ...update }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> saveUser(id, newUser)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="support-for-pre-tag" >
+&lt;div>
+&lt;a href="#support-for-pre-tag">
+##
+&lt;/a>
+Support for &amp;lt;pre&amp;gt; tag
+&lt;/div>
+&lt;/h3>
+&lt;pre>pre text&lt;/pre>
+&lt;pre>pre text&lt;/pre>
+&lt;pre>pre text&lt;/pre>
+&lt;h3 id="support-for-kbd-tag" >
+&lt;div>
+&lt;a href="#support-for-kbd-tag">
+##
+&lt;/a>
+Support for &amp;lt;kbd&amp;gt; tag
+&lt;/div>
+&lt;/h3>
+&lt;p>Press &lt;kbd>CTRL&lt;/kbd> + &lt;kbd>C&lt;/kbd> to copy text (Windows).&lt;/p>
+&lt;p>Press &lt;kbd>CMD&lt;/kbd> + &lt;kbd>C&lt;/kbd> to copy text (Mac OS).&lt;/p>
+&lt;p>Press &lt;kbd>CTRL&lt;/kbd>+&lt;kbd>ALT&lt;/kbd>+&lt;kbd>Delete&lt;/kbd> to end the session.&lt;/p>
+&lt;h3 id="support-for-mark-tag" >
+&lt;div>
+&lt;a href="#support-for-mark-tag">
+##
+&lt;/a>
+Support for &amp;lt;mark&amp;gt; tag
+&lt;/div>
+&lt;/h3>
+&lt;p>Most &lt;mark>salamanders&lt;/mark> are nocturnal, and hunt for insects, worms, and other small creatures.
+Most &lt;mark>salamanders&lt;/mark> are nocturnal, and hunt for insects, worms, and other small creatures.&lt;/p>
+&lt;p>Most &lt;mark>salamanders&lt;/mark> are nocturnal, and hunt for insects, worms, and other small creatures.&lt;/p>
+&lt;h3 id="support-for-kbd-in-pre" >
+&lt;div>
+&lt;a href="#support-for-kbd-in-pre">
+##
+&lt;/a>
+Support for &amp;lt;kbd&amp;gt; in &amp;lt;pre&amp;gt;
+&lt;/div>
+&lt;/h3>
+&lt;pre>This is a &lt;kbd>KBD&lt;/kbd> inside a pre. &lt;/pre>
+&lt;h3 id="support-for-kbd-in-code--should-not-be-used" >
+&lt;div>
+&lt;a href="#support-for-kbd-in-code--should-not-be-used">
+##
+&lt;/a>
+Support for &amp;lt;kbd&amp;gt; in &amp;lt;code&amp;gt; (❌ Should not be used)
+&lt;/div>
+&lt;/h3>
+&lt;p>&lt;code>This is a &lt;kbd>KBD&lt;/kbd> inside a code. &lt;/code>&lt;/p>
+&lt;h3 id="support-for-code-in-pre--should-not-be-used" >
+&lt;div>
+&lt;a href="#support-for-code-in-pre--should-not-be-used">
+##
+&lt;/a>
+Support for &amp;lt;code&amp;gt; in &amp;lt;pre&amp;gt; (❌ Should not be used)
+&lt;/div>
+&lt;/h3>
+&lt;pre>This is a &lt;code>CODE&lt;/code> inside a pre. &lt;/pre>
+&lt;h3 id="support-for-code-in-kbd--should-not-be-used" >
+&lt;div>
+&lt;a href="#support-for-code-in-kbd--should-not-be-used">
+##
+&lt;/a>
+Support for &amp;lt;code&amp;gt; in &amp;lt;kbd&amp;gt; (❌ Should not be used)
+&lt;/div>
+&lt;/h3>
+&lt;p>&lt;kbd>This is a &lt;code>CODE&lt;/code> inside a kbd. &lt;/kbd>&lt;/p>
+&lt;h3 id="support-for-pre-in-kbd--should-not-be-used" >
+&lt;div>
+&lt;a href="#support-for-pre-in-kbd--should-not-be-used">
+##
+&lt;/a>
+Support for &amp;lt;pre&amp;gt; in &amp;lt;kbd&amp;gt; (❌ Should not be used)
+&lt;/div>
+&lt;/h3>
+&lt;p>&lt;kbd>This is a &lt;pre>PRE&lt;/pre> inside a kbd. &lt;/kbd>&lt;/p>
+&lt;h3 id="support-for-pre-in-code--should-not-be-used" >
+&lt;div>
+&lt;a href="#support-for-pre-in-code--should-not-be-used">
+##
+&lt;/a>
+Support for &amp;lt;pre&amp;gt; in &amp;lt;code&amp;gt; (❌ Should not be used)
+&lt;/div>
+&lt;/h3>
+&lt;p>&lt;code>This is a &lt;pre>PRE&lt;/pre> inside a code. &lt;/code>&lt;/p>
+&lt;h3 id="support-for-mark-in-kbd" >
+&lt;div>
+&lt;a href="#support-for-mark-in-kbd">
+##
+&lt;/a>
+Support for &amp;lt;mark&amp;gt; in &amp;lt;kbd&amp;gt;
+&lt;/div>
+&lt;/h3>
+&lt;p>&lt;kbd>This is a &lt;mark>MARK&lt;/mark> inside a kbd. &lt;/kbd>&lt;/p>
+&lt;h3 id="support-for-mark-in-code" >
+&lt;div>
+&lt;a href="#support-for-mark-in-code">
+##
+&lt;/a>
+Support for &amp;lt;mark&amp;gt; in &amp;lt;code&amp;gt;
+&lt;/div>
+&lt;/h3>
+&lt;p>&lt;code>This is a &lt;mark>MARK&lt;/mark> inside a code. &lt;/code>&lt;/p>
+&lt;h3 id="support-for-mark-in-pre" >
+&lt;div>
+&lt;a href="#support-for-mark-in-pre">
+##
+&lt;/a>
+Support for &amp;lt;mark&amp;gt; in &amp;lt;pre&amp;gt;
+&lt;/div>
+&lt;/h3>
+&lt;pre>This is a &lt;mark>MARK&lt;/mark> inside a pre. &lt;/pre></description></item><item><title>Demo - Multiline Codes</title><link>/_drafts/demo-multiline-codes/</link><pubDate>Tue, 23 Apr 2024 00:00:00 +0000</pubDate><author>me@dotmindblog.io (Dotmind it)</author><guid>/_drafts/demo-multiline-codes/</guid><description>&lt;div class="highlight">&lt;div style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">&lt;code>&lt;span style="background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">199
+&lt;/span>&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">200
+&lt;/span>&lt;span style="background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">201
+&lt;/span>&lt;/span>&lt;span style="background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">202
+&lt;/span>&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">203
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">204
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">205
+&lt;/span>&lt;span style="background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">206
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">&lt;code class="language-c" data-lang="c">&lt;span style="display:flex; background-color:#51576d">&lt;span>&lt;span style="color:#e78284">int&lt;/span> &lt;span style="color:#8caaee">main&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e78284">int&lt;/span> a &lt;span style="color:#99d1db;font-weight:bold">=&lt;/span> &lt;span style="color:#ef9f76">1&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span> &lt;span style="color:#ca9ee6">if&lt;/span> (a &lt;span style="color:#99d1db;font-weight:bold">==&lt;/span> &lt;span style="color:#ef9f76">999&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span> &lt;span style="color:#737994;font-style:italic">// This is a very long comment to test the `overflow` attribute defined in CSS. The `overflow` property in CSS deals with the content when it overflows the block-level container. It can take the following values: `visible` (default), `hidden`, `scroll`, `auto`, and `clip`.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#737994;font-style:italic">&lt;/span> &lt;span style="color:#737994;font-style:italic">// If `visible` is specified, the content is not clipped and can render outside the container. If `hidden` is specified, the content is clipped and the rest of the content will be invisible. If `scroll` is specified, the browser should provide a scrolling mechanism for the user to access the clipped content.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#737994;font-style:italic">&lt;/span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ca9ee6">return&lt;/span> &lt;span style="color:#ef9f76">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="truth-table" >
+&lt;div>
+&lt;a href="#truth-table">
+#
+&lt;/a>
+Truth Table
+&lt;/div>
+&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Item&lt;/th>
+&lt;th>Line Numbers&lt;/th>
+&lt;th>Highlight Lines&lt;/th>
+&lt;th>Anchor Lines&lt;/th>
+&lt;th>Wide CodeBlock Scroll&lt;/th>
+&lt;th>Supported&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>Full Feature Support&lt;/strong>&lt;/td>
+&lt;td>ture&lt;/td>
+&lt;td>true&lt;/td>
+&lt;td>true&lt;/td>
+&lt;td>✅&lt;/td>
+&lt;td>✅&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>table&lt;/td>
+&lt;td>true&lt;/td>
+&lt;td>true&lt;/td>
+&lt;td>✅&lt;/td>
+&lt;td>✅&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>table&lt;/td>
+&lt;td>true&lt;/td>
+&lt;td>false&lt;/td>
+&lt;td>✅&lt;/td>
+&lt;td>✅&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>inline&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>✅&lt;/td>
+&lt;td>✅&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>ture&lt;/td>
+&lt;td>true&lt;/td>
+&lt;td>false&lt;/td>
+&lt;td>✅&lt;/td>
+&lt;td>✅&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>ture&lt;/td>
+&lt;td>false&lt;/td>
+&lt;td>false&lt;/td>
+&lt;td>✅&lt;/td>
+&lt;td>✅&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>false&lt;/td>
+&lt;td>true&lt;/td>
+&lt;td>/&lt;/td>
+&lt;td>✅&lt;/td>
+&lt;td>✅&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Basic Support&lt;/td>
+&lt;td>false&lt;/td>
+&lt;td>false&lt;/td>
+&lt;td>/&lt;/td>
+&lt;td>✅&lt;/td>
+&lt;td>✅&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Note: Anubis2 does not support &lt;code>hl_inline=true&lt;/code>&lt;/p>
+&lt;h2 id="line-numbers-highlight-lines" >
+&lt;div>
+&lt;a href="#line-numbers-highlight-lines">
+#
+&lt;/a>
+Line Numbers, Highlight Lines
+&lt;/div>
+&lt;/h2>
+&lt;h3 id="line-number-table-and-highlight-lines" >
+&lt;div>
+&lt;a href="#line-number-table-and-highlight-lines">
+##
+&lt;/a>
+Line Number (table) and Highlight Lines
+&lt;/div>
+&lt;/h3>
+&lt;p>&lt;code>linenos=table&lt;/code> will give copy-and-paste friendly code blocks.&lt;/p>
+&lt;pre>&lt;code>```c {linenos=table, hl_lines=[1,&amp;quot;3-4&amp;quot;,8], linenostart=199}
+// codes ...
+```
+&lt;/code>&lt;/pre>
+&lt;div class="highlight">&lt;div style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">&lt;code>&lt;span style="background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">199
+&lt;/span>&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">200
+&lt;/span>&lt;span style="background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">201
+&lt;/span>&lt;/span>&lt;span style="background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">202
+&lt;/span>&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">203
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">204
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">205
+&lt;/span>&lt;span style="background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">206
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">&lt;code class="language-c" data-lang="c">&lt;span style="display:flex; background-color:#51576d">&lt;span>&lt;span style="color:#e78284">int&lt;/span> &lt;span style="color:#8caaee">main&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e78284">int&lt;/span> a &lt;span style="color:#99d1db;font-weight:bold">=&lt;/span> &lt;span style="color:#ef9f76">1&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span> &lt;span style="color:#ca9ee6">if&lt;/span> (a &lt;span style="color:#99d1db;font-weight:bold">==&lt;/span> &lt;span style="color:#ef9f76">999&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span> &lt;span style="color:#737994;font-style:italic">// This is a very long comment to test the `overflow` attribute defined in CSS. The `overflow` property in CSS deals with the content when it overflows the block-level container. It can take the following values: `visible` (default), `hidden`, `scroll`, `auto`, and `clip`.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#737994;font-style:italic">&lt;/span> &lt;span style="color:#737994;font-style:italic">// If `visible` is specified, the content is not clipped and can render outside the container. If `hidden` is specified, the content is clipped and the rest of the content will be invisible. If `scroll` is specified, the browser should provide a scrolling mechanism for the user to access the clipped content.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#737994;font-style:italic">&lt;/span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ca9ee6">return&lt;/span> &lt;span style="color:#ef9f76">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="line-number-true-and-highlight-lines" >
+&lt;div>
+&lt;a href="#line-number-true-and-highlight-lines">
+##
+&lt;/a>
+Line Number (true) and Highlight Lines
+&lt;/div>
+&lt;/h3>
+&lt;pre>&lt;code>```c {linenos=true, hl_lines=[1,&amp;quot;3-4&amp;quot;,8], linenostart=1}
+// codes ...
+```
+&lt;/code>&lt;/pre>
+&lt;div class="highlight">&lt;div style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">&lt;code>&lt;span style="background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1
+&lt;/span>&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2
+&lt;/span>&lt;span style="background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3
+&lt;/span>&lt;/span>&lt;span style="background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">4
+&lt;/span>&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">6
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">7
+&lt;/span>&lt;span style="background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">8
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">&lt;code class="language-c" data-lang="c">&lt;span style="display:flex; background-color:#51576d">&lt;span>&lt;span style="color:#e78284">int&lt;/span> &lt;span style="color:#8caaee">main&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e78284">int&lt;/span> a &lt;span style="color:#99d1db;font-weight:bold">=&lt;/span> &lt;span style="color:#ef9f76">1&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span> &lt;span style="color:#ca9ee6">if&lt;/span> (a &lt;span style="color:#99d1db;font-weight:bold">==&lt;/span> &lt;span style="color:#ef9f76">999&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span> &lt;span style="color:#737994;font-style:italic">// This is a very long comment to test the `overflow` attribute defined in CSS. The `overflow` property in CSS deals with the content when it overflows the block-level container. It can take the following values: `visible` (default), `hidden`, `scroll`, `auto`, and `clip`.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#737994;font-style:italic">&lt;/span> &lt;span style="color:#737994;font-style:italic">// If `visible` is specified, the content is not clipped and can render outside the container. If `hidden` is specified, the content is clipped and the rest of the content will be invisible. If `scroll` is specified, the browser should provide a scrolling mechanism for the user to access the clipped content.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#737994;font-style:italic">&lt;/span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ca9ee6">return&lt;/span> &lt;span style="color:#ef9f76">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="line-number-inline-and-highlight-lines" >
+&lt;div>
+&lt;a href="#line-number-inline-and-highlight-lines">
+##
+&lt;/a>
+Line Number (inline) and Highlight Lines
+&lt;/div>
+&lt;/h3>
+&lt;pre>&lt;code>```c {linenos=inline, hl_lines=[1,&amp;quot;3-4&amp;quot;,8], linenostart=1}
+// codes ...
+```
+&lt;/code>&lt;/pre>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">&lt;code class="language-c" data-lang="c">&lt;span style="display:flex; background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1&lt;/span>&lt;span>&lt;span style="color:#e78284">int&lt;/span> &lt;span style="color:#8caaee">main&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2&lt;/span>&lt;span> &lt;span style="color:#e78284">int&lt;/span> a &lt;span style="color:#99d1db;font-weight:bold">=&lt;/span> &lt;span style="color:#ef9f76">1&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3&lt;/span>&lt;span> &lt;span style="color:#ca9ee6">if&lt;/span> (a &lt;span style="color:#99d1db;font-weight:bold">==&lt;/span> &lt;span style="color:#ef9f76">999&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">4&lt;/span>&lt;span> &lt;span style="color:#737994;font-style:italic">// This is a very long comment to test the `overflow` attribute defined in CSS. The `overflow` property in CSS deals with the content when it overflows the block-level container. It can take the following values: `visible` (default), `hidden`, `scroll`, `auto`, and `clip`.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">5&lt;/span>&lt;span>&lt;span style="color:#737994;font-style:italic">&lt;/span> &lt;span style="color:#737994;font-style:italic">// If `visible` is specified, the content is not clipped and can render outside the container. If `hidden` is specified, the content is clipped and the rest of the content will be invisible. If `scroll` is specified, the browser should provide a scrolling mechanism for the user to access the clipped content.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">6&lt;/span>&lt;span>&lt;span style="color:#737994;font-style:italic">&lt;/span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">7&lt;/span>&lt;span> &lt;span style="color:#ca9ee6">return&lt;/span> &lt;span style="color:#ef9f76">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">8&lt;/span>&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="line-number-false-and-highlight-lines" >
+&lt;div>
+&lt;a href="#line-number-false-and-highlight-lines">
+##
+&lt;/a>
+Line Number (false) and Highlight Lines
+&lt;/div>
+&lt;/h3>
+&lt;p>&lt;code>linenos=false&lt;/code> will turn off line numbers if it’s configured to be on in site configuration.&lt;/p>
+&lt;pre>&lt;code>```c {linenos=false, hl_lines=[1,&amp;quot;3-4&amp;quot;,8]}
+// codes ...
+```
+&lt;/code>&lt;/pre>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">&lt;code class="language-c" data-lang="c">&lt;span style="display:flex; background-color:#51576d">&lt;span>&lt;span style="color:#e78284">int&lt;/span> &lt;span style="color:#8caaee">main&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e78284">int&lt;/span> a &lt;span style="color:#99d1db;font-weight:bold">=&lt;/span> &lt;span style="color:#ef9f76">1&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span> &lt;span style="color:#ca9ee6">if&lt;/span> (a &lt;span style="color:#99d1db;font-weight:bold">==&lt;/span> &lt;span style="color:#ef9f76">999&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span> &lt;span style="color:#737994;font-style:italic">// This is a very long comment to test the `overflow` attribute defined in CSS. The `overflow` property in CSS deals with the content when it overflows the block-level container. It can take the following values: `visible` (default), `hidden`, `scroll`, `auto`, and `clip`.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#737994;font-style:italic">&lt;/span> &lt;span style="color:#737994;font-style:italic">// If `visible` is specified, the content is not clipped and can render outside the container. If `hidden` is specified, the content is clipped and the rest of the content will be invisible. If `scroll` is specified, the browser should provide a scrolling mechanism for the user to access the clipped content.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#737994;font-style:italic">&lt;/span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ca9ee6">return&lt;/span> &lt;span style="color:#ef9f76">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="anchor-inline-shortcode" >
+&lt;div>
+&lt;a href="#anchor-inline-shortcode">
+#
+&lt;/a>
+Anchor, Inline, Shortcode
+&lt;/div>
+&lt;/h2>
+&lt;h3 id="line-number-table-and-highlight-lines-and-anchor" >
+&lt;div>
+&lt;a href="#line-number-table-and-highlight-lines-and-anchor">
+##
+&lt;/a>
+Line Number (table) and Highlight Lines and Anchor
+&lt;/div>
+&lt;/h3>
+&lt;p>Now you can click on the line number to get a link to that line.&lt;/p>
+&lt;pre>&lt;code>```c {linenos=table, hl_lines=[1,&amp;quot;3-4&amp;quot;,8], linenostart=199, anchorlinenos=true}
+// codes ...
+```
+&lt;/code>&lt;/pre>
+&lt;div class="highlight">&lt;div style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">&lt;code>&lt;span style="background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7" id="hl-5-199">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-199">199&lt;/a>
+&lt;/span>&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7" id="hl-5-200">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-200">200&lt;/a>
+&lt;/span>&lt;span style="background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7" id="hl-5-201">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-201">201&lt;/a>
+&lt;/span>&lt;/span>&lt;span style="background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7" id="hl-5-202">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-202">202&lt;/a>
+&lt;/span>&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7" id="hl-5-203">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-203">203&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7" id="hl-5-204">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-204">204&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7" id="hl-5-205">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-205">205&lt;/a>
+&lt;/span>&lt;span style="background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7" id="hl-5-206">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-206">206&lt;/a>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">&lt;code class="language-c" data-lang="c">&lt;span style="display:flex; background-color:#51576d">&lt;span>&lt;span style="color:#e78284">int&lt;/span> &lt;span style="color:#8caaee">main&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e78284">int&lt;/span> a &lt;span style="color:#99d1db;font-weight:bold">=&lt;/span> &lt;span style="color:#ef9f76">1&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span> &lt;span style="color:#ca9ee6">if&lt;/span> (a &lt;span style="color:#99d1db;font-weight:bold">==&lt;/span> &lt;span style="color:#ef9f76">999&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span> &lt;span style="color:#737994;font-style:italic">// This is a very long comment to test the `overflow` attribute defined in CSS. The `overflow` property in CSS deals with the content when it overflows the block-level container. It can take the following values: `visible` (default), `hidden`, `scroll`, `auto`, and `clip`.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#737994;font-style:italic">&lt;/span> &lt;span style="color:#737994;font-style:italic">// If `visible` is specified, the content is not clipped and can render outside the container. If `hidden` is specified, the content is clipped and the rest of the content will be invisible. If `scroll` is specified, the browser should provide a scrolling mechanism for the user to access the clipped content.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#737994;font-style:italic">&lt;/span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ca9ee6">return&lt;/span> &lt;span style="color:#ef9f76">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="highlight-inline-are-not-supported-by-anubis2-" >
+&lt;div>
+&lt;a href="#highlight-inline-are-not-supported-by-anubis2-">
+##
+&lt;/a>
+Highlight Inline are not supported by Anubis2 ❌
+&lt;/div>
+&lt;/h3>
+&lt;pre>&lt;code>```c {linenos=true,hl_lines=[1,3,5], hl_inline=true}
+// codes ...
+```
+&lt;/code>&lt;/pre>
+&lt;div style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;span style="background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1
+&lt;/span>&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2
+&lt;/span>&lt;span style="background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3
+&lt;/span>&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">4
+&lt;/span>&lt;span style="background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">5
+&lt;/span>&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">6
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">7
+&lt;/span>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;code class="code-inline language-c">&lt;span style="color:#e78284">int&lt;/span> &lt;span style="color:#8caaee">main&lt;/span>() {
+&lt;span style="color:#e78284">int&lt;/span> a &lt;span style="color:#99d1db;font-weight:bold">=&lt;/span> &lt;span style="color:#ef9f76">1&lt;/span>;
+&lt;span style="color:#ca9ee6">if&lt;/span> (a &lt;span style="color:#99d1db;font-weight:bold">==&lt;/span> &lt;span style="color:#ef9f76">999&lt;/span>)
+&lt;span style="color:#737994;font-style:italic">// If `visible` is specified, the content is not clipped and can render outside the container. If `hidden` is specified, the content is clipped and the rest of the content will be invisible. If `scroll` is specified, the browser should provide a scrolling mechanism for the user to access the clipped content.
+&lt;/span>&lt;span style="color:#737994;font-style:italic">&lt;/span> }
+&lt;span style="color:#ca9ee6">return&lt;/span> &lt;span style="color:#ef9f76">0&lt;/span>;
+}
+&lt;/code>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;!--
+Those are trash codes.
+### Highlight shortcode, with Line Number (table), with Highlight Lines and Anchor
+{{&lt; highlight c "linenos=table,hl_lines=1 3-4 8, anchorlinenos=true" >}}
+// codes
+{{&lt; /highlight >}}
+&lt;div class="highlight">&lt;div style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">&lt;code>&lt;span style="background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7" id="1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#1">1&lt;/a>
+&lt;/span>&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7" id="2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#2">2&lt;/a>
+&lt;/span>&lt;span style="background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7" id="3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#3">3&lt;/a>
+&lt;/span>&lt;/span>&lt;span style="background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7" id="4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#4">4&lt;/a>
+&lt;/span>&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7" id="5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#5">5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7" id="6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#6">6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7" id="7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#7">7&lt;/a>
+&lt;/span>&lt;span style="background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7" id="8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#8">8&lt;/a>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">&lt;code class="language-c" data-lang="c">&lt;span style="display:flex; background-color:#51576d">&lt;span>&lt;span style="color:#e78284">int&lt;/span> &lt;span style="color:#8caaee">main&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e78284">int&lt;/span> a &lt;span style="color:#99d1db;font-weight:bold">=&lt;/span> &lt;span style="color:#ef9f76">1&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span>&lt;span style="color:#ca9ee6">if&lt;/span> (a &lt;span style="color:#99d1db;font-weight:bold">==&lt;/span> &lt;span style="color:#ef9f76">999&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span>&lt;span style="color:#737994;font-style:italic">// This is a very long comment to test the `overflow` attribute defined in CSS. The `overflow` property in CSS deals with the content when it overflows the block-level container. It can take the following values: `visible` (default), `hidden`, `scroll`, `auto`, and `clip`.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#737994;font-style:italic">// If `visible` is specified, the content is not clipped and can render outside the container. If `hidden` is specified, the content is clipped and the rest of the content will be invisible. If `scroll` is specified, the browser should provide a scrolling mechanism for the user to access the clipped content.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#737994;font-style:italic">&lt;/span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ca9ee6">return&lt;/span> &lt;span style="color:#ef9f76">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+### Highlight shortcode, with Line Number (inline), with Highlight Lines and Anchor
+{{&lt; highlight c "linenos=inline,hl_lines=1 3-4 8, anchorlinenos=true" >}}
+// codes
+{{&lt; /highlight >}}
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">&lt;code class="language-c" data-lang="c">&lt;span style="display:flex; background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7" id="1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#1">1&lt;/a>&lt;/span>&lt;span>&lt;span style="color:#e78284">int&lt;/span> &lt;span style="color:#8caaee">main&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7" id="2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#2">2&lt;/a>&lt;/span>&lt;span>&lt;span style="color:#e78284">int&lt;/span> a &lt;span style="color:#99d1db;font-weight:bold">=&lt;/span> &lt;span style="color:#ef9f76">1&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7" id="3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#3">3&lt;/a>&lt;/span>&lt;span>&lt;span style="color:#ca9ee6">if&lt;/span> (a &lt;span style="color:#99d1db;font-weight:bold">==&lt;/span> &lt;span style="color:#ef9f76">999&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7" id="4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#4">4&lt;/a>&lt;/span>&lt;span>&lt;span style="color:#737994;font-style:italic">// This is a very long comment to test the `overflow` attribute defined in CSS. The `overflow` property in CSS deals with the content when it overflows the block-level container. It can take the following values: `visible` (default), `hidden`, `scroll`, `auto`, and `clip`.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7" id="5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#5">5&lt;/a>&lt;/span>&lt;span>&lt;span style="color:#737994;font-style:italic">// If `visible` is specified, the content is not clipped and can render outside the container. If `hidden` is specified, the content is clipped and the rest of the content will be invisible. If `scroll` is specified, the browser should provide a scrolling mechanism for the user to access the clipped content.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7" id="6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#6">6&lt;/a>&lt;/span>&lt;span>&lt;span style="color:#737994;font-style:italic">&lt;/span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7" id="7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#7">7&lt;/a>&lt;/span>&lt;span>&lt;span style="color:#ca9ee6">return&lt;/span> &lt;span style="color:#ef9f76">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7" id="8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#8">8&lt;/a>&lt;/span>&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+### Highlight shortcode, No Line Number, With Highlight Lines and Anchor
+{{&lt; highlight c "linenos=false,hl_lines=1 3-4 8, anchorlinenos=true" >}}
+// codes
+{{&lt; /highlight >}}
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">&lt;code class="language-c" data-lang="c">&lt;span style="display:flex; background-color:#51576d">&lt;span>&lt;span style="color:#e78284">int&lt;/span> &lt;span style="color:#8caaee">main&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e78284">int&lt;/span> a &lt;span style="color:#99d1db;font-weight:bold">=&lt;/span> &lt;span style="color:#ef9f76">1&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span>&lt;span style="color:#ca9ee6">if&lt;/span> (a &lt;span style="color:#99d1db;font-weight:bold">==&lt;/span> &lt;span style="color:#ef9f76">999&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span>&lt;span style="color:#737994;font-style:italic">// This is a very long comment to test the `overflow` attribute defined in CSS. The `overflow` property in CSS deals with the content when it overflows the block-level container. It can take the following values: `visible` (default), `hidden`, `scroll`, `auto`, and `clip`.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#737994;font-style:italic">// If `visible` is specified, the content is not clipped and can render outside the container. If `hidden` is specified, the content is clipped and the rest of the content will be invisible. If `scroll` is specified, the browser should provide a scrolling mechanism for the user to access the clipped content.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#737994;font-style:italic">&lt;/span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ca9ee6">return&lt;/span> &lt;span style="color:#ef9f76">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#51576d">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div> --></description></item><item><title>About</title><link>/about/</link><pubDate>Tue, 09 Apr 2024 00:00:00 +0000</pubDate><author>me@dotmindblog.io (Dotmind it)</author><guid>/about/</guid><description>&lt;p>&lt;a href="https://dotmindblog.vercel.app">Dotmind&lt;/a> it&amp;rsquo;s a simple, minimalist blog to keep the essentials.&lt;/p></description></item><item><title>Advanced Style</title><link>/_drafts/advancedstyle/</link><pubDate>Tue, 09 Apr 2024 00:00:00 +0000</pubDate><author>me@dotmindblog.io (Dotmind it)</author><guid>/_drafts/advancedstyle/</guid><description>&lt;p>There are examples of how to use custom &lt;code>global-wise style&lt;/code> or &lt;code>page-wise style&lt;/code>.&lt;/p>
+&lt;div class="anubis-custom-style">
+The custom &lt;code>.css&lt;/code> &lt;code>.scss&lt;/code> &lt;code>.sass&lt;/code> file should be placed in &lt;code>assets/&lt;/code> folder. (instead of &lt;code>static/&lt;/code>)
+&lt;/div>
+&lt;junyi>
+This page is affected by &lt;code>assets/css/custom1.scss&lt;/code> and &lt;code>assets/css/custom2.css&lt;/code> and &lt;code>advanced-style/style.css&lt;/code>
+&lt;/junyi>
+&lt;p>&lt;junyi>&lt;code>advanced-style/style.css&lt;/code> affects only the current page.&lt;/junyi>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#ca9ee6">style&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> @&lt;span style="color:#ca9ee6">import&lt;/span> &lt;span style="color:#a6d189">&amp;#39;style.css&amp;#39;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#ca9ee6">style&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;style>
+@import 'style.css';
+&lt;/style>
+&lt;p>&lt;junyi>&lt;code>assets/css/custom1.scss&lt;/code> and &lt;code>assets/css/custom2.scss&lt;/code> will have global effect.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-scss" data-lang="scss">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#737994;font-style:italic">// assets/css/custom2.css
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#737994;font-style:italic">&lt;/span>&lt;span style="color:#e5c890">.anubis-custom-style&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8caaee">background-color&lt;/span>&lt;span style="color:#99d1db;font-weight:bold">:&lt;/span> &lt;span style="color:#e5c890">pink&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8caaee">color&lt;/span>&lt;span style="color:#99d1db;font-weight:bold">:&lt;/span> &lt;span style="color:#e5c890">black&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8caaee">padding&lt;/span>&lt;span style="color:#99d1db;font-weight:bold">:&lt;/span> &lt;span style="color:#ef9f76">1&lt;/span>&lt;span style="color:#e78284">em&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8caaee">border-radius&lt;/span>&lt;span style="color:#99d1db;font-weight:bold">:&lt;/span> &lt;span style="color:#ef9f76">0&lt;/span>&lt;span style="color:#ef9f76">.3&lt;/span>&lt;span style="color:#e78284">em&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8caaee">border&lt;/span>&lt;span style="color:#99d1db;font-weight:bold">:&lt;/span> &lt;span style="color:#ef9f76">1&lt;/span>&lt;span style="color:#e78284">px&lt;/span> &lt;span style="color:#81c8be">solid&lt;/span> &lt;span style="color:#e5c890">black&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-scss" data-lang="scss">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#737994;font-style:italic">// assets/css/foundation/_vars.scss
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#737994;font-style:italic">&lt;/span>&lt;span style="color:#f2d5cf">$font-stack&lt;/span>&lt;span style="color:#99d1db;font-weight:bold">:&lt;/span> Helvetica&lt;span style="color:#99d1db;font-weight:bold">,&lt;/span> &lt;span style="color:#81c8be">sans-serif&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f2d5cf">$primary-color&lt;/span>&lt;span style="color:#99d1db;font-weight:bold">:&lt;/span> &lt;span style="color:#8caaee">rgb&lt;/span>(&lt;span style="color:#ef9f76">255&lt;/span>&lt;span style="color:#99d1db;font-weight:bold">,&lt;/span> &lt;span style="color:#ef9f76">255&lt;/span>&lt;span style="color:#99d1db;font-weight:bold">,&lt;/span> &lt;span style="color:#ef9f76">168&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f2d5cf">$background-color&lt;/span>&lt;span style="color:#99d1db;font-weight:bold">:&lt;/span> &lt;span style="color:#8caaee">rgb&lt;/span>(&lt;span style="color:#ef9f76">85&lt;/span>&lt;span style="color:#99d1db;font-weight:bold">,&lt;/span> &lt;span style="color:#ef9f76">85&lt;/span>&lt;span style="color:#99d1db;font-weight:bold">,&lt;/span> &lt;span style="color:#ef9f76">85&lt;/span>);
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-scss" data-lang="scss">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#737994;font-style:italic">// assets/css/custom1.scss
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#737994;font-style:italic">&lt;/span>&lt;span style="color:#ca9ee6">@import&lt;/span> &lt;span style="color:#a6d189">&amp;#39;foundation/vars&amp;#39;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ca9ee6">junyi&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8caaee">display&lt;/span>&lt;span style="color:#99d1db;font-weight:bold">:&lt;/span> &lt;span style="color:#81c8be">block&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8caaee">font&lt;/span>&lt;span style="color:#99d1db;font-weight:bold">:&lt;/span> &lt;span style="color:#ef9f76">100&lt;/span>&lt;span style="color:#e78284">%&lt;/span> &lt;span style="color:#f2d5cf">$font-stack&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8caaee">color&lt;/span>&lt;span style="color:#99d1db;font-weight:bold">:&lt;/span> &lt;span style="color:#f2d5cf">$primary-color&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8caaee">background-color&lt;/span>&lt;span style="color:#99d1db;font-weight:bold">:&lt;/span> &lt;span style="color:#f2d5cf">$background-color&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8caaee">margin-top&lt;/span>&lt;span style="color:#99d1db;font-weight:bold">:&lt;/span> &lt;span style="color:#ef9f76">1&lt;/span>&lt;span style="color:#e78284">em&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Rich Content</title><link>/_drafts/rich-content/</link><pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate><author>me@dotmindblog.io (Dotmind it)</author><guid>/_drafts/rich-content/</guid><description>&lt;p>Hugo ships with several &lt;a href="https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes">Built-in Shortcodes&lt;/a> for rich content, along with a &lt;a href="https://gohugo.io/about/hugo-and-gdpr/">Privacy Config&lt;/a> and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p>
+&lt;hr>
+&lt;h2 id="youtube-privacy-enhanced-shortcode" >
+&lt;div>
+&lt;a href="#youtube-privacy-enhanced-shortcode">
+#
+&lt;/a>
+YouTube Privacy Enhanced Shortcode
+&lt;/div>
+&lt;/h2>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/ZJthWmvUzzc?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
+&lt;/div>
+&lt;br>
+&lt;hr>
+&lt;h2 id="x-simple-shortcode" >
+&lt;div>
+&lt;a href="#x-simple-shortcode">
+#
+&lt;/a>
+x Simple Shortcode
+&lt;/div>
+&lt;/h2>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">“In addition to being more logical, asymmetry has the advantage that its complete appearance is far more optically effective than symmetry.”&lt;br>— Jan Tschichold &lt;a href="https://t.co/gcv7SrhvJb">pic.twitter.com/gcv7SrhvJb&lt;/a>&lt;/p>&amp;mdash; Design Reviewed | Graphic Design History (@DesignReviewed) &lt;a href="https://twitter.com/DesignReviewed/status/1085870671291310081?ref_src=twsrc%5Etfw">January 17, 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;br>
+&lt;hr>
+&lt;h2 id="vimeo-simple-shortcode" >
+&lt;div>
+&lt;a href="#vimeo-simple-shortcode">
+#
+&lt;/a>
+Vimeo Simple Shortcode
+&lt;/div>
+&lt;/h2>
+&lt;style>
+.__h_video {
+position: relative;
+padding-bottom: 56.23%;
+height: 0;
+overflow: hidden;
+width: 100%;
+background: #000;
+}
+.__h_video img {
+width: 100%;
+height: auto;
+color: #000;
+}
+.__h_video .play {
+height: 72px;
+width: 72px;
+left: 50%;
+top: 50%;
+margin-left: -36px;
+margin-top: -36px;
+position: absolute;
+cursor: pointer;
+}
+&lt;/style>&lt;div class="s_video_simple __h_video">
+&lt;a href="https://vimeo.com/4.8912912e&amp;#43;07" rel="noopener" target="_blank">
+&lt;img src="https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640" srcset="https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640 1x, https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640 2x" alt="Sing Jan Swing - Kinetic Type">
+&lt;div class="play">
+&lt;svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61 61">&lt;circle cx="30.5" cy="30.5" r="30.5" opacity=".8" fill="#000">&lt;/circle>&lt;path d="M25.3 19.2c-2.1-1.2-3.8-.2-3.8 2.2v18.1c0 2.4 1.7 3.4 3.8 2.2l16.6-9.1c2.1-1.2 2.1-3.2 0-4.4l-16.6-9z" fill="#fff">&lt;/path>&lt;/svg>
+&lt;/div>
+&lt;/a>
+&lt;/div></description></item><item><title>Placeholder Text</title><link>/_drafts/placeholder-text/</link><pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate><author>me@dotmindblog.io (Dotmind it)</author><guid>/_drafts/placeholder-text/</guid><description>&lt;p>Lorem est tota propiore conpellat pectoribus de
+pectora summo. Redit teque digerit hominumque toris verebor lumina non cervice
+subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc
+caluere tempus inhospita parcite confusaque translucet patri vestro qui optatis
+lumine cognoscere flos nubis! Fronde ipsamque patulos Dryopen deorum.&lt;/p>
+&lt;ol>
+&lt;li>Exierant elisi ambit vivere dedere&lt;/li>
+&lt;li>Duce pollice&lt;/li>
+&lt;li>Eris modo&lt;/li>
+&lt;li>Spargitque ferrea quos palude&lt;/li>
+&lt;/ol>
+&lt;p>Rursus nulli murmur; hastile inridet ut ab gravi sententia! Nomine potitus
+silentia flumen, sustinet placuit petis in dilapsa erat sunt. Atria
+tractus malis.&lt;/p>
+&lt;ol>
+&lt;li>Comas hunc haec pietate fetum procerum dixit&lt;/li>
+&lt;li>Post torum vates letum Tiresia&lt;/li>
+&lt;li>Flumen querellas&lt;/li>
+&lt;li>Arcanaque montibus omnes&lt;/li>
+&lt;li>Quidem et&lt;/li>
+&lt;/ol>
+&lt;h2 id="vagus-elidunt" >
+&lt;div>
+&lt;a href="#vagus-elidunt">
+#
+&lt;/a>
+Vagus elidunt
+&lt;/div>
+&lt;/h2>
+&lt;p>&lt;svg class="canon" xmlns="http://www.w3.org/2000/svg" overflow="visible" viewBox="0 0 496 373" height="373" width="496">&lt;g fill="none">&lt;path stroke="#000" stroke-width=".75" d="M.599 372.348L495.263 1.206M.312.633l494.95 370.853M.312 372.633L247.643.92M248.502.92l246.76 370.566M330.828 123.869V1.134M330.396 1.134L165.104 124.515">&lt;/path>&lt;path stroke="#ED1C24" stroke-width=".75" d="M275.73 41.616h166.224v249.05H275.73zM54.478 41.616h166.225v249.052H54.478z">&lt;/path>&lt;path stroke="#000" stroke-width=".75" d="M.479.375h495v372h-495zM247.979.875v372">&lt;/path>&lt;ellipse cx="498.729" cy="177.625" rx=".75" ry="1.25">&lt;/ellipse>&lt;ellipse cx="247.229" cy="377.375" rx=".75" ry="1.25">&lt;/ellipse>&lt;/g>&lt;/svg>&lt;/p>
+&lt;p>&lt;a href="https://en.wikipedia.org/wiki/Canons_of_page_construction#Van_de_Graaf_canon">The Van de Graaf Canon&lt;/a>&lt;/p>
+&lt;h2 id="mane-refeci-capiebant-unda-mulcebat" >
+&lt;div>
+&lt;a href="#mane-refeci-capiebant-unda-mulcebat">
+#
+&lt;/a>
+Mane refeci capiebant unda mulcebat
+&lt;/div>
+&lt;/h2>
+&lt;p>Victa caducifer, malo vulnere contra
+dicere aurato, ludit regale, voca! Retorsit colit est profanae esse virescere
+furit nec; iaculi matertera et visa est, viribus. Divesque creatis, tecta novat collumque vulnus est, parvas. &lt;strong>Faces illo pepulere&lt;/strong> tempus adest. Tendit flamma, ab opes virum sustinet, sidus sequendo urbis.&lt;/p>
+&lt;p>Iubar proles corpore raptos vero auctor imperium; sed et huic: manus caeli
+Lelegas tu lux. Verbis obstitit intus oblectamina fixis linguisque ausus sperare
+Echionides cornuaque tenent clausit possit. Omnia putatur. Praeteritae refert
+ausus; ferebant e primus lora nutat, vici quae mea ipse. Et iter nil spectatae
+vulnus haerentia iuste et exercebat, sui et.&lt;/p>
+&lt;p>Eurytus Hector, materna ipsumque ut Politen, nec, nate, ignari, vernum cohaesit sequitur. Vel &lt;strong>mitis temploque&lt;/strong> vocatus, inque alis, &lt;em>oculos nomen&lt;/em> non silvis corpore coniunx ne displicet illa. Crescunt non unus, vidit visa quantum inmiti flumina mortis facto sic: undique a alios vincula sunt iactata abdita! Suspenderat ego fuit tendit: luna, ante urbem
+Propoetides &lt;strong>parte&lt;/strong>.&lt;/p></description></item><item><title>Math Typesetting</title><link>/_drafts/math-typesetting/</link><pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate><author>me@dotmindblog.io (Dotmind it)</author><guid>/_drafts/math-typesetting/</guid><description>&lt;p>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p>
+&lt;ul>
+&lt;li>To enable MathJax on a page basis include the parameter &lt;code>math: true&lt;/code> in content files.&lt;/li>
+&lt;/ul>
+&lt;h2 id="examples" >
+&lt;div>
+&lt;a href="#examples">
+#
+&lt;/a>
+Examples
+&lt;/div>
+&lt;/h2>
+&lt;p>Inline math: $$ \varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887… $$&lt;/p>
+&lt;p>Block math:&lt;/p>
+&lt;p>$$
+\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
+$$&lt;/p></description></item><item><title>Emoji Support</title><link>/_drafts/emoji-support/</link><pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate><author>me@dotmindblog.io (Dotmind it)</author><guid>/_drafts/emoji-support/</guid><description>&lt;p>Emoji can be enabled in a Hugo project in a number of ways.&lt;/p>
+&lt;p>The &lt;a href="https://gohugo.io/functions/emojify/">&lt;code>emojify&lt;/code>&lt;/a> function can be called directly in templates or &lt;a href="https://gohugo.io/templates/shortcode-templates/#inline-shortcodes">Inline Shortcodes&lt;/a>.&lt;/p>
+&lt;p>To enable emoji globally, set &lt;code>enableEmoji&lt;/code> to &lt;code>true&lt;/code> in your site’s &lt;a href="https://gohugo.io/getting-started/configuration/">configuration&lt;/a> and then you can type emoji shorthand codes directly in content files; e.g.&lt;/p>
+&lt;p>&lt;span class="nowrap">&lt;span class="emojify">🙈&lt;/span> &lt;code>:see_no_evil:&lt;/code>&lt;/span> &lt;span class="nowrap">&lt;span class="emojify">🙉&lt;/span> &lt;code>:hear_no_evil:&lt;/code>&lt;/span> &lt;span class="nowrap">&lt;span class="emojify">🙊&lt;/span> &lt;code>:speak_no_evil:&lt;/code>&lt;/span>&lt;/p>
+&lt;br>
+&lt;p>The &lt;a href="http://www.emoji-cheat-sheet.com/">Emoji cheat sheet&lt;/a> is a useful reference for emoji shorthand codes.&lt;/p>
+&lt;hr>
+&lt;p>&lt;strong>N.B.&lt;/strong> The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>.emoji {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>font-family: Apple Color Emoji,Segoe UI Emoji,NotoColorEmoji,Segoe UI Symbol,Android Emoji,EmojiSymbols;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Emoji 支持</title><link>/_drafts/emoji-support.zh/</link><pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate><author>me@dotmindblog.io (Dotmind it)</author><guid>/_drafts/emoji-support.zh/</guid><description>&lt;p>在 Hugo 博客里，你可以用多种方式使用 Emoji：&lt;/p>
+&lt;p>The &lt;a href="https://gohugo.io/functions/emojify/">&lt;code>emojify&lt;/code>&lt;/a> function can be called directly in templates or &lt;a href="https://gohugo.io/templates/shortcode-templates/#inline-shortcodes">Inline Shortcodes&lt;/a>.&lt;/p>
+&lt;p>To enable emoji globally, set &lt;code>enableEmoji&lt;/code> to &lt;code>true&lt;/code> in your site’s &lt;a href="https://gohugo.io/getting-started/configuration/">configuration&lt;/a> and then you can type emoji shorthand codes directly in content files; e.g.&lt;/p>
+&lt;p>&lt;span class="nowrap">&lt;span class="emojify">🙈&lt;/span> &lt;code>:see_no_evil:&lt;/code>&lt;/span> &lt;span class="nowrap">&lt;span class="emojify">🙉&lt;/span> &lt;code>:hear_no_evil:&lt;/code>&lt;/span> &lt;span class="nowrap">&lt;span class="emojify">🙊&lt;/span> &lt;code>:speak_no_evil:&lt;/code>&lt;/span>&lt;/p>
+&lt;br>
+&lt;p>The &lt;a href="http://www.emoji-cheat-sheet.com/">Emoji cheat sheet&lt;/a> is a useful reference for emoji shorthand codes.&lt;/p>
+&lt;hr>
+&lt;p>&lt;strong>N.B.&lt;/strong> The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>.emoji {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>font-family: Apple Color Emoji,Segoe UI Emoji,NotoColorEmoji,Segoe UI Symbol,Android Emoji,EmojiSymbols;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Posts</title><link>/_drafts/_index.pl/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>me@dotmindblog.io (Dotmind it)</author><guid>/_drafts/_index.pl/</guid><description/></item></channel></rss>
