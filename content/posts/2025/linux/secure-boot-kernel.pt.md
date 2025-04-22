@@ -18,7 +18,7 @@ draft = false
 <!--more-->
 ----
 
-Com o aumento das aplicações de IA que exigem GPUs de alto desempenho, é comum a necessidade de utilizar módulos personalizados, incluindo <a href="https://github.com/NVIDIA/open-gpu-kernel-modules" target="_blank">drivers open-source como os da NVIDIA</a>. Esses módulos precisam ser assinados manualmente para funcionar corretamente em distribuições Linux que utilizam Secure Boot.
+Com o aumento das aplicações de IA que exigem GPUs de alto desempenho, é comum a necessidade de utilizar módulos personalizados, incluindo <a href="https://github.com/NVIDIA/open-gpu-kernel-modules" target="_blank">drivers open-source, como os da NVIDIA</a>. Esses módulos precisam ser assinados manualmente para funcionar corretamente em distribuições Linux que utilizam Secure Boot.
 
 Este guia mostra como criar e cadastrar sua própria chave (MOK) no firmware UEFI, permitindo assinar com segurança esses módulos personalizados sem precisar desativar o Secure Boot.
 
@@ -33,7 +33,7 @@ Este guia mostra como criar e cadastrar sua própria chave (MOK) no firmware UEF
 mokutil --sb-state
 ```
 
-- **MOK (Machine Owner Key)** chave para assinar kernels/módulos (ex.: drivers NVIDIA, DKMS) no firmware, com Secure Boot ativo.
+- **MOK (Machine Owner Key)**, chave para assinar kernels/módulos (ex.: drivers NVIDIA, DKMS) no firmware, com Secure Boot ativo.
 
 ## 2. Gerando e cadastrando a MOK
 
@@ -59,7 +59,7 @@ ls -l /var/lib/shim-signed/mok/
 mokutil --import /var/lib/shim-signed/mok/MOK.der
 ```
 
-Defina uma senha que será solicitada no próximo boot e reinicie o sistema em seguida.
+Defina uma senha que será solicitada no próximo boot, e reinicie o sistema em seguida.
 
 3. Durante o boot seguinte, o sistema entrará automaticamente no MOK Manager (Shim).
 
@@ -67,7 +67,7 @@ Defina uma senha que será solicitada no próximo boot e reinicie o sistema em s
 
 1. Assim que a máquina reiniciar, o utilitário de gerenciamento de chaves UEFI "Shim" deve aparecer. Pressione qualquer tecla para começar.
 
-![Tela inicial do MOK Manager exibindo interface de gerenciamento de chaves](/images/2025/secure-boot-bios-2.png)
+![Tela inicial do MOK Manager exibindo interface de gerenciamento de chaves.](/images/2025/secure-boot-bios-2.png)
 
 3. Selecione "Enroll MOK".
 
@@ -100,7 +100,7 @@ mok_signing_key="/var/lib/shim-signed/mok/MOK.priv"
 mok_certificate="/var/lib/shim-signed/mok/MOK.der"
 ```
 
-Na maioria dos cenários comuns (módulos DKMS), você não precisará realizar a assinatura manual frequentemente. Configure corretamente o framework do DKMS como mostrado acima.
+Na maioria dos cenários comuns (módulos DKMS), você não precisará realizar, com frequência, a assinatura manual. Configure corretamente o framework do DKMS como mostrado acima.
 
 - Para assinar manualmente:
 
@@ -132,7 +132,7 @@ Na maioria dos cenários comuns (módulos DKMS), você não precisará realizar 
    sudo update-initramfs -u -k $(uname -r)
    ```
 
-- (Opcional) Script para ver todos os módulos e confirmar suas assinaturas:
+- **(Opcional)** Script para ver todos os módulos e confirmar suas assinaturas:
 
 ```bash
 for mod in /lib/modules/$(uname -r)/updates/dkms/*.ko.zst; do
@@ -145,7 +145,7 @@ done
 
 ## 5. Boas Práticas & Cuidados
 
-- **Importante**: Proteja suas chaves privadas.
+- **Importante:** Proteja suas chaves privadas.
 - Se você perder essa chave ou esquecer a senha, precisará gerar e importar novamente a MOK.
 - Confira logs (dmesg, journalctl) para erros como “module signature verification failed”.
 - Em algumas placas-mãe ou configuradores de VM (ex.: Hyper-V), é preciso configurar o Secure Boot para aceitar chaves da “Microsoft UEFI Certificate Authority” antes de gerar ou importar a MOK.

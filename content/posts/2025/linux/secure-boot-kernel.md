@@ -15,17 +15,17 @@ tags = [
 authors = ["iceteash"]
 draft = false
 +++
-With the rise of AI applications that 
+High-Performance AI on Linux: Securely Enabling NVIDIA Modules 
 <!--more-->
 ----
-With the rise of AI applications that demand high-performance GPUs, it’s becoming increasingly common to require custom modules, including <a href="https://github.com/NVIDIA/open-gpu-kernel-modules" target="_blank">NVIDIA's open-source drivers</a>. These modules need to be manually signed to work correctly on Linux distributions that use Secure Boot.
+With the rise of AI applications that demand high-performance GPUs, it's becoming increasingly common to require custom modules, including <a href="https://github.com/NVIDIA/open-gpu-kernel-modules" target="_blank">NVIDIA's open-source drivers</a>. These modules must be manually signed to function correctly on Linux distributions with Secure Boot enabled.
 <br></br>
-This guide shows you how to create and register your own key (MOK) in UEFI firmware, enabling you to securely sign these custom modules without having to disable Secure Boot.
+This guide walks you through creating and registering your own key (MOK) in UEFI firmware, allowing you to securely sign custom modules—without disabling Secure Boot.
 <br></br>
 
 ## 1. Secure Boot and MOK Concepts
 
-- **Secure Boot** is a firmware feature that only loads binaries signed with trusted keys. On various Linux distributions, the “shim” binary is used, pre-signed by Microsoft, ensuring broad compatibility.
+- **Secure Boot** is a firmware feature that only loads binaries signed with trusted keys. On various Linux distributions, the "shim" binary is used, pre-signed by Microsoft, ensuring broad compatibility.
 
 - Check the status of Secure Boot:
 ```bash
@@ -92,14 +92,14 @@ After returning to the operating system, your key will be included in the firmwa
 
 ## 4. Signing New Modules (e.g., NVIDIA/DKMS)
 
-If you’re using DKMS, configure the `/etc/dkms/framework.conf` file to point to your MOK. This way, any recompiled modules are signed automatically.
+If you're using DKMS, configure the file `/etc/dkms/framework.conf` to point to your MOK. This way, any recompiled modules are signed automatically.
 
 ```bash
 mok_signing_key="/var/lib/shim-signed/mok/MOK.priv"
 mok_certificate="/var/lib/shim-signed/mok/MOK.der"
 ```
 
-In most common scenarios (DKMS modules), you won’t need to manually sign modules often. Make sure your DKMS framework is set up as shown above.
+In most common scenarios (DKMS modules), you won't need to manually sign modules often. Make sure your DKMS framework is set up as shown above.
 
 - Manual signing (if needed):
 
@@ -144,7 +144,7 @@ done
 
 ## 5. Best Practices & Precautions
 
-- **Important**: Keep your private keys safe.
+- **Important**: keep your private keys safe.
 - If you lose this key or forget the password, you will need to generate and import a new MOK.
 - Check logs (dmesg, journalctl) for errors such as “module signature verification failed”.
 - On some motherboards or VM configurators (e.g., Hyper-V), you must configure Secure Boot to accept “Microsoft UEFI Certificate Authority” keys before generating or importing the MOK.

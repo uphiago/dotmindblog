@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dotmind it</title><link>/</link><description>Dotmind it</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>me@dotmindblog.io
-(Dotmind it)</managingEditor><lastBuildDate>Thu, 27 Mar 2025 12:10:31 -0300</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Secure Boot with MOK: Signing Modules in UEFI Environments</title><link>/posts/2025/linux/secure-boot-kernel/</link><pubDate>Thu, 27 Mar 2025 12:10:31 -0300</pubDate><author>me@dotmindblog.io (Dotmind it)</author><guid>/posts/2025/linux/secure-boot-kernel/</guid><description>&lt;p>With the rise of AI applications that&lt;/p>
+(Dotmind it)</managingEditor><lastBuildDate>Thu, 27 Mar 2025 12:10:31 -0300</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Secure Boot with MOK: Signing Modules in UEFI Environments</title><link>/posts/2025/linux/secure-boot-kernel/</link><pubDate>Thu, 27 Mar 2025 12:10:31 -0300</pubDate><author>me@dotmindblog.io (Dotmind it)</author><guid>/posts/2025/linux/secure-boot-kernel/</guid><description>&lt;p>High-Performance AI on Linux: Securely Enabling NVIDIA Modules&lt;/p>
 &lt;hr>
-&lt;p>With the rise of AI applications that demand high-performance GPUs, it’s becoming increasingly common to require custom modules, including &lt;a href="https://github.com/NVIDIA/open-gpu-kernel-modules" target="_blank">NVIDIA&amp;rsquo;s open-source drivers&lt;/a>. These modules need to be manually signed to work correctly on Linux distributions that use Secure Boot.
+&lt;p>With the rise of AI applications that demand high-performance GPUs, it&amp;rsquo;s becoming increasingly common to require custom modules, including &lt;a href="https://github.com/NVIDIA/open-gpu-kernel-modules" target="_blank">NVIDIA&amp;rsquo;s open-source drivers&lt;/a>. These modules must be manually signed to function correctly on Linux distributions with Secure Boot enabled.
 &lt;br>&lt;/br>
-This guide shows you how to create and register your own key (MOK) in UEFI firmware, enabling you to securely sign these custom modules without having to disable Secure Boot.
+This guide walks you through creating and registering your own key (MOK) in UEFI firmware, allowing you to securely sign custom modules—without disabling Secure Boot.
 &lt;br>&lt;/br>&lt;/p>
 &lt;h2 id="1-secure-boot-and-mok-concepts" >
 &lt;div>
@@ -15,7 +15,7 @@ This guide shows you how to create and register your own key (MOK) in UEFI firmw
 &lt;/h2>
 &lt;ul>
 &lt;li>
-&lt;p>&lt;strong>Secure Boot&lt;/strong> is a firmware feature that only loads binaries signed with trusted keys. On various Linux distributions, the “shim” binary is used, pre-signed by Microsoft, ensuring broad compatibility.&lt;/p>
+&lt;p>&lt;strong>Secure Boot&lt;/strong> is a firmware feature that only loads binaries signed with trusted keys. On various Linux distributions, the &amp;ldquo;shim&amp;rdquo; binary is used, pre-signed by Microsoft, ensuring broad compatibility.&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>Check the status of Secure Boot:&lt;/p>
@@ -93,10 +93,10 @@ This guide shows you how to create and register your own key (MOK) in UEFI firmw
 4. Signing New Modules (e.g., NVIDIA/DKMS)
 &lt;/div>
 &lt;/h2>
-&lt;p>If you’re using DKMS, configure the &lt;code>/etc/dkms/framework.conf&lt;/code> file to point to your MOK. This way, any recompiled modules are signed automatically.&lt;/p>
+&lt;p>If you&amp;rsquo;re using DKMS, configure the file &lt;code>/etc/dkms/framework.conf&lt;/code> to point to your MOK. This way, any recompiled modules are signed automatically.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f2d5cf">mok_signing_key&lt;/span>&lt;span style="color:#99d1db;font-weight:bold">=&lt;/span>&lt;span style="color:#a6d189">&amp;#34;/var/lib/shim-signed/mok/MOK.priv&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f2d5cf">mok_certificate&lt;/span>&lt;span style="color:#99d1db;font-weight:bold">=&lt;/span>&lt;span style="color:#a6d189">&amp;#34;/var/lib/shim-signed/mok/MOK.der&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>In most common scenarios (DKMS modules), you won’t need to manually sign modules often. Make sure your DKMS framework is set up as shown above.&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>In most common scenarios (DKMS modules), you won&amp;rsquo;t need to manually sign modules often. Make sure your DKMS framework is set up as shown above.&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;p>Manual signing (if needed):&lt;/p>
@@ -135,7 +135,7 @@ This guide shows you how to create and register your own key (MOK) in UEFI firmw
 &lt;/div>
 &lt;/h2>
 &lt;ul>
-&lt;li>&lt;strong>Important&lt;/strong>: Keep your private keys safe.&lt;/li>
+&lt;li>&lt;strong>Important&lt;/strong>: keep your private keys safe.&lt;/li>
 &lt;li>If you lose this key or forget the password, you will need to generate and import a new MOK.&lt;/li>
 &lt;li>Check logs (dmesg, journalctl) for errors such as “module signature verification failed”.&lt;/li>
 &lt;li>On some motherboards or VM configurators (e.g., Hyper-V), you must configure Secure Boot to accept “Microsoft UEFI Certificate Authority” keys before generating or importing the MOK.&lt;/li>
