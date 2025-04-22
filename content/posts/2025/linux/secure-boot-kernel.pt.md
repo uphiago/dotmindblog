@@ -14,7 +14,7 @@ tags = [
 authors = ["iceteash"]
 draft = false
 +++
-
+Integração de módulos customizados com Secure Boot habilitado 
 <!--more-->
 ----
 

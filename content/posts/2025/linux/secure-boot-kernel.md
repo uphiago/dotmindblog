@@ -15,7 +15,7 @@ tags = [
 authors = ["iceteash"]
 draft = false
 +++
-High-Performance AI on Linux: Securely Enabling NVIDIA Modules 
+Integrating Custom Kernel Modules with Secure Boot Enabled 
 <!--more-->
 ----
 With the rise of AI applications that demand high-performance GPUs, it's becoming increasingly common to require custom modules, including <a href="https://github.com/NVIDIA/open-gpu-kernel-modules" target="_blank">NVIDIA's open-source drivers</a>. These modules must be manually signed to function correctly on Linux distributions with Secure Boot enabled.
@@ -155,4 +155,4 @@ done
 
 - [Wiki Debian - SecureBoot](https://wiki.debian.org/SecureBoot#MOK_-_Machine_Owner_Key)
 - [Arch Linux Wiki - Secure Boot](https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot)
-- [Dynamic Kernel Module Support](https://wiki.archlinux.org/title/Dynamic_Kernel_Module_Support)
+- [Dynamic Kernel Module Support](https://wiki.archlinux.org/title/Dynamic_Kernel_Module_Support)=
