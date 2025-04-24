@@ -1,5 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dotmind it</title><link>/</link><description>Dotmind it</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>me@dotmindblog.io
-(Dotmind it)</managingEditor><lastBuildDate>Thu, 27 Mar 2025 12:10:31 -0300</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Secure Boot with MOK: Signing Modules in UEFI Environments</title><link>/posts/2025/linux/secure-boot-kernel/</link><pubDate>Thu, 27 Mar 2025 12:10:31 -0300</pubDate><author>me@dotmindblog.io (Dotmind it)</author><guid>/posts/2025/linux/secure-boot-kernel/</guid><description>&lt;p>High-Performance AI on Linux: Securely Enabling NVIDIA Modules&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dotmind it</title><link>/</link><description>Dotmind it</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>alwaysdotmind@gmail.com
+(Dotmind it)</managingEditor><lastBuildDate>Wed, 23 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>/about/</link><pubDate>Wed, 23 Apr 2025 00:00:00 +0000</pubDate><author>alwaysdotmind@gmail.com (Dotmind it)</author><guid>/about/</guid><description>&lt;p>Welcome to &lt;a href="https://dotmindblog.vercel.app">Dotmind it&lt;/a>, notes from ongoing deployments. Building where things usually break.
+&lt;br>&lt;/br>&lt;/p>
+&lt;details style="font-size: 0.9rem;">
+&lt;summary>&lt;strong>v0.5.0 - Roadmap - Knowledge Graph&lt;/strong>&lt;/summary>
+&lt;ul>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> Markdown ingestion &amp;amp; cleaning&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> Chunk coherence&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> Concept extraction with LLMs&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Edge generation &amp;amp; contextual-proximity weighting&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Community detection &amp;amp; centrality metrics&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Graph export
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> CSV and XML tokens performance benchmark&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 3D visualization in the browser (&lt;a href="https://react.dev/learn">React&lt;/a> + &lt;a href="https://github.com/vasturiano/3d-force-graph">3d-force-graph&lt;/a>)&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Analytical dashboard (filters, search, metrics)&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> MCP integration and chat features&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>&lt;strong>This list is updated continuously.&lt;/strong>&lt;br>
+Once all features are completed, the roadmap will be removed to make room for what&amp;rsquo;s next.&lt;br>&lt;/p>&lt;/blockquote>
+&lt;/details>
+&lt;hr>
+&lt;p>Send an email to &lt;a href="mailto:alwaysdotmind@gmail.com">alwaysdotmind@gmail.com&lt;/a> for questions or suggestions&lt;/p></description></item><item><title>Secure Boot with MOK: Signing Modules in UEFI Environments</title><link>/posts/2025/linux/secure-boot-kernel/</link><pubDate>Thu, 27 Mar 2025 12:10:31 -0300</pubDate><author>alwaysdotmind@gmail.com (Dotmind it)</author><guid>/posts/2025/linux/secure-boot-kernel/</guid><description>&lt;p>Integrating Custom Kernel Modules with Secure Boot Enabled&lt;/p>
 &lt;hr>
 &lt;p>With the rise of AI applications that demand high-performance GPUs, it&amp;rsquo;s becoming increasingly common to require custom modules, including &lt;a href="https://github.com/NVIDIA/open-gpu-kernel-modules" target="_blank">NVIDIA&amp;rsquo;s open-source drivers&lt;/a>. These modules must be manually signed to function correctly on Linux distributions with Secure Boot enabled.
 &lt;br>&lt;/br>
@@ -152,5 +176,5 @@ References
 &lt;ul>
 &lt;li>&lt;a href="https://wiki.debian.org/SecureBoot#MOK_-_Machine_Owner_Key">Wiki Debian - SecureBoot&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot">Arch Linux Wiki - Secure Boot&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://wiki.archlinux.org/title/Dynamic_Kernel_Module_Support">Dynamic Kernel Module Support&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>About</title><link>/about/</link><pubDate>Tue, 09 Apr 2024 00:00:00 +0000</pubDate><author>me@dotmindblog.io (Dotmind it)</author><guid>/about/</guid><description>&lt;p>&lt;a href="https://dotmindblog.vercel.app">Dotmind&lt;/a> it&amp;rsquo;s a simple, minimalist blog to keep the essentials.&lt;/p></description></item></channel></rss>
+&lt;li>&lt;a href="https://wiki.archlinux.org/title/Dynamic_Kernel_Module_Support">Dynamic Kernel Module Support&lt;/a>=&lt;/li>
+&lt;/ul></description></item></channel></rss>

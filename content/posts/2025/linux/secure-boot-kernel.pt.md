@@ -32,7 +32,7 @@ Este guia mostra como criar e cadastrar sua própria chave (MOK) no firmware UEF
 ```bash
 mokutil --sb-state
 ```
-
+ 
 - **MOK (Machine Owner Key)**, chave para assinar kernels/módulos (ex.: drivers NVIDIA, DKMS) no firmware, com Secure Boot ativo.
 
 ## 2. Gerando e cadastrando a MOK

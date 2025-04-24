@@ -9,7 +9,7 @@ title = "Dotmind it"
 pagerSize = 5
 
 [params.author]
-email = "me@dotmindblog.io"
+email = "alwaysdotmind@gmail.com"
 location = "Rio de Janeiro"
 name = "Dotmind it"
 
@@ -88,13 +88,13 @@ languageName = "Portuguese"
 
 [[languages.pt.menu.main]]
 identifier = "home"
-name = "home"
+name = "Home"
 url = "/"
 weight = 1
 
 [[languages.pt.menu.main]]
 identifier = "about"
-name = "about"
+name = "About"
 url = "/about/"
 weight = 2
 
@@ -106,7 +106,7 @@ weight = 3
 
 [[languages.pt.menu.main]]
 identifier = "archive"
-name = "Arquivo"
+name = "Archive"
 url = "/posts/"
 weight = 4
 
@@ -139,7 +139,7 @@ dnt = false
 enabled = true 
 id = "eca2615c-7bd6-4020-bc35-45b4c213d04f" # Website ID
 respectDNT = true 
-shareUrl = "https://cloud.umami.is/share/vHjEvAi9HY40mUCZ/dotmindblog.vercel.app" 
+shareUrl = "https://cloud.umami.is/share/wYiexR6220opwDF2/dotmindblog.vercel.app" 
 url = "https://cloud.umami.is/script.js" 
 
 [params.GoogleAnalytics]
