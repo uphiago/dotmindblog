@@ -30,3 +30,15 @@
 | Passed All 8 Summary Rendering Tests                                   | ✅ 8/8   |
 | Mermaid dark/light manual switch                                       | ✅       |
 | Mermaid dark/light auto switch                                         | ✅       |
+
+
+--------------------------------------------------------------------------------------
+
+| Feature                                                                | ice-tea |
+| ---------------------------------------------------------------------- | ------- |
+| Mailing
+| Beautiful icons
+| 
+| 
+| 
+| https://examples.motion.dev/react/typewriter

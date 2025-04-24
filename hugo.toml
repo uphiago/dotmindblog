@@ -17,7 +17,6 @@ name = "Dotmind it"
 dateFormat = "2006-01-02"
 description = "Dotmind indexes the essentials"
 paginationSinglePost = true
-
 colorTheme = "auto"
 colorThemeSwitcher = true
 
