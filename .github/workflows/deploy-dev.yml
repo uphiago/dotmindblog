@@ -3,7 +3,7 @@ name: Deploy **Dev** to GitHub Pages
 on:
   push:
     branches:
-      - updates-v0.6.0
+      - gh-pages
   workflow_dispatch: {}
 
 jobs:
