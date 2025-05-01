@@ -1,29 +1,158 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dotmind it</title><link>/</link><description>Dotmind it</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>alwaysdotmind@gmail.com
-(Dotmind it)</managingEditor><lastBuildDate>Wed, 23 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>/about/</link><pubDate>Wed, 23 Apr 2025 00:00:00 +0000</pubDate><author>alwaysdotmind@gmail.com (Dotmind it)</author><guid>/about/</guid><description>&lt;p>Welcome to &lt;a href="https://dotmindblog.vercel.app">Dotmind it&lt;/a>, notes from ongoing deployments. Building where things usually break.
+(Dotmind it. Building where things usually break)</managingEditor><lastBuildDate>Thu, 01 May 2025 00:27:00 -0300</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>DE, WM, X11 and Wayland</title><link>/posts/2025/linux/distros/graphics-components/</link><pubDate>Thu, 01 May 2025 00:27:00 -0300</pubDate><author>alwaysdotmind@gmail.com (Dotmind it. Building where things usually break)</author><guid>/posts/2025/linux/distros/graphics-components/</guid><description>&lt;h2 id="key-components-of-the-linux-graphical-interface" >
+&lt;div>
+&lt;a href="#key-components-of-the-linux-graphical-interface">
+#
+&lt;/a>
+Key Components of the Linux Graphical Interface
+&lt;/div>
+&lt;/h2>
+&lt;p>Before we talk about drivers, it&amp;rsquo;s important to understand how the main components of the graphical interface work on Linux.&lt;/p>
+&lt;br>
+&lt;p>&lt;strong>TL;DR:&lt;/strong> In Linux, the DE provides the visual layer, the WM handles window placement, and X11 or Wayland manages communication between apps, the GPU, and the display server.&lt;/p>
+&lt;h2 id="desktop-environment-de" >
+&lt;div>
+&lt;a href="#desktop-environment-de">
+#
+&lt;/a>
+Desktop Environment (DE)
+&lt;/div>
+&lt;/h2>
+&lt;p>The &lt;strong>Desktop Environment&lt;/strong> includes everything you see and interact with in your daily use:&lt;/p>
+&lt;ul>
+&lt;li>the taskbar and system tray&lt;/li>
+&lt;li>menus, notifications, and window design (style, animations, buttons)&lt;/li>
+&lt;li>file manager, panels, widgets&lt;/li>
+&lt;li>themes, icons, and fonts&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Ex.:&lt;/strong> GNOME, KDE Plasma (my personal favorite), Cinnamon, Budgie&amp;hellip;&lt;/p>
+&lt;p>Each one balances performance, aesthetics, and features differently.&lt;/p>
+&lt;hr>
+&lt;h2 id="window-manager-wm" >
+&lt;div>
+&lt;a href="#window-manager-wm">
+#
+&lt;/a>
+Window Manager (WM)
+&lt;/div>
+&lt;/h2>
+&lt;p>The &lt;strong>Window Manager&lt;/strong> controls the placement and behavior of windows on your screen:&lt;/p>
+&lt;ul>
+&lt;li>layout modes (floating, tiling, monocle)&lt;/li>
+&lt;li>keyboard shortcuts for moving and resizing windows&lt;/li>
+&lt;li>window borders, shadows, and stacking order&lt;/li>
+&lt;li>focus rules and workspace management&lt;/li>
+&lt;/ul>
+&lt;p>You can use the WM that comes integrated with your DE, or choose a standalone WM for more control and customization.&lt;/p>
+&lt;p>&lt;strong>Ex.:&lt;/strong> i3, bspwm, Sway, Hyprland.&lt;/p>
+&lt;hr>
+&lt;h2 id="graphical-protocols" >
+&lt;div>
+&lt;a href="#graphical-protocols">
+#
+&lt;/a>
+Graphical Protocols
+&lt;/div>
+&lt;/h2>
+&lt;p>Graphical protocols mediate the communication between applications, the WM/DE, and the graphics hardware. On Linux, two main protocols handle this, each with its own pros and cons:&lt;/p>
+&lt;h3 id="x11-xorg" >
+&lt;div>
+&lt;a href="#x11-xorg">
+##
+&lt;/a>
+X11 (Xorg)
+&lt;/div>
+&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>Why choose it&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Excellent compatibility with a wide range of applications, desktop environments, and drivers.&lt;/li>
+&lt;li>Mature ecosystem with support for extensions, debugging, automation, and remote forwarding.&lt;/li>
+&lt;li>Recommended for legacy setups or when specific tools still require X11.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Potential drawbacks&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Outdated architecture with extra layers that increase latency and complicate optimizations.&lt;/li>
+&lt;li>Limited support for HiDPI, multiple GPUs, and high refresh rate displays.&lt;/li>
+&lt;li>Security concerns: any app can listen to global input like keyboard and mouse events.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="wayland" >
+&lt;div>
+&lt;a href="#wayland">
+##
+&lt;/a>
+Wayland
+&lt;/div>
+&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>Why choose it&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Modern architecture with direct rendering, reducing latency and improving resource efficiency.&lt;/li>
+&lt;li>Isolated security model: apps can&amp;rsquo;t access each other&amp;rsquo;s input or windows.&lt;/li>
+&lt;li>Improved native support for HiDPI, fractional scaling, and screen rotation.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Potential drawbacks&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Legacy apps may still depend on X11, although XWayland provides partial compatibility.&lt;/li>
+&lt;li>Some advanced graphical tools and drivers still face limitations or instability.&lt;/li>
+&lt;li>Screen capture and recording can be limited depending on the compositor.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>&lt;strong>Quick tip:&lt;/strong> Many Linux distros let you switch between Wayland and Xorg at the login screen. If something critical doesn&amp;rsquo;t work properly on Wayland, just log back in with X11.&lt;/p>&lt;/blockquote>
+&lt;p>With these concepts in mind, you can fine-tune your compositor, protocol, and window manager to gain better control over latency, rendering, and GPU performance in your daily workflow.&lt;/p></description></item><item><title>About</title><link>/about/</link><pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate><author>alwaysdotmind@gmail.com (Dotmind it. Building where things usually break)</author><guid>/about/</guid><description>&lt;p>Welcome to &lt;a href="https://dotmindblog.vercel.app">Dotmind it&lt;/a>, things we write down so we don&amp;rsquo;t forget next time. Quick logs from active deployments.&lt;/p>
+&lt;p>Expect changes, nothing here is static. Versioning is in place.
 &lt;br>&lt;/br>&lt;/p>
+&lt;p>Thanks to &lt;a href="https://github.com/Mitrichius" target="_blank" rel="noopener noreferrer">@Mitrichius&lt;/a> and &lt;a href="https://github.com/Junyi-99" target="_blank" rel="noopener noreferrer">@Junyi-99&lt;/a> for their great work!&lt;/p>
 &lt;details style="font-size: 0.9rem;">
-&lt;summary>&lt;strong>v0.5.0 - Roadmap - Knowledge Graph&lt;/strong>&lt;/summary>
+&lt;summary>&lt;strong>v1.0.0 - Roadmap&lt;/strong>&lt;/summary>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>Dotmind it&lt;/strong> - New features, optimizations, and more, all the time.&lt;/p>
+&lt;ul>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> Fix Giscus Sync&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> Hugo deploy to Vercel&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> Github Actions to Github Pages from development branch&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Newsletter&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> A new favicon please&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Search engine indexing&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> About pt-br version pending for laziness&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Knowledge Graph&lt;/strong> - Smarter search, faster insights powered by all site content and verified data.&lt;/p>
 &lt;ul>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> Markdown ingestion &amp;amp; cleaning&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> Chunk coherence&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> Concept extraction with LLMs&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> Edge generation &amp;amp; contextual-proximity weighting&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> Community detection &amp;amp; centrality metrics&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> Graph export
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> Edge generation &amp;amp; contextual-proximity weighting&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> Community detection &amp;amp; centrality metrics&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> Graph export
 &lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> CSV and XML tokens performance benchmark&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 3D visualization in the browser (&lt;a href="https://react.dev/learn">React&lt;/a> + &lt;a href="https://github.com/vasturiano/3d-force-graph">3d-force-graph&lt;/a>)&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 3D visualization in the browser (&lt;a href="https://react.dev/learn">React&lt;/a> + &lt;a href="https://github.com/vasturiano/3d-force-graph">3d-force-graph&lt;/a>)&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> Analytical dashboard (filters, search, metrics)&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> MCP integration and chat features&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> MCP integration with official docs&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Add tests for graph interaction module&lt;/li>
 &lt;/ul>
-&lt;blockquote>
-&lt;p>&lt;strong>This list is updated continuously.&lt;/strong>&lt;br>
-Once all features are completed, the roadmap will be removed to make room for what&amp;rsquo;s next.&lt;br>&lt;/p>&lt;/blockquote>
+&lt;/li>
+&lt;/ul>
 &lt;/details>
 &lt;hr>
-&lt;p>Send an email to &lt;a href="mailto:alwaysdotmind@gmail.com">alwaysdotmind@gmail.com&lt;/a> for questions or suggestions&lt;/p></description></item><item><title>Secure Boot with MOK: Signing Modules in UEFI Environments</title><link>/posts/2025/linux/secure-boot-kernel/</link><pubDate>Thu, 27 Mar 2025 12:10:31 -0300</pubDate><author>alwaysdotmind@gmail.com (Dotmind it)</author><guid>/posts/2025/linux/secure-boot-kernel/</guid><description>&lt;p>Integrating Custom Kernel Modules with Secure Boot Enabled&lt;/p>
+&lt;br>
+&lt;p>Feedback? Ideas? &lt;a href="https://www.linkedin.com/in/uphiago/" target="_blank" rel="noopener">Reach out on LinkedIn&lt;/a>&lt;/p></description></item><item><title>Signing Modules in UEFI Environments</title><link>/posts/2025/linux/secure-boot-kernel/</link><pubDate>Thu, 27 Mar 2025 12:10:31 -0300</pubDate><author>alwaysdotmind@gmail.com (Dotmind it. Building where things usually break)</author><guid>/posts/2025/linux/secure-boot-kernel/</guid><description>&lt;!-- Integrating Custom Kernel Modules with Secure Boot -->
 &lt;hr>
 &lt;p>With the rise of AI applications that demand high-performance GPUs, it&amp;rsquo;s becoming increasingly common to require custom modules, including &lt;a href="https://github.com/NVIDIA/open-gpu-kernel-modules" target="_blank">NVIDIA&amp;rsquo;s open-source drivers&lt;/a>. These modules must be manually signed to function correctly on Linux distributions with Secure Boot enabled.
 &lt;br>&lt;/br>

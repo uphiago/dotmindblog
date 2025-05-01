@@ -1,6 +1,6 @@
 +++
 author = "iceteash"
-title = "Secure Boot with MOK: Signing Modules in UEFI Environments"
+title = "Signing Modules in UEFI Environments"
 date = 2025-03-27T12:10:31-03:00
 description = "Set up Secure Boot on Linux and learn how to sign kernel modules with your own MOK key."
 
@@ -15,9 +15,10 @@ tags = [
 authors = ["iceteash"]
 draft = false
 +++
-Integrating Custom Kernel Modules with Secure Boot Enabled 
+<!-- Integrating Custom Kernel Modules with Secure Boot  -->
 <!--more-->
 ----
+
 With the rise of AI applications that demand high-performance GPUs, it's becoming increasingly common to require custom modules, including <a href="https://github.com/NVIDIA/open-gpu-kernel-modules" target="_blank">NVIDIA's open-source drivers</a>. These modules must be manually signed to function correctly on Linux distributions with Secure Boot enabled.
 <br></br>
 This guide walks you through creating and registering your own key (MOK) in UEFI firmware, allowing you to securely sign custom modules—without disabling Secure Boot.

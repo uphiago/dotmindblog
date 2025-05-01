@@ -10,12 +10,12 @@ pagerSize = 5
 
 [params.author]
 email = "alwaysdotmind@gmail.com"
-location = "Rio de Janeiro"
-name = "Dotmind it"
+location = "Worldwide"
+name = "Dotmind it. Building where things usually break"
 
 [params]
 dateFormat = "2006-01-02"
-description = "Dotmind indexes the essentials"
+description = "Dotmind it. Building where things usually break"
 paginationSinglePost = true
 colorTheme = "auto"
 colorThemeSwitcher = true
