@@ -1,14 +1,16 @@
-name: Deploy **Dev** to GitHub Pages
+name: Deploy Dev to GitHub Pages
 
 on:
   push:
-    branches:
-      - gh-pages
+    branches: [developer]
   workflow_dispatch: {}
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
@@ -26,9 +28,9 @@ jobs:
           hugo --minify \
                --baseURL "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
 
-      - name: Deploy to GitHub Pages (gh-pages-dev)
+      - name: Deploy to GitHub Pages (preview)
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          destination_branch: gh-pages-dev
+          publish_branch: developer
