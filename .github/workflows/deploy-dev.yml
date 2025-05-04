@@ -41,4 +41,8 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages
+          exclude_assets: |
+            themes/
+            resources/
+            .github/
           commit_message: "Automatic deploy from developer branch - $(date +'%Y-%m-%d %H:%M:%S')"
