@@ -1,0 +1,173 @@
+baseURL = "https://dotmindblog.vercel.app/"
+defaultContentLanguage = "en"
+disqusShortname = ""
+languageCode = "en-us"
+theme = "anubis2"
+title = "Dotmind it"
+
+[pagination]
+pagerSize = 5
+
+[params.author]
+email = "alwaysdotmind@gmail.com"
+location = "Worldwide"
+name = "Dotmind it. Building where things usually break"
+
+[params]
+dateFormat = "2006-01-02"
+description = "Dotmind it. Building where things usually break"
+paginationSinglePost = true
+colorTheme = "auto"
+colorThemeSwitcher = true
+
+copyCodeButton = true 
+locale = "en-us" 
+math = false # true: enable mathjax globally (default is false)
+readMore = false 
+readNextPosts = 2 
+rssAsSocialIcon = true 
+toc = true 
+
+# Graphcomment support
+graphcommentId = ""
+
+GiscusCategoryId = "DIC_kwDOOHsFIM4CoAP8"
+GiscusDataMapping = "pathname"
+GiscusDiscussionCategory = "General"
+GiscusLazyLoad = false
+GiscusRepo = "uphiago/dotmindblog"
+GiscusRepoId = "R_kgDOOHsFIA"
+GiscusThemeLight = "noborder_light"
+GiscusThemeDark = "noborder_dark"
+
+customCSS = ["custom-css/custom1.scss", "custom-css/custom2.css"]
+
+social = [
+  #   {id = "docs", url = "https://gohugo.io/documentation/"},
+  {id = "github", url = "https://github.com/uphiago/dotmindblog"}, #   {id = "linkedin", url = "https://www.linkedin.com/"},
+  #   {id = "email", url = "example@example.com"},
+  #   {id = "facebook", url = "#"},
+  # {id = "linkedin", url = "https://www.linkedin.com/in/uphiago"}, # {id = "instagram", url = "https://instagram.com/uphiago"}, #   {id = "netease-music", url = "#"},
+  #   {id = "telegram", url = "#"},
+  #   {id = "x", url = "#"},
+  #   {id = "youtube", url = "#"},
+  #   {id = "bluesky", url = "#"},
+]
+
+[[menu.main]]
+identifier = "home"
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+identifier = "about"
+name = "About"
+url = "/about/"
+weight = 2
+
+[[menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 3
+
+[[menu.main]]
+identifier = "archive"
+name = "Archive"
+url = "/posts/"
+weight = 4
+
+[languages]
+[languages.en]
+languageName = "English"
+
+[languages.pt]
+languageName = "Portuguese"
+
+[[languages.pt.menu.main]]
+identifier = "home"
+name = "Home"
+url = "/"
+weight = 1
+
+[[languages.pt.menu.main]]
+identifier = "about"
+name = "About"
+url = "/about/"
+weight = 2
+
+[[languages.pt.menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 3
+
+[[languages.pt.menu.main]]
+identifier = "archive"
+name = "Archive"
+url = "/posts/"
+weight = 4
+
+[languages.pt.params]
+languageCode = "pt-br"
+
+[taxonomies]
+author = "authors"
+category = "categories"
+tag = "tags"
+
+[markup]
+defaultMarkdownHandler = 'goldmark'
+
+[markup.goldmark.renderer]
+unsafe = true # Enable unsafe mode to have a better experience
+
+[markup.highlight]
+anchorLineNos = false 
+codeFences = true # tested with true and false. Both work.
+noClasses = true # If you run with markup.highlight.noClasses=false in your site configuration, you need a style sheet.
+style = 'catppuccin-frappe' # Find more style at here: https://swapoff.org/chroma/playground/
+tabWidth = 4 
+
+[params.UmamiAnalytics]
+async = true 
+datacache = false 
+defer = true 
+dnt = false 
+enabled = true 
+id = "eca2615c-7bd6-4020-bc35-45b4c213d04f" # Website ID
+respectDNT = true 
+shareUrl = "https://cloud.umami.is/share/wYiexR6220opwDF2/dotmindblog.vercel.app" 
+url = "https://cloud.umami.is/script.js" 
+
+[params.GoogleAnalytics]
+enabled = true
+gtag = "G-8TLQ2313W1"
+
+[minify]
+minifyOutput = true
+
+[imaging]
+anchor = "Smart"
+quality = 85
+resampleFilter = "Lanczos"
+
+[caches]
+[caches.images]
+dir = ":resourceDir/_gen"
+maxAge = "720h"
+
+[module]
+[[module.mounts]]
+excludeFiles = ['posts/_drafts/**']
+source = 'content'
+target = 'content'
+
+[[module.mounts]]
+source = 'node_modules'
+target = 'assets'
+
+[[module.mounts]]
+source = 'assets'
+target = 'assets'

@@ -1,0 +1,114 @@
+{{ $colorTheme := "light" }}
+{{ $colorThemeSwitcher := true }}
+
+{{ if and (isset site.Params "colortheme") (ne site.Params.colortheme "") }}
+    {{ $colorTheme = site.Params.colortheme | lower }}
+{{ end }}
+
+{{ if isset site.Params "colorthemeswitcher" }}
+    {{ $colorThemeSwitcher = site.Params.colorthemeswitcher }}
+{{ end }}
+
+{{ if or (eq $colorThemeSwitcher true) (eq $colorTheme "auto") }}
+    {{ if $colorThemeSwitcher }}
+        <div class="theme-switcher">
+            <svg class="theme-icon" width="24" height="24" viewBox="0 0 24 24">
+            <mask id="moon-mask">
+                <rect x="0" y="0" width="24" height="24" fill="white"/>
+                <circle cx="17" cy="4" r="9" fill="black"/>
+            </mask>
+            <circle class="theme-circle" cx="12" cy="12" r="5" mask="url(#moon-mask)" fill="currentColor"/>
+            <g class="sun-rays" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <line x1="12" y1="1" x2="12" y2="3"/>
+                <line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/>
+                <line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </g>
+        </svg>
+        </div>
+    {{ end }}
+
+    <script>
+        document.documentElement.classList.add('no-animate');
+        const STORAGE_KEY = 'user-color-scheme'
+        const defaultTheme = "{{ $colorTheme }}"
+
+        const themeMap = {
+            light: "{{ .Site.Params.GiscusThemeLight }}",
+            dark: "{{ .Site.Params.GiscusThemeDark }}"
+        };
+
+        let currentTheme  = detectCurrentScheme();
+        // let switchButton
+        let autoDefinedScheme = window.matchMedia('(prefers-color-scheme: dark)')
+
+        function switchTheme(e) {
+        document.documentElement.classList.remove('no-animate');
+            currentTheme = (currentTheme === 'dark') ? 'light' : 'dark';
+            if (localStorage) localStorage.setItem(STORAGE_KEY, currentTheme);
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            changeGiscusTheme(currentTheme);
+            document.body.dispatchEvent(new CustomEvent(currentTheme + "-theme-set"));
+        }
+
+        const autoChangeScheme = e => {
+            currentTheme = e.matches ? 'dark' : 'light'
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            changeGiscusTheme(currentTheme);
+            document.body.dispatchEvent(new CustomEvent(currentTheme + "-theme-set"));
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            switchButton = document.querySelector('.theme-switcher')
+            currentTheme = detectCurrentScheme()
+
+            if (currentTheme === 'auto') {
+                autoChangeScheme(autoDefinedScheme);
+                autoDefinedScheme.addListener(autoChangeScheme);
+            } else {
+                document.documentElement.setAttribute('data-theme', currentTheme)
+            }
+
+            if (switchButton) {
+                switchButton.addEventListener('click', switchTheme, false)
+            }
+
+            showContent();
+        })
+
+        function detectCurrentScheme() {
+            if (localStorage !== null && localStorage.getItem(STORAGE_KEY)) {
+                return localStorage.getItem(STORAGE_KEY)
+            }
+            if (defaultTheme) {
+                return defaultTheme
+            }
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+
+        function showContent() {
+            document.body.style.visibility = 'visible';
+            document.body.style.opacity = 1;
+        }
+
+        function changeGiscusTheme (theme) {
+            const giscusTheme = themeMap[theme] || theme;
+
+            function sendMessage(message) {
+              const iframe = document.querySelector('iframe.giscus-frame');
+              if (!iframe) return;
+              iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+            }
+
+            sendMessage({
+              setConfig: {
+                theme: giscusTheme
+              }
+            });
+        }
+    </script>
+{{ end }}
