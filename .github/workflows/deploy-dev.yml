@@ -6,16 +6,19 @@ on:
   workflow_dispatch: {}
 
 jobs:
-  build-deploy:
+  deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pages: write
+      id-token: write
 
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
         with:
           submodules: recursive
+          fetch-depth: 0
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -23,10 +26,13 @@ jobs:
           hugo-version: '0.115.4'
           extended: true
 
-      - name: Build with Hugo
+      - name: Get deployment URL
+        id: deployment
         run: |
-          hugo --minify \
-               --baseURL "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+         echo "page_url=https://${{ github.repository_owner }}.github.io/${{ github.repository.name }}" >> $GITHUB_OUTPUT
+        
+      - name: Build
+        run: hugo --minify --baseURL "${{ steps.deployment.outputs.page_url }}/"
 
       - name: Deploy to GitHub Pages (preview)
         uses: peaceiris/actions-gh-pages@v3
