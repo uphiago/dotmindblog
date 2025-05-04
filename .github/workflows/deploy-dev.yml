@@ -19,6 +19,7 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
+          ref: developer
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -39,4 +40,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          publish_branch: developer
+          publish_branch: gh-pages
+          commit_message: "Automatic deploy from developer branch - $(date +'%Y-%m-%d %H:%M:%S')"
