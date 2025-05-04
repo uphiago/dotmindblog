@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>distro on Dotmind it</title><link>/dotmindblog/pt/tags/distro/</link><description>Dotmind it (distro)</description><generator>Hugo -- gohugo.io</generator><language>pt</language><managingEditor>alwaysdotmind@gmail.com
+(Dotmind it. Building where things usually break)</managingEditor><lastBuildDate>Thu, 01 May 2025 00:27:00 -0300</lastBuildDate><atom:link href="/dotmindblog/pt/tags/distro/index.xml" rel="self" type="application/rss+xml"/><item><title>DE, WM, X11 e Wayland</title><link>/dotmindblog/pt/posts/2025/linux/distros/graphics-components/</link><pubDate>Thu, 01 May 2025 00:27:00 -0300</pubDate><author>alwaysdotmind@gmail.com (Dotmind it. Building where things usually break)</author><guid>/dotmindblog/pt/posts/2025/linux/distros/graphics-components/</guid><description>&lt;h2 id="componentes-que-formam-a-interface-gráfica-do-linux" >
+&lt;div>
+&lt;a href="#componentes-que-formam-a-interface-gr%c3%a1fica-do-linux">
+#
+&lt;/a>
+Componentes que formam a interface gráfica do Linux
+&lt;/div>
+&lt;/h2>
+&lt;p>Antes de falarmos de drivers, vale entender como funcionam os principais componentes da interface gráfica no Linux.&lt;/p>
+&lt;br>
+&lt;p>&lt;strong>TL;DR:&lt;/strong> No Linux, o DE fornece a interface visual, o WM organiza as janelas, e X11 ou Wayland define como os aplicativos se comunicam com a GPU e o servidor gráfico.&lt;/p>
+&lt;h2 id="ambiente-de-área-de-trabalho-de" >
+&lt;div>
+&lt;a href="#ambiente-de-%c3%a1rea-de-trabalho-de">
+#
+&lt;/a>
+Ambiente de Área de Trabalho (DE)
+&lt;/div>
+&lt;/h2>
+&lt;p>O &lt;strong>Desktop Environment&lt;/strong> reúne tudo aquilo que você &amp;ldquo;vê e toca&amp;rdquo; diariamente:&lt;/p>
+&lt;ul>
+&lt;li>barra de tarefas e bandeja do sistema&lt;/li>
+&lt;li>menus, notificações e janelas (estilo, animações, botões)&lt;/li>
+&lt;li>gerenciador de arquivos, painéis, widgets&lt;/li>
+&lt;li>temas, ícones e fontes&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Ex.:&lt;/strong> GNOME, KDE Plasma (sou fã), Cinnamon, Budgie&amp;hellip;&lt;/p>
+&lt;p>Cada um equilibra desempenho, visual e recursos de forma diferente.&lt;/p>
+&lt;hr>
+&lt;h2 id="gerenciador-de-janelas-wm" >
+&lt;div>
+&lt;a href="#gerenciador-de-janelas-wm">
+#
+&lt;/a>
+Gerenciador de Janelas (WM)
+&lt;/div>
+&lt;/h2>
+&lt;p>O &lt;strong>Window Manager&lt;/strong> decide onde e como cada janela aparece na sua tela:&lt;/p>
+&lt;ul>
+&lt;li>posicionamento (flutuante, mosaico, monocle)&lt;/li>
+&lt;li>atalhos de teclado para mover/redimensionar&lt;/li>
+&lt;li>bordas, sombras e pilha de janelas&lt;/li>
+&lt;li>regras de foco e workspaces&lt;/li>
+&lt;/ul>
+&lt;p>Você pode usar o WM que já vem integrado ao DE, ou optar por um WM independente para ter mais controle e personalização.&lt;/p>
+&lt;p>&lt;strong>Ex.:&lt;/strong> i3, bspwm, Sway, Hyprland.&lt;/p>
+&lt;hr>
+&lt;h2 id="protocolos-gráficos" >
+&lt;div>
+&lt;a href="#protocolos-gr%c3%a1ficos">
+#
+&lt;/a>
+Protocolos Gráficos
+&lt;/div>
+&lt;/h2>
+&lt;p>O protocolo gráfico funciona como intermediário entre as aplicações, o WM/DE e o hardware de vídeo. No Linux essa função é sustentada por dois protocolos principais, cada um com suas características e limitações:&lt;/p>
+&lt;h3 id="x11-xorg" >
+&lt;div>
+&lt;a href="#x11-xorg">
+##
+&lt;/a>
+X11 (Xorg)
+&lt;/div>
+&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>Por que escolher&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Alta compatibilidade com aplicativos, ambientes gráficos e drivers existentes.&lt;/li>
+&lt;li>Ecossistema maduro, com suporte a extensões, depuração, automação e forwarding remoto.&lt;/li>
+&lt;li>Recomendado para cenários legados ou quando ferramentas específicas ainda exigem X11.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Onde pode doer&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Arquitetura antiga, com camadas que elevam a latência e dificultam otimizações.&lt;/li>
+&lt;li>Suporte limitado a HiDPI, múltiplas GPUs e monitores de alta taxa de atualização.&lt;/li>
+&lt;li>Segurança frágil: qualquer aplicativo pode interceptar entradas globais (teclado/mouse).&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="wayland" >
+&lt;div>
+&lt;a href="#wayland">
+##
+&lt;/a>
+Wayland
+&lt;/div>
+&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>Por que escolher&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Arquitetura moderna com renderização direta, que reduz a latência e melhora o uso de recursos.&lt;/li>
+&lt;li>Modelo de segurança isolado: aplicações não têm acesso às entradas ou janelas umas das outras.&lt;/li>
+&lt;li>Suporte nativo aprimorado para HiDPI, escala fracionada e rotação de tela.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Onde pode doer&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Aplicações legadas ainda exigem X11, embora o XWayland forneça compatibilidade parcial.&lt;/li>
+&lt;li>Ferramentas gráficas avançadas e alguns drivers ainda enfrentam limitações ou instabilidades.&lt;/li>
+&lt;li>Captura de tela e gravação podem ter limitações dependendo do compositor.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>&lt;strong>Dica rápida:&lt;/strong> Algumas distros permitem alternar entre Wayland e Xorg na tela de login. Se algo essencial não funcionar em Wayland, basta voltar ao X11.&lt;/p>
+&lt;/blockquote>
+&lt;p>Com esses conceitos, você poderá ajustar compositor, protocolo e window manager, dando maior controle sobre latência, renderização e uso da GPU para o seu dia a dia.&lt;/p></description></item><item><title>Assinando Módulos de Kernel em Ambientes UEFI</title><link>/dotmindblog/pt/posts/2025/linux/secure-boot-kernel/</link><pubDate>Thu, 27 Mar 2025 12:10:31 -0300</pubDate><author>alwaysdotmind@gmail.com (Dotmind it. Building where things usually break)</author><guid>/dotmindblog/pt/posts/2025/linux/secure-boot-kernel/</guid><description>&lt;!-- Integração de módulos customizados com Secure Boot -->
+&lt;hr>
+&lt;p>Com o aumento das aplicações de IA que exigem GPUs de alto desempenho, é comum a necessidade de utilizar módulos personalizados, incluindo &lt;a href="https://github.com/NVIDIA/open-gpu-kernel-modules" target="_blank">drivers open-source, como os da NVIDIA&lt;/a>. Esses módulos precisam ser assinados manualmente para funcionar corretamente em distribuições Linux que utilizam Secure Boot.&lt;/p>
+&lt;p>Este guia mostra como criar e cadastrar sua própria chave (MOK) no firmware UEFI, permitindo assinar com segurança esses módulos personalizados sem precisar desativar o Secure Boot.&lt;/p>
+&lt;p>&lt;br>&lt;/br>&lt;/p>
+&lt;h2 id="1-conceitos-de-secure-boot-e-mok" >
+&lt;div>
+&lt;a href="#1-conceitos-de-secure-boot-e-mok">
+#
+&lt;/a>
+1. Conceitos de Secure Boot e MOK
+&lt;/div>
+&lt;/h2>
+&lt;p>» &lt;strong>Secure Boot&lt;/strong> é um recurso do firmware que carrega apenas binários assinados com chaves confiáveis. Em várias distribuições Linux, usa-se o binário &amp;ldquo;shim&amp;rdquo;, já assinado pela Microsoft, garantindo compatibilidade.&lt;/p>
+&lt;p>» Verifique o status do Secure Boot:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#ef9f76;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mokutil --sb-state
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;strong>MOK (Machine Owner Key)&lt;/strong>, chave para assinar kernels/módulos (ex.: drivers NVIDIA, DKMS) no firmware, com Secure Boot ativo.&lt;/li>
+&lt;/ul>
+&lt;h2 id="2-gerando-e-cadastrando-a-mok" >
+&lt;div>
+&lt;a href="#2-gerando-e-cadastrando-a-mok">
+#
+&lt;/a>
+2. Gerando e cadastrando a MOK
+&lt;/div>
+&lt;/h2>
+&lt;ol>
+&lt;li>Em distribuições baseadas em Debian/Ubuntu, gere uma nova chave MOK com:&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#ef9f76;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo mkdir -p /var/lib/shim-signed/mok/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo openssl req -nodes -new -x509 -newkey rsa:2048 &lt;span style="color:#8caaee">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8caaee">&lt;/span> -keyout /var/lib/shim-signed/mok/MOK.priv &lt;span style="color:#8caaee">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8caaee">&lt;/span> -outform DER -out /var/lib/shim-signed/mok/MOK.der &lt;span style="color:#8caaee">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8caaee">&lt;/span> -days 36500 -subj &lt;span style="color:#a6d189">&amp;#34;/CN=My Secure Boot Key/&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Isso criará os arquivos &lt;code>MOK.der&lt;/code> e &lt;code>MOK.priv&lt;/code> em &lt;code>/var/lib/shim-signed/mok/&lt;/code>, verifique com:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#ef9f76;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ls -l /var/lib/shim-signed/mok/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
+&lt;li>Importe a chave pública (MOK.der) no firmware UEFI com o comando:&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#ef9f76;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mokutil --import /var/lib/shim-signed/mok/MOK.der
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Defina uma senha que será solicitada no próximo boot, e reinicie o sistema em seguida.&lt;/p>
+&lt;ol start="3">
+&lt;li>Durante o boot seguinte, o sistema entrará automaticamente no MOK Manager (Shim).&lt;/li>
+&lt;/ol>
+&lt;h2 id="3-passo-a-passo-no-mok-manager" >
+&lt;div>
+&lt;a href="#3-passo-a-passo-no-mok-manager">
+#
+&lt;/a>
+3. Passo a passo no MOK Manager
+&lt;/div>
+&lt;/h2>
+&lt;ol>
+&lt;li>Assim que a máquina reiniciar, o utilitário de gerenciamento de chaves UEFI &amp;ldquo;Shim&amp;rdquo; deve aparecer. Pressione qualquer tecla para começar.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://uphiago.github.io/dotmindblog?v=1746323161/images/2025/secure-boot-bios-2.png" alt="Tela inicial do MOK Manager exibindo interface de gerenciamento de chaves.">&lt;/p>
+&lt;ol start="3">
+&lt;li>Selecione &amp;ldquo;Enroll MOK&amp;rdquo;.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://uphiago.github.io/dotmindblog?v=1746323161/images/2025/secure-boot-bios-3.png" alt="A tela &amp;ldquo;Perform MOK management&amp;rdquo; é exibida.">&lt;/p>
+&lt;ol start="4">
+&lt;li>Selecione &amp;ldquo;Continue&amp;rdquo;.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://uphiago.github.io/dotmindblog?v=1746323161/images/2025/secure-boot-bios-6.png" alt="uefi1">&lt;/p>
+&lt;ol start="5">
+&lt;li>Selecione &amp;ldquo;Yes&amp;rdquo;.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://uphiago.github.io/dotmindblog?v=1746323161/images/2025/secure-boot-bios-7.png" alt="uefi1">&lt;/p>
+&lt;ol start="6">
+&lt;li>Digite a senha que você definiu ao importar a chave.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://uphiago.github.io/dotmindblog?v=1746323161/images/2025/secure-boot-bios-8.png" alt="uefi1">&lt;/p>
+&lt;ol start="7">
+&lt;li>A tela &amp;ldquo;Perform MOK management&amp;rdquo; reaparecerá. Selecione &amp;ldquo;Reboot&amp;rdquo;.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://uphiago.github.io/dotmindblog?v=1746323161/images/2025/secure-boot-bios-9.png" alt="uefi1">&lt;/p>
+&lt;p>Ao voltar para o sistema operacional, sua chave já estará inclusa no firmware.&lt;/p>
+&lt;h2 id="4-assinando-novos-módulos-ex-nvidiadkms" >
+&lt;div>
+&lt;a href="#4-assinando-novos-m%c3%b3dulos-ex-nvidiadkms">
+#
+&lt;/a>
+4. Assinando novos Módulos (Ex.: NVIDIA/DKMS)
+&lt;/div>
+&lt;/h2>
+&lt;p>Se estiver usando DKMS, configure o arquivo &lt;code>/etc/dkms/framework.conf&lt;/code> para apontar para sua MOK. Assim, os módulos recompilados serão assinados automaticamente.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#ef9f76;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#babbf1">mok_signing_key&lt;/span>&lt;span style="color:#99d1db">=&lt;/span>&lt;span style="color:#a6d189">&amp;#34;/var/lib/shim-signed/mok/MOK.priv&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#babbf1">mok_certificate&lt;/span>&lt;span style="color:#99d1db">=&lt;/span>&lt;span style="color:#a6d189">&amp;#34;/var/lib/shim-signed/mok/MOK.der&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Na maioria dos cenários comuns (módulos DKMS), você não precisará realizar, com frequência, a assinatura manual. Configure corretamente o framework do DKMS como mostrado acima.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Para assinar manualmente:&lt;/p>
+&lt;p>Substitua &lt;code>nvidia&lt;/code> pelo &lt;code>&amp;lt;module_name&amp;gt;&lt;/code> para localizar o módulo desejado:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#ef9f76;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo modinfo -n nvidia
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Descompacte o módulo para um arquivo temporário:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#ef9f76;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo zstd -d /lib/modules/&lt;span style="color:#ca9ee6">$(&lt;/span>uname -r&lt;span style="color:#ca9ee6">)&lt;/span>/updates/dkms/nvidia.ko.zst -o /tmp/nvidia.ko
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Assine o módulo recém-descompactado:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#ef9f76;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo /usr/src/linux-headers-&lt;span style="color:#ca9ee6">$(&lt;/span>uname -r&lt;span style="color:#ca9ee6">)&lt;/span>/scripts/sign-file sha256 &lt;span style="color:#8caaee">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8caaee">&lt;/span> /var/lib/shim-signed/mok/MOK.priv &lt;span style="color:#8caaee">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8caaee">&lt;/span> /var/lib/shim-signed/mok/MOK.der &lt;span style="color:#8caaee">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8caaee">&lt;/span> /tmp/nvidia.ko
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Sobrescreva novamente o módulo assinado:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#ef9f76;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo zstd -f --rm /tmp/nvidia.ko -o /lib/modules/&lt;span style="color:#ca9ee6">$(&lt;/span>uname -r&lt;span style="color:#ca9ee6">)&lt;/span>/updates/dkms/nvidia.ko.zst
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Reconstrua o cache de módulos:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#ef9f76;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo depmod -a
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Se necessário, atualize o initramfs para refletir nos módulos iniciais carregados durante o boot:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#ef9f76;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo update-initramfs -u -k &lt;span style="color:#ca9ee6">$(&lt;/span>uname -r&lt;span style="color:#ca9ee6">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>(Opcional)&lt;/strong> Script para ver todos os módulos e confirmar suas assinaturas:&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#ef9f76;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ca9ee6">for&lt;/span> mod in /lib/modules/&lt;span style="color:#ca9ee6">$(&lt;/span>uname -r&lt;span style="color:#ca9ee6">)&lt;/span>/updates/dkms/*.ko.zst&lt;span style="color:#c6d0f5">;&lt;/span> &lt;span style="color:#ca9ee6">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#babbf1">out&lt;/span>&lt;span style="color:#99d1db">=&lt;/span>&lt;span style="color:#a6d189">&amp;#34;/tmp/&lt;/span>&lt;span style="color:#ca9ee6">$(&lt;/span>basename &lt;span style="color:#a6d189">&amp;#34;&lt;/span>&lt;span style="color:#babbf1">$mod&lt;/span>&lt;span style="color:#a6d189">&amp;#34;&lt;/span> .zst&lt;span style="color:#ca9ee6">)&lt;/span>&lt;span style="color:#a6d189">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> zstd -d &lt;span style="color:#a6d189">&amp;#34;&lt;/span>&lt;span style="color:#babbf1">$mod&lt;/span>&lt;span style="color:#a6d189">&amp;#34;&lt;/span> -o &lt;span style="color:#a6d189">&amp;#34;&lt;/span>&lt;span style="color:#babbf1">$out&lt;/span>&lt;span style="color:#a6d189">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#c6d0f5;font-style:italic">echo&lt;/span> &lt;span style="color:#a6d189">&amp;#34;&amp;gt;&amp;gt;&amp;gt; &lt;/span>&lt;span style="color:#ca9ee6">$(&lt;/span>basename &lt;span style="color:#a6d189">&amp;#34;&lt;/span>&lt;span style="color:#babbf1">$out&lt;/span>&lt;span style="color:#a6d189">&amp;#34;&lt;/span>&lt;span style="color:#ca9ee6">)&lt;/span>&lt;span style="color:#a6d189">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> modinfo &lt;span style="color:#a6d189">&amp;#34;&lt;/span>&lt;span style="color:#babbf1">$out&lt;/span>&lt;span style="color:#a6d189">&amp;#34;&lt;/span> &lt;span style="color:#c6d0f5">|&lt;/span> grep signer
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ca9ee6">done&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="5-boas-práticas--cuidados" >
+&lt;div>
+&lt;a href="#5-boas-pr%c3%a1ticas--cuidados">
+#
+&lt;/a>
+5. Boas Práticas &amp;amp; Cuidados
+&lt;/div>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Importante:&lt;/strong> Proteja suas chaves privadas.&lt;/li>
+&lt;li>Se você perder essa chave ou esquecer a senha, precisará gerar e importar novamente a MOK.&lt;/li>
+&lt;li>Confira logs (dmesg, journalctl) para erros como “module signature verification failed”.&lt;/li>
+&lt;li>Em algumas placas-mãe ou configuradores de VM (ex.: Hyper-V), é preciso configurar o Secure Boot para aceitar chaves da “Microsoft UEFI Certificate Authority” antes de gerar ou importar a MOK.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://uphiago.github.io/dotmindblog?v=1746323161/images/2025/secure-boot-bios-1.png" alt="Secure Boot BIOS Screenshot">&lt;/p>
+&lt;h2 id="referências" >
+&lt;div>
+&lt;a href="#refer%c3%aancias">
+#
+&lt;/a>
+Referências
+&lt;/div>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://wiki.debian.org/SecureBoot#MOK_-_Machine_Owner_Key">Wiki Debian - SecureBoot&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot">Arch Linux Wiki - Secure Boot&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://wiki.archlinux.org/title/Dynamic_Kernel_Module_Support">Dynamic Kernel Module Support&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>
