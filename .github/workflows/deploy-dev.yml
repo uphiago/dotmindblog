@@ -1,21 +1,23 @@
-name: Deploy Dev to GitHub Pages
+name: Deploy from Developer to GH-Pages
 
 on:
   push:
-    branches: [gh-pages]
+    branches: [developer]
   workflow_dispatch: {}
 
 jobs:
-  build-deploy:
+  deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: write
 
     steps:
-      - name: Checkout source
+      - name: Checkout code
         uses: actions/checkout@v4
         with:
           submodules: recursive
+          fetch-depth: 0
+          ref: developer
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -26,11 +28,13 @@ jobs:
       - name: Build with Hugo
         run: |
           hugo --minify \
-               --baseURL "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
-
-      - name: Deploy to GitHub Pages (preview)
+               --baseURL "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}?v=$(date +%s)"
+        
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages
+          force_orphan: true
+          commit_message: "Deploy branch - $(date +'%Y-%m-%d %H:%M:%S')"
