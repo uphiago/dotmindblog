@@ -27,7 +27,7 @@ The blog itself also serves as an experiment to observe AI crawler behavior. The
 ## Structure
 
 ```
-content/        # Posts in Markdown (en + pt per file)
+content/        # Posts in Markdown (.md for EN, .pt.md for PT-BR)
 layouts/        # Custom partials and overrides
 static/images/  # Post images
 assets/         # SCSS and JS
@@ -44,9 +44,3 @@ hugo server -D
 ```
 
 Requires Hugo extended edition. See [hugo.io/installation](https://gohugo.io/installation/).
-
----
-
-## Notable post
-
-[Agentic Engineering: Skills Stack, MCP, and Project Context](https://dotmindblog.vercel.app/posts/2026/ai/agentic-engineering-guide/) — a practical guide on structuring AI agents with Skills, MCP, and the Plan → Execute → Verify loop.
