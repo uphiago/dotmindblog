@@ -16,11 +16,11 @@ authors = ["iceteash"]
 draft = false
 +++
 
-> **Author's Note:** This guide consolidates best practices for prompt engineering and autonomous systems architecture. It is designed for developers who want to move beyond simple "prompts" toward robust and reliable agentic systems.
-
 <!--more-->
 
 ---
+
+> **Author's Note:** This guide consolidates best practices for prompt engineering and autonomous systems architecture. It is designed for developers who want to move beyond simple "prompts" toward robust and reliable agentic systems.
 
 ## 0. Quick Setup (TL;DR)
 
