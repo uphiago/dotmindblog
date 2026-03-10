@@ -37,7 +37,6 @@ Thanks to <a href="https://github.com/Mitrichius" target="_blank" rel="noopener 
     - [ ] CSV and XML tokens performance benchmark
   - [x] 3D visualization in the browser ([React](https://react.dev/learn) + [3d-force-graph](https://github.com/vasturiano/3d-force-graph))
   - [ ] Analytical dashboard (filters, search, metrics)
-  - [ ] MCP integration with official docs
   - [ ] Add tests for graph interaction module
 </details>
 

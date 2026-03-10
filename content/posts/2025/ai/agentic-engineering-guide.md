@@ -29,7 +29,7 @@ Want to get started right now? Here's how to configure Skills support in common 
 | Platform | How to Configure |
 | :--- | :--- |
 | **Codex** | Keep skills in `skills/` in your workspace and project rules in `AGENTS.md`. The agent uses these artifacts as its primary source of operational context. |
-| **Claude** | Add the `skills/` folder path to your `claude_desktop_config.json` or simply drag the folder into the chat context. |
+| **Claude** | Create a `.claude/skills/` folder at the project root (or `~/.claude/skills/` for personal use). Claude Code auto-discovers skills on startup — no additional configuration needed. |
 | **OpenCode** | Skills are loaded automatically if placed at the project root under `.opencode/skills` or `skills/`. Make sure the Agent plugin is active. |
 | **Antigravity** | No action needed. Antigravity scans the `skills/` folder at workspace startup and automatically indexes `SKILL.md` files. |
 
@@ -83,7 +83,7 @@ This pattern aligns with Anthropic's official recommendations for context manage
 
 ### Skill Directory Structure
 
-A skill located at `skills/<skill-name>/` should implement the following components:
+A skill should implement the following components. The base directory varies by platform: `.claude/skills/<name>/` in Claude Code, `skills/<name>/` in Codex and Antigravity, `.opencode/skills/<name>/` in OpenCode.
 
 ### A. The Behavior Manifest (`SKILL.md`)
 
@@ -151,7 +151,7 @@ What differs between Codex, Claude, OpenCode, and Antigravity is mainly the **co
 
 - **MCP everywhere:** MCP is an open standard and can be used across all environments to connect external data and tools.
 - **Codex (practical example):** `skills/` + `AGENTS.md` as the project's local contract, with tool execution in the workspace.
-- **Claude (practical example):** *Personas* in `.claude/agents` and persistent context in `CLAUDE.md`.
+- **Claude (practical example):** Sub-agents defined in `.claude/agents/` (`.md` files with YAML frontmatter) and persistent context in `CLAUDE.md`.
 - **OpenCode/Antigravity (practical example):** Skills in `skills/`, script-based execution, and continuous validation in the autonomous loop.
 
 > **Critical Security:** Configure destructive skills (e.g., `git push`, file deletion) to require explicit human approval (*Human-in-the-loop*), regardless of the agent's autonomy level.
@@ -165,11 +165,17 @@ Let's build a real skill to enforce safe Git operations.
 **Directory Structure:**
 
 ```text
-skills/
-└── git-safe/
-    ├── SKILL.md
-    └── scripts/
-        └── pre_push_check.sh
+# Claude Code
+.claude/skills/git-safe/
+├── SKILL.md
+└── scripts/
+    └── pre_push_check.sh
+
+# Codex / Antigravity
+skills/git-safe/
+├── SKILL.md
+└── scripts/
+    └── pre_push_check.sh
 ```
 
 **`SKILL.md` contents (Manifest):**
@@ -253,8 +259,9 @@ This section is a practical checklist for getting productive with agents, skills
 
 ### 1. Where Skills Should Live
 
-- **Project:** `skills/<skill-name>/SKILL.md` (recommended for team-wide standards).
-- **Personal:** user skills directory (when the skill is a utility not specific to the project).
+- **Project (Claude Code):** `.claude/skills/<name>/SKILL.md`
+- **Project (Codex / Antigravity):** `skills/<name>/SKILL.md`
+- **Personal (Claude Code):** `~/.claude/skills/<name>/SKILL.md` (available across all projects)
 - **Rule of thumb:** if it affects the repository's code or rules, keep it in the repository.
 
 ### 2. How the Agent Discovers Skills
@@ -267,13 +274,21 @@ This section is a practical checklist for getting productive with agents, skills
 ### 3. Recommended Skill Structure
 
 ```text
-skills/
-└── skill-name/
-    ├── SKILL.md
-    ├── references/
-    │   └── guide.md
-    └── scripts/
-        └── run.sh
+# Claude Code
+.claude/skills/skill-name/
+├── SKILL.md
+├── references/
+│   └── guide.md
+└── scripts/
+    └── run.sh
+
+# Codex / Antigravity
+skills/skill-name/
+├── SKILL.md
+├── references/
+│   └── guide.md
+└── scripts/
+    └── run.sh
 ```
 
 - `SKILL.md`: objective, trigger, flow, and success criteria.

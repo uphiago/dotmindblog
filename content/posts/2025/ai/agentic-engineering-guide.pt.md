@@ -16,11 +16,11 @@ authors = ["iceteash"]
 draft = false
 +++
 
-> **Nota do Autor:** Este guia consolida as melhores práticas de engenharia de prompt e arquitetura de sistemas autônomos. Ele foi desenhado para desenvolvedores que desejam transitar de simples "prompts" para sistemas agênticos robustos e confiáveis.
-
 <!--more-->
 
 ---
+
+> **Nota do Autor:** Este guia consolida as melhores práticas de engenharia de prompt e arquitetura de sistemas autônomos. Ele foi desenhado para desenvolvedores que desejam transitar de simples "prompts" para sistemas agênticos robustos e confiáveis.
 
 ## 0. Setup Rápido (TL;DR)
 
@@ -29,7 +29,7 @@ Quer começar agora? Veja como configurar o suporte a Skills em ambientes agênt
 | Plataforma | Como Configurar |
 | :--- | :--- |
 | **Codex** | Mantenha as skills em `skills/` no workspace e as regras do projeto em `AGENTS.md`. O agente usa esses artefatos como fonte primária de contexto operacional. |
-| **Claude** | Adicione o caminho da pasta `skills/` no seu arquivo `claude_desktop_config.json` ou simplesmente arraste a pasta para o contexto do chat. |
+| **Claude** | Crie a pasta `.claude/skills/` na raiz do projeto (ou `~/.claude/skills/` para uso pessoal). O Claude Code descobre as skills automaticamente ao iniciar — nenhuma configuração adicional é necessária. |
 | **OpenCode** | As skills são carregadas automaticamente se estiverem na raiz do projeto em `.opencode/skills` ou `skills/`. Certifique-se de que o plugin de Agente está ativo. |
 | **Antigravity** | Nenhuma ação necessária. O Antigravity escaneia a pasta `skills/` na inicialização do workspace e indexa os arquivos `SKILL.md` automaticamente. |
 
@@ -83,7 +83,7 @@ Esse padrão está alinhado com as recomendações oficiais da Anthropic para ge
 
 ### Estrutura de Diretórios da Skill
 
-Uma skill localizada em `skills/<nome-da-skill>/` deve implementar os seguintes componentes:
+Uma skill deve implementar os seguintes componentes. O diretório base varia por plataforma: `.claude/skills/<nome>/` no Claude Code, `skills/<nome>/` no Codex e Antigravity, `.opencode/skills/<nome>/` no OpenCode.
 
 ### A. O Manifesto de Comportamento (`SKILL.md`)
 
@@ -151,7 +151,7 @@ O que muda entre Codex, Claude, OpenCode e Antigravity é principalmente a **exp
 
 - **MCP em todos:** MCP é um padrão aberto e pode ser usado em todos os ambientes para conectar dados e ferramentas externas.
 - **Codex (exemplo prático):** uso de `skills/` + `AGENTS.md` como contrato local do projeto e execução de ferramentas no workspace.
-- **Claude (exemplo prático):** *Personas* em `.claude/agents` e contexto persistente em `CLAUDE.md`.
+- **Claude (exemplo prático):** Sub-agents definidos em `.claude/agents/` (arquivos `.md` com frontmatter YAML) e contexto persistente em `CLAUDE.md`.
 - **OpenCode/Antigravity (exemplo prático):** Skills em `skills/`, execução por scripts e validação contínua no loop autônomo.
 
 > **Segurança Crítica:** Configure skills destrutivas (ex: `git push`, deleção de arquivos) para exigir aprovação humana explícita (*Human-in-the-loop*), independentemente da autonomia do agente.
@@ -165,11 +165,17 @@ Vamos construir uma skill real para garantir operações Git seguras.
 **Estrutura de Diretórios:**
 
 ```text
-skills/
-└── git-safe/
-    ├── SKILL.md
-    └── scripts/
-        └── pre_push_check.sh
+# Claude Code
+.claude/skills/git-safe/
+├── SKILL.md
+└── scripts/
+    └── pre_push_check.sh
+
+# Codex / Antigravity
+skills/git-safe/
+├── SKILL.md
+└── scripts/
+    └── pre_push_check.sh
 ```
 
 **Conteúdo do `SKILL.md` (Manifesto):**
@@ -253,8 +259,9 @@ Esta seção é um checklist prático para começar a produzir com agentes, skil
 
 ### 1. Onde as Skills Devem Ficar
 
-- **Projeto:** `skills/<skill-name>/SKILL.md` (recomendado para padrões do time).
-- **Pessoal:** diretório de skills do usuário (quando a skill for utilitária e não específica do projeto).
+- **Projeto (Claude Code):** `.claude/skills/<nome>/SKILL.md`
+- **Projeto (Codex / Antigravity):** `skills/<nome>/SKILL.md`
+- **Pessoal (Claude Code):** `~/.claude/skills/<nome>/SKILL.md` (disponível em todos os projetos)
 - **Regra prática:** se afeta código/regras do repositório, mantenha no próprio repositório.
 
 ### 2. Como o Agente Descobre Skills
@@ -267,13 +274,21 @@ Esta seção é um checklist prático para começar a produzir com agentes, skil
 ### 3. Estrutura Recomendada de Skill
 
 ```text
-skills/
-└── nome-da-skill/
-    ├── SKILL.md
-    ├── references/
-    │   └── guia.md
-    └── scripts/
-        └── run.sh
+# Claude Code
+.claude/skills/nome-da-skill/
+├── SKILL.md
+├── references/
+│   └── guia.md
+└── scripts/
+    └── run.sh
+
+# Codex / Antigravity
+skills/nome-da-skill/
+├── SKILL.md
+├── references/
+│   └── guia.md
+└── scripts/
+    └── run.sh
 ```
 
 - `SKILL.md`: objetivo, gatilho, fluxo e critérios de sucesso.
