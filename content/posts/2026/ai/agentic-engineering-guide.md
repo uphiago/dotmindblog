@@ -29,15 +29,15 @@ Want to get started right now? Here's how to configure Skills support in common 
 | Platform | How to Configure |
 | :--- | :--- |
 | **Codex** | Keep skills in `skills/` in your workspace and project rules in `AGENTS.md`. The agent uses these artifacts as its primary source of operational context. |
-| **Claude** | Create a `.claude/skills/` folder at the project root (or `~/.claude/skills/` for personal use). Claude Code auto-discovers skills on startup — no additional configuration needed. |
+| **Claude** | Create a `.claude/skills/` folder at the project root (or `~/.claude/skills/` for personal use). Claude Code auto-discovers skills on startup: no additional configuration needed. |
 | **OpenCode** | Skills are loaded automatically if placed at the project root under `.opencode/skills` or `skills/`. Make sure the Agent plugin is active. |
-> **Interoperability:** The Agent Skills standard is adopted by 30+ tools — Claude Code, Codex, Cursor, VS Code, Gemini CLI, GitHub Copilot, Roo Code, OpenCode, and others. **A single Skill works across any compatible runtime.** Don't create per-tool versions; the file system is the universal source of truth. See the full list at [agentskills.io](https://agentskills.io).
+> **Interoperability:** The Agent Skills standard is adopted by 30+ tools: Claude Code, Codex, Cursor, VS Code, Gemini CLI, GitHub Copilot, Roo Code, OpenCode, and others. **A single Skill works across any compatible runtime.** Don't create per-tool versions; the file system is the universal source of truth. See the full list at [agentskills.io](https://agentskills.io).
 
 ---
 
 ## 1. The New Frontier: Agentic Engineering
 
-The era of using LLMs purely as consultative chatbots is over. We are living through the transition to **Autonomous Agents** — systems capable of orchestrating planning, tool execution, and result verification. However, an agent's effectiveness is directly proportional to the quality of the tools (Skills) provided to it.
+The era of using LLMs purely as consultative chatbots is over. We are living through the transition to **Autonomous Agents**: systems capable of orchestrating planning, tool execution, and result verification. However, an agent's effectiveness is directly proportional to the quality of the tools (Skills) provided to it.
 
 Unlike a standalone prompt, a **Skill** is a modular, reusable, and deterministic functional unit that extends the model's native capabilities.
 
@@ -59,7 +59,7 @@ To build truly effective agents that understand your organization's context, we 
 
 ## 2. Technical Architecture of a Skill
 
-To build a robust skill, we abandon organic structures in favor of strict organization. It's not just about folders — it's about **Progressive Disclosure**.
+To build a robust skill, we abandon organic structures in favor of strict organization. It's not just about folders: it's about **Progressive Disclosure**.
 
 ### The "Progressive Disclosure" Pattern
 
@@ -81,7 +81,7 @@ This pattern aligns with Anthropic's official recommendations for context manage
 
 ### Skill Directory Structure
 
-A skill should implement the following components. The base directory varies by platform: `.claude/skills/<name>/` in Claude Code, `skills/<name>/` in Codex and Antigravity, `.opencode/skills/<name>/` in OpenCode.
+A skill should implement the following components. The base directory varies by platform: `.claude/skills/<name>/` in Claude Code, `skills/<name>/` in Codex, `.opencode/skills/<name>/` in OpenCode.
 
 ### A. The Behavior Manifest (`SKILL.md`)
 
@@ -129,7 +129,7 @@ Where determinism happens. Don't ask the AI to "imagine" how to run a database m
 
 - **Purpose:** Python, Bash, or Node.js scripts that handle the heavy lifting.
 - **Security:** Enables code auditing and sandbox execution.
-- **Progressive Disclosure (Level 3):** These files are NEVER read by the LLM — only executed. This guarantees zero token consumption for heavy logic.
+- **Progressive Disclosure (Level 3):** These files are NEVER read by the LLM: only executed. This guarantees zero token consumption for heavy logic.
 
 ### C. The Knowledge Base (`references/`)
 
@@ -151,7 +151,7 @@ Regardless of the tool, all Agent Skills-compatible runtimes follow the same pil
 2. **Execution (Execute):** The agent uses tools and scripts (`scripts/`) to apply changes deterministically.
 3. **Verification (Verify):** The agent validates the result with tests, checks, and quality criteria before completing the task.
 
-What differs between tools is mainly the **configuration/orchestration experience** (where to declare agents, memory, and integrations) — not the operational principles.
+What differs between tools is mainly the **configuration/orchestration experience** (where to declare agents, memory, and integrations): not the operational principles.
 
 - **MCP everywhere:** MCP is an open standard and can be used across all environments to connect external data and tools.
 - **Codex (practical example):** `skills/` + `AGENTS.md` as the project's local contract, with tool execution in the workspace.
@@ -175,7 +175,7 @@ Let's build a real skill to enforce safe Git operations.
 └── scripts/
     └── pre_push_check.sh
 
-# Codex / Antigravity
+# Codex / OpenCode
 skills/git-safe/
 ├── SKILL.md
 └── scripts/
@@ -246,7 +246,7 @@ For massive tasks, a single agent gets lost. The solution is delegation.
 
 ### D. Dynamic Context Injection
 
-The `` !`command` `` syntax runs a shell command *before* the model receives the prompt — the output replaces the placeholder in the skill content. The model never sees the command, only the already-processed result.
+The `` !`command` `` syntax runs a shell command *before* the model receives the prompt: the output replaces the placeholder in the skill content. The model never sees the command, only the already-processed result.
 
 Useful for injecting live data without relying on memory or prior context:
 
@@ -294,11 +294,11 @@ This section is a practical checklist for getting productive with agents, skills
 ### 1. Where Skills Should Live
 
 - **Project (Claude Code):** `.claude/skills/<name>/SKILL.md`
-- **Project (Codex / Antigravity):** `skills/<name>/SKILL.md`
+- **Project (Codex / OpenCode):** `skills/<name>/SKILL.md`
 - **Personal (Claude Code):** `~/.claude/skills/<name>/SKILL.md` (available across all projects)
 - **Rule of thumb:** if it affects the repository's code or rules, keep it in the repository.
 
-> **Note:** `.claude/commands/` still works as a simpler alternative — a single `.md` file with no folder structure. Skills are recommended since they support supporting files, scripts, and invocation control.
+> **Note:** `.claude/commands/` still works as a simpler alternative: a single `.md` file with no folder structure. Skills are recommended since they support supporting files, scripts, and invocation control.
 
 ### 2. How the Agent Discovers Skills
 
@@ -318,7 +318,7 @@ This section is a practical checklist for getting productive with agents, skills
 └── scripts/
     └── run.sh
 
-# Codex / Antigravity
+# Codex / OpenCode
 skills/skill-name/
 ├── SKILL.md
 ├── references/
@@ -366,10 +366,10 @@ To deepen your knowledge of agent architecture and best practices, refer to the 
 
 **Documentation & Standards:**
 
-- **Agent Skills (open specification):** [agentskills.io](https://agentskills.io) — The open skills standard adopted by Claude Code, Codex, Cursor, VS Code, Gemini CLI, GitHub Copilot, and others.
-- **Model Context Protocol (MCP):** [modelcontextprotocol.io/docs/getting-started/intro](https://modelcontextprotocol.io/docs/getting-started/intro) — The open standard for connecting AI assistants to systems.
-- **Claude Prompt Engineering (System prompts):** [platform.claude.com/docs/en/build-with-claude/prompt-engineering/give-claude-a-role-system-prompts](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/give-claude-a-role-system-prompts) — Official guide on roles and system instructions.
-- **Claude Prompt Engineering (Long context):** [platform.claude.com/docs/en/build-with-claude/prompt-engineering/long-context-tips](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/long-context-tips) — Best practices for long prompts and extended context.
+- **Agent Skills (open specification):** [agentskills.io](https://agentskills.io): The open skills standard adopted by Claude Code, Codex, Cursor, VS Code, Gemini CLI, GitHub Copilot, and others.
+- **Model Context Protocol (MCP):** [modelcontextprotocol.io/docs/getting-started/intro](https://modelcontextprotocol.io/docs/getting-started/intro): The open standard for connecting AI assistants to systems.
+- **Claude Prompt Engineering (System prompts):** [platform.claude.com/docs/en/build-with-claude/prompt-engineering/give-claude-a-role-system-prompts](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/give-claude-a-role-system-prompts): Official guide on roles and system instructions.
+- **Claude Prompt Engineering (Long context):** [platform.claude.com/docs/en/build-with-claude/prompt-engineering/long-context-tips](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/long-context-tips): Best practices for long prompts and extended context.
 
 **Recommended Reading:**
 

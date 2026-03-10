@@ -29,9 +29,9 @@ Quer começar agora? Veja como configurar o suporte a Skills em ambientes agênt
 | Plataforma | Como Configurar |
 | :--- | :--- |
 | **Codex** | Mantenha as skills em `skills/` no workspace e as regras do projeto em `AGENTS.md`. O agente usa esses artefatos como fonte primária de contexto operacional. |
-| **Claude** | Crie a pasta `.claude/skills/` na raiz do projeto (ou `~/.claude/skills/` para uso pessoal). O Claude Code descobre as skills automaticamente ao iniciar — nenhuma configuração adicional é necessária. |
+| **Claude** | Crie a pasta `.claude/skills/` na raiz do projeto (ou `~/.claude/skills/` para uso pessoal). O Claude Code descobre as skills automaticamente ao iniciar: nenhuma configuração adicional é necessária. |
 | **OpenCode** | As skills são carregadas automaticamente se estiverem na raiz do projeto em `.opencode/skills` ou `skills/`. Certifique-se de que o plugin de Agente está ativo. |
-> **Interoperabilidade:** O padrão Agent Skills é adotado por mais de 30 ferramentas — Claude Code, Codex, Cursor, VS Code, Gemini CLI, GitHub Copilot, Roo Code, OpenCode e outros. **Uma única Skill funciona em qualquer runtime compatível.** Não crie versões por ferramenta; o sistema de arquivos é a fonte da verdade universal. Veja a lista completa em [agentskills.io](https://agentskills.io).
+> **Interoperabilidade:** O padrão Agent Skills é adotado por mais de 30 ferramentas: Claude Code, Codex, Cursor, VS Code, Gemini CLI, GitHub Copilot, Roo Code, OpenCode e outros. **Uma única Skill funciona em qualquer runtime compatível.** Não crie versões por ferramenta; o sistema de arquivos é a fonte da verdade universal. Veja a lista completa em [agentskills.io](https://agentskills.io).
 
 ---
 
@@ -81,7 +81,7 @@ Esse padrão está alinhado com as recomendações oficiais da Anthropic para ge
 
 ### Estrutura de Diretórios da Skill
 
-Uma skill deve implementar os seguintes componentes. O diretório base varia por plataforma: `.claude/skills/<nome>/` no Claude Code, `skills/<nome>/` no Codex e Antigravity, `.opencode/skills/<nome>/` no OpenCode.
+Uma skill deve implementar os seguintes componentes. O diretório base varia por plataforma: `.claude/skills/<nome>/` no Claude Code, `skills/<nome>/` no Codex, `.opencode/skills/<nome>/` no OpenCode.
 
 ### A. O Manifesto de Comportamento (`SKILL.md`)
 
@@ -175,7 +175,7 @@ Vamos construir uma skill real para garantir operações Git seguras.
 └── scripts/
     └── pre_push_check.sh
 
-# Codex / Antigravity
+# Codex / OpenCode
 skills/git-safe/
 ├── SKILL.md
 └── scripts/
@@ -246,9 +246,7 @@ Para tarefas massivas, um único agente se perde. A solução é delegar.
 
 ### D. Injeção de Contexto Dinâmico
 
-
-
-A sintaxe `` !`comando` `` executa um comando shell *antes* de o modelo receber o prompt — o output substitui o placeholder no conteúdo da skill. O modelo nunca vê o comando, só o resultado já processado.
+A sintaxe `` !`comando` `` executa um comando shell *antes* de o modelo receber o prompt: o output substitui o placeholder no conteúdo da skill. O modelo nunca vê o comando, só o resultado já processado.
 
 Útil para injetar dados ao vivo sem depender de memória ou contexto anterior:
 
@@ -296,11 +294,11 @@ Esta seção é um checklist prático para começar a produzir com agentes, skil
 ### 1. Onde as Skills Devem Ficar
 
 - **Projeto (Claude Code):** `.claude/skills/<nome>/SKILL.md`
-- **Projeto (Codex / Antigravity):** `skills/<nome>/SKILL.md`
+- **Projeto (Codex / OpenCode):** `skills/<nome>/SKILL.md`
 - **Pessoal (Claude Code):** `~/.claude/skills/<nome>/SKILL.md` (disponível em todos os projetos)
 - **Regra prática:** se afeta código/regras do repositório, mantenha no próprio repositório.
 
-> **Nota:** `.claude/commands/` ainda funciona como alternativa mais simples — um único arquivo `.md` sem estrutura de pasta. Skills são recomendadas pois suportam arquivos de suporte, scripts e controle de invocação.
+> **Nota:** `.claude/commands/` ainda funciona como alternativa mais simples: um único arquivo `.md` sem estrutura de pasta. Skills são recomendadas pois suportam arquivos de suporte, scripts e controle de invocação.
 
 ### 2. Como o Agente Descobre Skills
 
@@ -320,7 +318,7 @@ Esta seção é um checklist prático para começar a produzir com agentes, skil
 └── scripts/
     └── run.sh
 
-# Codex / Antigravity
+# Codex / OpenCode
 skills/nome-da-skill/
 ├── SKILL.md
 ├── references/
@@ -368,10 +366,10 @@ Para aprofundar seu conhecimento em arquitetura de agentes e melhores práticas,
 
 **Documentação & Padrões:**
 
-- **Agent Skills (especificação aberta):** [agentskills.io](https://agentskills.io) — O padrão aberto de skills adotado por Claude Code, Codex, Cursor, VS Code, Gemini CLI, GitHub Copilot e outros.
-- **Model Context Protocol (MCP):** [modelcontextprotocol.io/docs/getting-started/intro](https://modelcontextprotocol.io/docs/getting-started/intro) — O padrão aberto para conectar assistentes de IA a sistemas.
-- **Claude Prompt Engineering (System prompts):** [platform.claude.com/docs/en/build-with-claude/prompt-engineering/give-claude-a-role-system-prompts](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/give-claude-a-role-system-prompts) — Guia oficial de papéis e instruções de sistema.
-- **Claude Prompt Engineering (Long context):** [platform.claude.com/docs/en/build-with-claude/prompt-engineering/long-context-tips](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/long-context-tips) — Boas práticas para prompts longos e contexto extenso.
+- **Agent Skills (especificação aberta):** [agentskills.io](https://agentskills.io): O padrão aberto de skills adotado por Claude Code, Codex, Cursor, VS Code, Gemini CLI, GitHub Copilot e outros.
+- **Model Context Protocol (MCP):** [modelcontextprotocol.io/docs/getting-started/intro](https://modelcontextprotocol.io/docs/getting-started/intro): O padrão aberto para conectar assistentes de IA a sistemas.
+- **Claude Prompt Engineering (System prompts):** [platform.claude.com/docs/en/build-with-claude/prompt-engineering/give-claude-a-role-system-prompts](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/give-claude-a-role-system-prompts): Guia oficial de papéis e instruções de sistema.
+- **Claude Prompt Engineering (Long context):** [platform.claude.com/docs/en/build-with-claude/prompt-engineering/long-context-tips](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/long-context-tips): Boas práticas para prompts longos e contexto extenso.
 
 **Artigos Recomendados:**
 
