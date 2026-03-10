@@ -231,10 +231,14 @@ Never trust the first output. The secret to quality is an **immediate** feedback
    - If **Failure**: The agent reads the error, fixes it, and tries again.
    - If **Success**: Only then is the result presented to the user.
 
-This prevents cascading errors and ensures robust outputs. For massive tasks, a single agent gets lost. The solution is delegation.
+This prevents cascading errors and ensures robust outputs.
 
-- **The Orchestrator:** Doesn't get its hands dirty. It analyzes the request ("Build a complete app"), breaks it into sub-tasks ("Create DB", "Create Frontend"), and delegates.
-- **The Workers:** Specialist agents that only see their own tools. The *Worker-SQL* has no access to CSS tools, and vice versa. This dramatically increases both security and precision.
+### Orchestration (Orchestrator-Workers)
+
+For massive tasks, a single agent gets lost. The solution is delegation.
+
+- **The Orchestrator:** Doesn't get its hands dirty. It analyzes the request ("Build a complete app"), breaks it into sub-tasks ("Create DB", "Create Frontend"), and delegates to specialized sub-agents.
+- **The Workers:** Sub-agents that only see their own tools. The *Worker-SQL* has no access to CSS tools, and vice versa. This dramatically increases both security and precision.
 
 ### C. Automated Testing (LLM-as-a-Judge)
 

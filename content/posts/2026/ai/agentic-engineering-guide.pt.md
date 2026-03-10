@@ -231,10 +231,14 @@ Nunca confie na primeira saída. O segredo da qualidade é o loop de feedback **
    - Se **Falha**: O agente lê o erro, corrige e tenta de novo.
    - Se **Sucesso**: Só então o resultado é apresentado ao usuário.
 
-Isso previne o efeito cascata de erros e garante saídas robustas. Para tarefas massivas, um único agente se perde. A solução é delegar.
+Isso previne o efeito cascata de erros e garante saídas robustas.
 
-- **O Orquestrador:** Não põe a mão na massa. Ele analisa o pedido ("Construa um app completo"), quebra em sub-tarefas ("Criar DB", "Criar Frontend") e delega.
-- **Os Operários (Workers):** Agentes especialistas que só enxergam suas próprias ferramentas. O *Worker-SQL* não tem acesso a ferramentas de CSS, e vice-versa. Isso aumenta drasticamente a segurança e a precisão.
+### Orquestração (Orchestrator-Workers)
+
+Para tarefas massivas, um único agente se perde. A solução é delegar.
+
+- **O Orquestrador:** Não põe a mão na massa. Ele analisa o pedido ("Construa um app completo"), quebra em sub-tarefas ("Criar DB", "Criar Frontend") e delega para sub-agents especializados.
+- **Os Operários (Workers):** Sub-agents que só enxergam suas próprias ferramentas. O *Worker-SQL* não tem acesso a ferramentas de CSS, e vice-versa. Isso aumenta drasticamente a segurança e a precisão.
 
 ### C. Testes Automatizados (LLM-as-a-Judge)
 
