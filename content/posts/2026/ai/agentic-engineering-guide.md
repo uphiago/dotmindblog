@@ -31,9 +31,7 @@ Want to get started right now? Here's how to configure Skills support in common 
 | **Codex** | Keep skills in `skills/` in your workspace and project rules in `AGENTS.md`. The agent uses these artifacts as its primary source of operational context. |
 | **Claude** | Create a `.claude/skills/` folder at the project root (or `~/.claude/skills/` for personal use). Claude Code auto-discovers skills on startup — no additional configuration needed. |
 | **OpenCode** | Skills are loaded automatically if placed at the project root under `.opencode/skills` or `skills/`. Make sure the Agent plugin is active. |
-| **Antigravity** | No action needed. Antigravity scans the `skills/` folder at workspace startup and automatically indexes `SKILL.md` files. |
-
-> **Interoperability:** The key advantage of this architecture is that **a single Skill works across different runtimes/agents**. Don't create per-tool versions; the file system is the universal source of truth.
+> **Interoperability:** The Agent Skills standard is adopted by 30+ tools — Claude Code, Codex, Cursor, VS Code, Gemini CLI, GitHub Copilot, Roo Code, OpenCode, and others. **A single Skill works across any compatible runtime.** Don't create per-tool versions; the file system is the universal source of truth. See the full list at [agentskills.io](https://agentskills.io).
 
 ---
 
@@ -45,7 +43,7 @@ Unlike a standalone prompt, a **Skill** is a modular, reusable, and deterministi
 
 ### The Skills Architecture Pattern
 
-To guarantee interoperability across platforms like Codex, Claude, OpenCode, and Antigravity, we adopt an architecture based on **Context Isolation** and **Safe Execution**.
+To guarantee interoperability across the dozens of platforms that support the Agent Skills standard, we adopt an architecture based on **Context Isolation** and **Safe Execution**.
 
 This solves the "Functional Hallucination" problem: research from Anthropic and DeepMind indicates that models "grounded" in well-defined tools make significantly fewer logical errors.
 
@@ -77,7 +75,7 @@ This pattern aligns with Anthropic's official recommendations for context manage
 - **Anthropic Engineering - Building effective agents:** [anthropic.com/engineering/building-effective-agents](https://www.anthropic.com/engineering/building-effective-agents)
 - **Academic evidence on context ("Lost in the Middle"):** [arxiv.org/abs/2307.03172](https://arxiv.org/abs/2307.03172)
 
-![Progressive Disclosure pattern diagram](/images/2025/agentic-engineering-progressive-disclosure.png)
+![Progressive Disclosure pattern diagram](/images/2026/agentic-engineering-progressive-disclosure.png)
 
 ---
 
@@ -107,6 +105,12 @@ Beyond `name` and `description`, these fields make your skill more predictable a
 - **`user-invocable`**: controls whether the skill appears in the command menu.
 - **`argument-hint`**: documents the expected argument format.
 - **`context: fork` + `agent`**: runs in an isolated sub-agent for long or specialized tasks.
+- **`model`**: sets the model used when the skill is active (e.g., `claude-opus-4-6`).
+
+Skill content also supports dynamic substitutions:
+
+- **`$ARGUMENTS`**: replaced by everything passed when invoking the skill. E.g., `/fix-issue 123` → `$ARGUMENTS` becomes `123`.
+- **`$ARGUMENTS[N]`** or **`$N`**: accesses arguments by position. E.g., `/migrate SearchBar React Vue` with `$0`, `$1`, `$2`.
 
 Example:
 
@@ -133,26 +137,26 @@ Static documentation and examples (One-shot learning).
 
 - **Purpose:** Provide *Just-in-Time* context. The agent only loads these files when the task demands it, saving tokens.
 
-![Skill directory structure](/images/2025/agentic-engineering-directory-structure.png)
+![Skill directory structure](/images/2026/agentic-engineering-directory-structure.png)
 
 ---
 
 ## 3. Implementation and Usage by Environment
 
-### Codex, Claude, OpenCode, and Antigravity: Shared Foundations
+### Shared Foundations Across Runtimes
 
-All four environments follow the same pillars of agentic architecture: **MCP + Skills + Plan → Execute → Verify loop**.
+Regardless of the tool, all Agent Skills-compatible runtimes follow the same pillars: **MCP + Skills + Plan → Execute → Verify loop**.
 
 1. **Planning (Plan):** The agent understands context and current state via project memory and local rules (e.g., `AGENTS.md`, `CLAUDE.md`, `project-memory` skills).
 2. **Execution (Execute):** The agent uses tools and scripts (`scripts/`) to apply changes deterministically.
 3. **Verification (Verify):** The agent validates the result with tests, checks, and quality criteria before completing the task.
 
-What differs between Codex, Claude, OpenCode, and Antigravity is mainly the **configuration/orchestration experience** (where to declare agents, memory, and integrations) — not the operational principles.
+What differs between tools is mainly the **configuration/orchestration experience** (where to declare agents, memory, and integrations) — not the operational principles.
 
 - **MCP everywhere:** MCP is an open standard and can be used across all environments to connect external data and tools.
 - **Codex (practical example):** `skills/` + `AGENTS.md` as the project's local contract, with tool execution in the workspace.
-- **Claude (practical example):** Sub-agents defined in `.claude/agents/` (`.md` files with YAML frontmatter) and persistent context in `CLAUDE.md`.
-- **OpenCode/Antigravity (practical example):** Skills in `skills/`, script-based execution, and continuous validation in the autonomous loop.
+- **Claude Code (practical example):** Sub-agents defined in `.claude/agents/` (`.md` files with YAML frontmatter) and persistent context in `CLAUDE.md`.
+- **OpenCode (practical example):** Skills in `skills/`, script-based execution, and continuous validation in the autonomous loop.
 
 > **Critical Security:** Configure destructive skills (e.g., `git push`, file deletion) to require explicit human approval (*Human-in-the-loop*), regardless of the agent's autonomy level.
 
@@ -184,13 +188,13 @@ skills/git-safe/
 ---
 name: git-safe
 description: Utility for safe version control operations.
-allowed-tools: bash
+allowed-tools: Bash(git *)
 ---
 # Guidelines
 1. TRIGGER: When the user requests sync/push.
 2. ACTION: Execute `scripts/pre_push_check.sh`.
 3. RULE: If the script fails, abort the operation and report the error.
-4. FORBIDDEN: Never use `--human-override` flags without explicit permission.
+4. SECURITY: Always require human confirmation before any push operation.
 ```
 
 **`pre_push_check.sh` contents (Execution):**
@@ -233,14 +237,40 @@ Never trust the first output. The secret to quality is an **immediate** feedback
 
 This prevents cascading errors and ensures robust outputs.
 
-### Orchestration (Orchestrator-Workers)
+### C. Orchestration (Orchestrator-Workers)
 
 For massive tasks, a single agent gets lost. The solution is delegation.
 
 - **The Orchestrator:** Doesn't get its hands dirty. It analyzes the request ("Build a complete app"), breaks it into sub-tasks ("Create DB", "Create Frontend"), and delegates to specialized sub-agents.
 - **The Workers:** Sub-agents that only see their own tools. The *Worker-SQL* has no access to CSS tools, and vice versa. This dramatically increases both security and precision.
 
-### C. Automated Testing (LLM-as-a-Judge)
+### D. Dynamic Context Injection
+
+The `` !`command` `` syntax runs a shell command *before* the model receives the prompt — the output replaces the placeholder in the skill content. The model never sees the command, only the already-processed result.
+
+Useful for injecting live data without relying on memory or prior context:
+
+```yaml
+---
+name: pr-summary
+description: Summarize the changes in a pull request
+context: fork
+agent: Explore
+allowed-tools: Bash(gh *)
+---
+
+## PR context
+- Diff: !`gh pr diff`
+- Comments: !`gh pr view --comments`
+- Changed files: !`gh pr diff --name-only`
+
+## Task
+Summarize this pull request's changes with a focus on impact and risks.
+```
+
+---
+
+### E. Automated Testing (LLM-as-a-Judge)
 
 How do you know if your agent is performing well? Use another AI to test it.
 
@@ -257,7 +287,7 @@ def test_git_safe_block():
 
 ---
 
-## 6. Technical Guide for Contributors
+## 6. Quick Reference
 
 This section is a practical checklist for getting productive with agents, skills, and MCP on a daily basis.
 
@@ -267,6 +297,8 @@ This section is a practical checklist for getting productive with agents, skills
 - **Project (Codex / Antigravity):** `skills/<name>/SKILL.md`
 - **Personal (Claude Code):** `~/.claude/skills/<name>/SKILL.md` (available across all projects)
 - **Rule of thumb:** if it affects the repository's code or rules, keep it in the repository.
+
+> **Note:** `.claude/commands/` still works as a simpler alternative — a single `.md` file with no folder structure. Skills are recommended since they support supporting files, scripts, and invocation control.
 
 ### 2. How the Agent Discovers Skills
 
@@ -334,6 +366,7 @@ To deepen your knowledge of agent architecture and best practices, refer to the 
 
 **Documentation & Standards:**
 
+- **Agent Skills (open specification):** [agentskills.io](https://agentskills.io) — The open skills standard adopted by Claude Code, Codex, Cursor, VS Code, Gemini CLI, GitHub Copilot, and others.
 - **Model Context Protocol (MCP):** [modelcontextprotocol.io/docs/getting-started/intro](https://modelcontextprotocol.io/docs/getting-started/intro) — The open standard for connecting AI assistants to systems.
 - **Claude Prompt Engineering (System prompts):** [platform.claude.com/docs/en/build-with-claude/prompt-engineering/give-claude-a-role-system-prompts](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/give-claude-a-role-system-prompts) — Official guide on roles and system instructions.
 - **Claude Prompt Engineering (Long context):** [platform.claude.com/docs/en/build-with-claude/prompt-engineering/long-context-tips](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/long-context-tips) — Best practices for long prompts and extended context.

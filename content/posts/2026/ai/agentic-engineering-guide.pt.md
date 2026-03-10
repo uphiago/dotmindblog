@@ -31,9 +31,7 @@ Quer começar agora? Veja como configurar o suporte a Skills em ambientes agênt
 | **Codex** | Mantenha as skills em `skills/` no workspace e as regras do projeto em `AGENTS.md`. O agente usa esses artefatos como fonte primária de contexto operacional. |
 | **Claude** | Crie a pasta `.claude/skills/` na raiz do projeto (ou `~/.claude/skills/` para uso pessoal). O Claude Code descobre as skills automaticamente ao iniciar — nenhuma configuração adicional é necessária. |
 | **OpenCode** | As skills são carregadas automaticamente se estiverem na raiz do projeto em `.opencode/skills` ou `skills/`. Certifique-se de que o plugin de Agente está ativo. |
-| **Antigravity** | Nenhuma ação necessária. O Antigravity escaneia a pasta `skills/` na inicialização do workspace e indexa os arquivos `SKILL.md` automaticamente. |
-
-> **Interoperabilidade:** A grande vantagem desta arquitetura é que **uma única Skill funciona em diferentes runtimes/agentes**. Não crie versões por ferramenta; o sistema de arquivos é a fonte da verdade universal.
+> **Interoperabilidade:** O padrão Agent Skills é adotado por mais de 30 ferramentas — Claude Code, Codex, Cursor, VS Code, Gemini CLI, GitHub Copilot, Roo Code, OpenCode e outros. **Uma única Skill funciona em qualquer runtime compatível.** Não crie versões por ferramenta; o sistema de arquivos é a fonte da verdade universal. Veja a lista completa em [agentskills.io](https://agentskills.io).
 
 ---
 
@@ -45,7 +43,7 @@ Diferente de um prompt isolado, uma **Skill** é uma unidade funcional modular, 
 
 ### O Padrão de Arquitetura de Skills
 
-Para garantir interoperabilidade entre plataformas como Codex, Claude, OpenCode e Antigravity, adotamos uma arquitetura baseada em **Isolamento de Contexto** e **Execução Segura**.
+Para garantir interoperabilidade entre as dezenas de plataformas que suportam o padrão Agent Skills, adotamos uma arquitetura baseada em **Isolamento de Contexto** e **Execução Segura**.
 
 Isso resolve o problema da "Alucinação Funcional": pesquisas da Anthropic e da DeepMind indicam que modelos "aterrados" (grounded) em ferramentas bem definidas cometem significativamente menos erros lógicos.
 
@@ -77,7 +75,7 @@ Esse padrão está alinhado com as recomendações oficiais da Anthropic para ge
 - **Anthropic Engineering - Building effective agents:** [anthropic.com/engineering/building-effective-agents](https://www.anthropic.com/engineering/building-effective-agents)
 - **Evidência acadêmica sobre contexto ("Lost in the Middle"):** [arxiv.org/abs/2307.03172](https://arxiv.org/abs/2307.03172)
 
-![Diagrama do padrão Progressive Disclosure](/images/2025/agentic-engineering-progressive-disclosure.png)
+![Diagrama do padrão Progressive Disclosure](/images/2026/agentic-engineering-progressive-disclosure.png)
 
 ---
 
@@ -107,6 +105,12 @@ Além de `name` e `description`, estes campos deixam a skill mais previsível e 
 - **`user-invocable`**: controla se a skill aparece no menu de comandos.
 - **`argument-hint`**: documenta o formato esperado de argumentos.
 - **`context: fork` + `agent`**: roda em subagente isolado para tarefas longas ou especializadas.
+- **`model`**: define o modelo usado quando a skill está ativa (ex: `claude-opus-4-6`).
+
+O conteúdo do `SKILL.md` também suporta substituições dinâmicas:
+
+- **`$ARGUMENTS`**: substituído por tudo que é passado ao invocar a skill. Ex: `/fix-issue 123` → `$ARGUMENTS` vira `123`.
+- **`$ARGUMENTS[N]`** ou **`$N`**: acessa argumentos por posição. Ex: `/migrate SearchBar React Vue` com `$0`, `$1`, `$2`.
 
 Exemplo:
 
@@ -133,26 +137,26 @@ Documentação estática e exemplos (One-shot learning).
 
 - **Função:** Fornecer contexto *Just-in-Time*. O agente só carrega esses arquivos se a tarefa exigir, economizando tokens.
 
-![Estrutura de diretórios de uma skill](/images/2025/agentic-engineering-directory-structure.png)
+![Estrutura de diretórios de uma skill](/images/2026/agentic-engineering-directory-structure.png)
 
 ---
 
 ## 3. Implementação e Uso por Ambiente
 
-### Codex, Claude, OpenCode e Antigravity: Fundamentos Compartilhados
+### Fundamentos Compartilhados entre Runtimes
 
-Os quatro ambientes seguem os mesmos pilares de arquitetura agêntica: **MCP + Skills + Loop Plan → Execute → Verify**.
+Independente da ferramenta, todos os runtimes compatíveis com Agent Skills seguem os mesmos pilares: **MCP + Skills + Loop Plan → Execute → Verify**.
 
 1. **Planejamento (Plan):** O agente entende contexto e estado atual via memória de projeto e regras locais (ex: `AGENTS.md`, `CLAUDE.md`, skills de `project-memory`).
 2. **Execução (Execute):** O agente usa ferramentas e scripts (`scripts/`) para aplicar mudanças de forma determinística.
 3. **Verificação (Verify):** O agente valida o resultado com testes, checks e critérios de qualidade antes de encerrar a tarefa.
 
-O que muda entre Codex, Claude, OpenCode e Antigravity é principalmente a **experiência de configuração/orquestração** (onde declarar agentes, memória e integrações), e não os princípios operacionais.
+O que muda entre as ferramentas é principalmente a **experiência de configuração/orquestração** (onde declarar agentes, memória e integrações), e não os princípios operacionais.
 
 - **MCP em todos:** MCP é um padrão aberto e pode ser usado em todos os ambientes para conectar dados e ferramentas externas.
 - **Codex (exemplo prático):** uso de `skills/` + `AGENTS.md` como contrato local do projeto e execução de ferramentas no workspace.
-- **Claude (exemplo prático):** Sub-agents definidos em `.claude/agents/` (arquivos `.md` com frontmatter YAML) e contexto persistente em `CLAUDE.md`.
-- **OpenCode/Antigravity (exemplo prático):** Skills em `skills/`, execução por scripts e validação contínua no loop autônomo.
+- **Claude Code (exemplo prático):** Sub-agents definidos em `.claude/agents/` (arquivos `.md` com frontmatter YAML) e contexto persistente em `CLAUDE.md`.
+- **OpenCode (exemplo prático):** Skills em `skills/`, execução por scripts e validação contínua no loop autônomo.
 
 > **Segurança Crítica:** Configure skills destrutivas (ex: `git push`, deleção de arquivos) para exigir aprovação humana explícita (*Human-in-the-loop*), independentemente da autonomia do agente.
 
@@ -184,13 +188,13 @@ skills/git-safe/
 ---
 name: git-safe
 description: Utilitário para operações seguras de versionamento.
-allowed-tools: bash
+allowed-tools: Bash(git *)
 ---
 # Diretrizes
 1. GATILHO: Quando o usuário solicitar sync/push.
 2. AÇÃO: Execute `scripts/pre_push_check.sh`.
 3. REGRA: Se o script falhar, aborte a operação e reporte o erro.
-4. PROIBIDO: Nunca use flags `--human-override` sem permissão explícita.
+4. SEGURANÇA: Sempre solicite confirmação humana antes de qualquer push.
 ```
 
 **Conteúdo do `pre_push_check.sh` (Execução):**
@@ -233,14 +237,42 @@ Nunca confie na primeira saída. O segredo da qualidade é o loop de feedback **
 
 Isso previne o efeito cascata de erros e garante saídas robustas.
 
-### Orquestração (Orchestrator-Workers)
+### C. Orquestração (Orchestrator-Workers)
 
 Para tarefas massivas, um único agente se perde. A solução é delegar.
 
 - **O Orquestrador:** Não põe a mão na massa. Ele analisa o pedido ("Construa um app completo"), quebra em sub-tarefas ("Criar DB", "Criar Frontend") e delega para sub-agents especializados.
 - **Os Operários (Workers):** Sub-agents que só enxergam suas próprias ferramentas. O *Worker-SQL* não tem acesso a ferramentas de CSS, e vice-versa. Isso aumenta drasticamente a segurança e a precisão.
 
-### C. Testes Automatizados (LLM-as-a-Judge)
+### D. Injeção de Contexto Dinâmico
+
+
+
+A sintaxe `` !`comando` `` executa um comando shell *antes* de o modelo receber o prompt — o output substitui o placeholder no conteúdo da skill. O modelo nunca vê o comando, só o resultado já processado.
+
+Útil para injetar dados ao vivo sem depender de memória ou contexto anterior:
+
+```yaml
+---
+name: pr-summary
+description: Resume as mudanças de um pull request
+context: fork
+agent: Explore
+allowed-tools: Bash(gh *)
+---
+
+## Contexto do PR
+- Diff: !`gh pr diff`
+- Comentários: !`gh pr view --comments`
+- Arquivos alterados: !`gh pr diff --name-only`
+
+## Tarefa
+Resuma as mudanças deste pull request com foco em impacto e riscos.
+```
+
+---
+
+### E. Testes Automatizados (LLM-as-a-Judge)
 
 Como saber se seu agente está performando bem? Use outra IA para testar.
 
@@ -257,7 +289,7 @@ def test_git_safe_block():
 
 ---
 
-## 6. Guia Técnico para Colaboradores
+## 6. Referência Rápida
 
 Esta seção é um checklist prático para começar a produzir com agentes, skills e MCP no dia a dia.
 
@@ -267,6 +299,8 @@ Esta seção é um checklist prático para começar a produzir com agentes, skil
 - **Projeto (Codex / Antigravity):** `skills/<nome>/SKILL.md`
 - **Pessoal (Claude Code):** `~/.claude/skills/<nome>/SKILL.md` (disponível em todos os projetos)
 - **Regra prática:** se afeta código/regras do repositório, mantenha no próprio repositório.
+
+> **Nota:** `.claude/commands/` ainda funciona como alternativa mais simples — um único arquivo `.md` sem estrutura de pasta. Skills são recomendadas pois suportam arquivos de suporte, scripts e controle de invocação.
 
 ### 2. Como o Agente Descobre Skills
 
@@ -334,6 +368,7 @@ Para aprofundar seu conhecimento em arquitetura de agentes e melhores práticas,
 
 **Documentação & Padrões:**
 
+- **Agent Skills (especificação aberta):** [agentskills.io](https://agentskills.io) — O padrão aberto de skills adotado por Claude Code, Codex, Cursor, VS Code, Gemini CLI, GitHub Copilot e outros.
 - **Model Context Protocol (MCP):** [modelcontextprotocol.io/docs/getting-started/intro](https://modelcontextprotocol.io/docs/getting-started/intro) — O padrão aberto para conectar assistentes de IA a sistemas.
 - **Claude Prompt Engineering (System prompts):** [platform.claude.com/docs/en/build-with-claude/prompt-engineering/give-claude-a-role-system-prompts](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/give-claude-a-role-system-prompts) — Guia oficial de papéis e instruções de sistema.
 - **Claude Prompt Engineering (Long context):** [platform.claude.com/docs/en/build-with-claude/prompt-engineering/long-context-tips](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/long-context-tips) — Boas práticas para prompts longos e contexto extenso.
