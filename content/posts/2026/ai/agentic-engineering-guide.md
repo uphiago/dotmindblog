@@ -1,6 +1,6 @@
 +++
 author = "iceteash"
-title = "Practical Guide to Agentic Engineering: Skills Stack, MCP, and Project Context"
+title = "Skills Stack, MCP, and Project Context"
 date = 2026-03-10T00:00:00-03:00
 description = "How to structure Skills, MCP, and project context to build robust, interoperable autonomous agents across any AI runtime."
 tags = [
@@ -31,6 +31,7 @@ Want to get started right now? Here's how to configure Skills support in common 
 | **Codex** | Keep skills in `skills/` in your workspace and project rules in `AGENTS.md`. The agent uses these artifacts as its primary source of operational context. |
 | **Claude** | Create a `.claude/skills/` folder at the project root (or `~/.claude/skills/` for personal use). Claude Code auto-discovers skills on startup: no additional configuration needed. |
 | **OpenCode** | Skills are loaded automatically if placed at the project root under `.opencode/skills` or `skills/`. Make sure the Agent plugin is active. |
+
 > **Interoperability:** The Agent Skills standard is adopted by 30+ tools: Claude Code, Codex, Cursor, VS Code, Gemini CLI, GitHub Copilot, Roo Code, OpenCode, and others. **A single Skill works across any compatible runtime.** Don't create per-tool versions; the file system is the universal source of truth. See the full list at [agentskills.io](https://agentskills.io).
 
 ---
