@@ -31,7 +31,8 @@ Quer começar agora? Veja como configurar o suporte a Skills em ambientes agênt
 | **Codex** | Mantenha as skills em `skills/` no workspace e as regras do projeto em `AGENTS.md`. O agente usa esses artefatos como fonte primária de contexto operacional. |
 | **Claude** | Crie a pasta `.claude/skills/` na raiz do projeto (ou `~/.claude/skills/` para uso pessoal). O Claude Code descobre as skills automaticamente ao iniciar: nenhuma configuração adicional é necessária. |
 | **OpenCode** | As skills são carregadas automaticamente se estiverem na raiz do projeto em `.opencode/skills` ou `skills/`. Certifique-se de que o plugin de Agente está ativo. |
-| **skills.sh** | `npx skills add <repo>` instala skills em uma pasta central e cria symlinks para o caminho esperado de cada agente detectado (Claude Code, Cursor, Codex e mais de 40 outros). Uma fonte única de verdade, sem duplicação. |
+
+Para gerenciar skills em múltiplos agentes a partir de uma fonte única, [skills.sh](https://skills.sh) (Vercel Labs) instala em uma pasta central e propaga via symlinks — `npx skills add <repo>`.
 
 > **Interoperabilidade:** O padrão Agent Skills é adotado por mais de 30 ferramentas: Claude Code, Codex, Cursor, VS Code, Gemini CLI, GitHub Copilot, Roo Code, OpenCode e outros. **Uma única Skill funciona em qualquer runtime compatível.** Não crie versões por ferramenta; o sistema de arquivos é a fonte da verdade universal. Veja a lista completa em [agentskills.io](https://agentskills.io).
 
@@ -298,11 +299,10 @@ Esta seção é um checklist prático para começar a produzir com agentes, skil
 - **Projeto (Claude Code):** `.claude/skills/<nome>/SKILL.md`
 - **Projeto (Codex / OpenCode):** `skills/<nome>/SKILL.md`
 - **Pessoal (Claude Code):** `~/.claude/skills/<nome>/SKILL.md` (disponível em todos os projetos)
+- **Todos os agentes de uma vez:** use [skills.sh](https://skills.sh) — instala em uma pasta, cria symlinks para Claude Code, Cursor, Codex e mais de 40 outros automaticamente.
 - **Regra prática:** se afeta código/regras do repositório, mantenha no próprio repositório.
 
 > **Nota:** `.claude/commands/` ainda funciona como alternativa mais simples: um único arquivo `.md` sem estrutura de pasta. Skills são recomendadas pois suportam arquivos de suporte, scripts e controle de invocação.
-
-> **Dica:** [skills.sh](https://skills.sh) (Vercel Labs) resolve o problema de duplicação entre agentes: instale uma vez em uma pasta central e os symlinks se propagam automaticamente para o caminho esperado de cada agente — `npx skills add <repo>`.
 
 ### 2. Como o Agente Descobre Skills
 

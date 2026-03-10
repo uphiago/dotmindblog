@@ -31,7 +31,8 @@ Want to get started right now? Here's how to configure Skills support in common 
 | **Codex** | Keep skills in `skills/` in your workspace and project rules in `AGENTS.md`. The agent uses these artifacts as its primary source of operational context. |
 | **Claude** | Create a `.claude/skills/` folder at the project root (or `~/.claude/skills/` for personal use). Claude Code auto-discovers skills on startup: no additional configuration needed. |
 | **OpenCode** | Skills are loaded automatically if placed at the project root under `.opencode/skills` or `skills/`. Make sure the Agent plugin is active. |
-| **skills.sh** | `npx skills add <repo>` installs skills to a central folder and creates symlinks to every detected agent's expected path (Claude Code, Cursor, Codex, and 40+ others). One source of truth, zero duplication. |
+
+To manage skills across multiple agents from a single source, [skills.sh](https://skills.sh) (Vercel Labs) installs to a central folder and propagates via symlinks — `npx skills add <repo>`.
 
 > **Interoperability:** The Agent Skills standard is adopted by 30+ tools: Claude Code, Codex, Cursor, VS Code, Gemini CLI, GitHub Copilot, Roo Code, OpenCode, and others. **A single Skill works across any compatible runtime.** Don't create per-tool versions; the file system is the universal source of truth. See the full list at [agentskills.io](https://agentskills.io).
 
@@ -298,11 +299,10 @@ This section is a practical checklist for getting productive with agents, skills
 - **Project (Claude Code):** `.claude/skills/<name>/SKILL.md`
 - **Project (Codex / OpenCode):** `skills/<name>/SKILL.md`
 - **Personal (Claude Code):** `~/.claude/skills/<name>/SKILL.md` (available across all projects)
+- **All agents at once:** use [skills.sh](https://skills.sh) — installs to one folder, symlinks to Claude Code, Cursor, Codex, and 40+ others automatically.
 - **Rule of thumb:** if it affects the repository's code or rules, keep it in the repository.
 
 > **Note:** `.claude/commands/` still works as a simpler alternative: a single `.md` file with no folder structure. Skills are recommended since they support supporting files, scripts, and invocation control.
-
-> **Tip:** [skills.sh](https://skills.sh) (Vercel Labs) solves the multi-agent duplication problem: install once to a central folder, symlinks propagate to every agent's expected path automatically — `npx skills add <repo>`.
 
 ### 2. How the Agent Discovers Skills
 
