@@ -2,7 +2,7 @@
 author = "iceteash"
 title = "Stack de Skills, MCP e Contexto de Projeto"
 date = 2026-04-02T00:00:00-03:00
-description = "Como estruturar Skills, MCP e contexto de projeto para construir agentes autônomos robustos e interoperáveis em qualquer runtime de IA."
+description = "Guia prático para construir agentes interoperáveis em qualquer runtime de IA."
 tags = [
   "ai",
   "agents",

@@ -2,7 +2,7 @@
 author = "iceteash"
 title = "Skills Stack, MCP, and Project Context"
 date = 2026-04-02T00:00:00-03:00
-description = "How to structure Skills, MCP, and project context to build robust, interoperable autonomous agents across any AI runtime."
+description = "A practical guide to building interoperable agents across any AI runtime."
 tags = [
   "ai",
   "agents",
