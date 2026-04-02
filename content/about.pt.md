@@ -12,7 +12,7 @@ Welcome to [Dotmind it](https://dotmindblog.vercel.app), things we write down so
 Expect changes, nothing here is static. Versioning is in place.
 <br></br>
 
-Thanks to <a href="https://github.com/Mitrichius" target="_blank" rel="noopener noreferrer">@Mitrichius</a> and <a href="https://github.com/Junyi-99" target="_blank" rel="noopener noreferrer">@Junyi-99</a> for their great work!
+Thanks to <a href="https://github.com/Mitrichius/hugo-theme-anubis" target="_blank" rel="noopener noreferrer">@Mitrichius</a> and <a href="https://github.com/Junyi-99/hugo-theme-anubis2" target="_blank" rel="noopener noreferrer">@Junyi-99</a> for their great work!
 
 
 <details style="font-size: 0.9rem;">
