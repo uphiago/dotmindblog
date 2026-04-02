@@ -393,5 +393,3 @@ Para aprofundar seu conhecimento em arquitetura de agentes e melhores práticas,
 ## Conclusão
 
 Skills + MCP + contexto de projeto formam um padrão operacional moderno para times de engenharia. Comece pequeno, padronize cedo e evolua com consistência.
-
-E aí, você já tem feito algo desse tipo com IA? Conta pra gente como isso tem acelerado seu fluxo de trabalho, onde ajudou de verdade e quais desafios ainda estão no caminho.
