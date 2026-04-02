@@ -154,7 +154,7 @@ Documentação estática e exemplos (One-shot learning).
 
 Independente da ferramenta, todos os runtimes compatíveis com Agent Skills seguem os mesmos pilares: **MCP + Skills + Loop Research → Plan → Execute → Verify**.
 
-1. **Pesquisa (Research):** O agente mapeia o estado atual — lê arquivos de contexto, regras do projeto e código relevante antes de tocar em qualquer coisa.
+1. **Pesquisa (Research):** O agente mapeia o estado atual: lê arquivos de contexto, regras do projeto e código relevante antes de tocar em qualquer coisa.
 2. **Planejamento (Plan):** O agente quebra o trabalho em passos pequenos e verificáveis, definindo critérios de aceite antes de implementar.
 3. **Execução (Execute):** O agente usa ferramentas e scripts (`scripts/`) para aplicar mudanças de forma determinística.
 4. **Verificação (Verify):** O agente valida o resultado com testes, checks e critérios de qualidade antes de encerrar a tarefa.
@@ -307,7 +307,7 @@ Esta seção é um checklist prático para começar a produzir com agentes, skil
 - **Todos os agentes de uma vez:** use [skills.sh](https://skills.sh): instala em uma pasta, cria symlinks para Claude Code, Cursor, Codex e mais de 40 outros automaticamente.
 - **Regra prática:** se afeta código/regras do repositório, mantenha no próprio repositório.
 
-**Boas práticas para `CLAUDE.md` / `AGENTS.md`:** mantenha curto (abaixo de 200 linhas); inclua comandos de build, teste e lint; registre decisões arquiteturais e convenções do projeto; liste gotchas técnicos (ex: strict mode, regras de import); evite teoria — o que o linter já impõe não precisa viver aqui.
+**Boas práticas para `CLAUDE.md` / `AGENTS.md`:** mantenha curto (abaixo de 200 linhas); inclua comandos de build, teste e lint; registre decisões arquiteturais e convenções do projeto; liste gotchas técnicos (ex: strict mode, regras de import); evite teoria; o que o linter já impõe não precisa viver aqui.
 
 > **Nota:** `.claude/commands/` ainda funciona como alternativa mais simples: um único arquivo `.md` sem estrutura de pasta. Skills são recomendadas pois suportam arquivos de suporte, scripts e controle de invocação.
 

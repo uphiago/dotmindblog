@@ -154,7 +154,7 @@ Static documentation and examples (One-shot learning).
 
 Regardless of the tool, all Agent Skills-compatible runtimes follow the same pillars: **MCP + Skills + Research → Plan → Execute → Verify loop**.
 
-1. **Research:** The agent maps the current state — reads context files, project rules, and relevant code before touching anything.
+1. **Research:** The agent maps the current state: reads context files, project rules, and relevant code before touching anything.
 2. **Planning (Plan):** The agent breaks the work into small, verifiable steps, defining acceptance criteria before implementing.
 3. **Execution (Execute):** The agent uses tools and scripts (`scripts/`) to apply changes deterministically.
 4. **Verification (Verify):** The agent validates the result with tests, checks, and quality criteria before completing the task.
@@ -307,7 +307,7 @@ This section is a practical checklist for getting productive with agents, skills
 - **All agents at once:** use [skills.sh](https://skills.sh): installs to one folder, symlinks to Claude Code, Cursor, Codex, and 40+ others automatically.
 - **Rule of thumb:** if it affects the repository's code or rules, keep it in the repository.
 
-**CLAUDE.md / AGENTS.md best practices:** keep it short (under 200 lines); include build, test, and lint commands; document architectural decisions and project conventions; list technical gotchas (e.g., strict mode, import rules); avoid theory — what the linter already enforces doesn't need to live here.
+**CLAUDE.md / AGENTS.md best practices:** keep it short (under 200 lines); include build, test, and lint commands; document architectural decisions and project conventions; list technical gotchas (e.g., strict mode, import rules); avoid theory; what the linter already enforces doesn't need to live here.
 
 > **Note:** `.claude/commands/` still works as a simpler alternative: a single `.md` file with no folder structure. Skills are recommended since they support supporting files, scripts, and invocation control.
 
