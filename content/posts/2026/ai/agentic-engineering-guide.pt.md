@@ -48,7 +48,7 @@ Diferente de um prompt isolado, uma **Skill** é uma unidade funcional modular, 
 
 Para garantir interoperabilidade entre as dezenas de plataformas que suportam o padrão Agent Skills, adotamos uma arquitetura baseada em **Isolamento de Contexto** e **Execução Segura**.
 
-Isso resolve o problema da "Alucinação Funcional": pesquisas da Anthropic e da DeepMind indicam que modelos "aterrados" (grounded) em ferramentas bem definidas cometem significativamente menos erros lógicos.
+Isso resolve o problema da "Alucinação Funcional": pesquisas sobre modelos aumentados com ferramentas — incluindo Toolformer (Meta AI, 2023) e o trabalho publicado pela Anthropic sobre construção de agentes eficazes — mostram que modelos ancorados em ferramentas bem definidas cometem significativamente menos erros lógicos.
 
 ### O "Stack" Agêntico
 
@@ -80,7 +80,7 @@ Esse padrão está alinhado com as recomendações oficiais da Anthropic para ge
 - **Anthropic Engineering - Building effective agents:** [anthropic.com/engineering/building-effective-agents](https://www.anthropic.com/engineering/building-effective-agents)
 - **Evidência acadêmica sobre contexto ("Lost in the Middle"):** [arxiv.org/abs/2307.03172](https://arxiv.org/abs/2307.03172)
 
-Preencher a janela além do necessário degrada a qualidade da recuperação, não só a eficiência. *"Lost in the Middle"* demonstra que modelos têm pior desempenho consistente com conteúdo posicionado no meio de contextos longos. Priorize contexto curto, relevante e verificável em vez de volume. Uma heurística útil: mantenha o contexto ativo abaixo de ~40% da janela para tarefas de raciocínio complexo.
+Preencher a janela além do necessário degrada a qualidade da recuperação, não só a eficiência. *"Lost in the Middle"* demonstra que modelos têm pior desempenho com conteúdo posicionado no meio de contextos longos — a curva de performance é em U, com os piores resultados no centro. Priorize contexto curto, relevante e verificável em vez de volume; evite carregar conteúdo que o agente não precisa para a tarefa atual.
 
 ![Diagrama do padrão Progressive Disclosure](/images/2026/agentic-engineering-progressive-disclosure.png)
 
@@ -113,6 +113,8 @@ Além de `name` e `description`, estes campos deixam a skill mais previsível e 
 - **`argument-hint`**: documenta o formato esperado de argumentos.
 - **`context: fork` + `agent`**: roda em subagente isolado para tarefas longas ou especializadas.
 - **`model`**: define o modelo usado quando a skill está ativa (ex: `claude-opus-4-6`).
+
+Nota: `allowed-tools` faz parte do padrão aberto Agent Skills. Todos os outros campos acima são extensões específicas do Claude Code e podem não estar disponíveis em outros runtimes.
 
 O conteúdo do `SKILL.md` também suporta substituições dinâmicas:
 
@@ -307,7 +309,7 @@ Esta seção é um checklist prático para começar a produzir com agentes, skil
 - **Todos os agentes de uma vez:** use [skills.sh](https://skills.sh): instala em uma pasta, cria symlinks para Claude Code, Cursor, Codex e mais de 40 outros automaticamente.
 - **Regra prática:** se afeta código/regras do repositório, mantenha no próprio repositório.
 
-**Boas práticas para `CLAUDE.md` / `AGENTS.md`:** mantenha curto (abaixo de 200 linhas); inclua comandos de build, teste e lint; registre decisões arquiteturais e convenções do projeto; liste gotchas técnicos (ex: strict mode, regras de import); evite teoria; o que o linter já impõe não precisa viver aqui.
+**Boas práticas para `CLAUDE.md` / `AGENTS.md`:** mantenha curto (200 linhas é uma heurística amplamente usada pela comunidade, não um limite oficial); inclua comandos de build, teste e lint; registre decisões arquiteturais e convenções do projeto; liste gotchas técnicos (ex: strict mode, regras de import); evite teoria; o que o linter já impõe não precisa viver aqui.
 
 > **Nota:** `.claude/commands/` ainda funciona como alternativa mais simples: um único arquivo `.md` sem estrutura de pasta. Skills são recomendadas pois suportam arquivos de suporte, scripts e controle de invocação.
 

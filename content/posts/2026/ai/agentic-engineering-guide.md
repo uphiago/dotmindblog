@@ -48,7 +48,7 @@ Unlike a standalone prompt, a **Skill** is a modular, reusable, and deterministi
 
 To guarantee interoperability across the dozens of platforms that support the Agent Skills standard, we adopt an architecture based on **Context Isolation** and **Safe Execution**.
 
-This solves the "Functional Hallucination" problem: research from Anthropic and DeepMind indicates that models "grounded" in well-defined tools make significantly fewer logical errors.
+This solves the "Functional Hallucination" problem: research on tool-augmented language models — including Toolformer (Meta AI, 2023) and Anthropic's published work on building effective agents — shows that models grounded in well-defined tools make significantly fewer logical errors.
 
 ### The Agentic Stack
 
@@ -80,7 +80,7 @@ This pattern aligns with Anthropic's official recommendations for context manage
 - **Anthropic Engineering - Building effective agents:** [anthropic.com/engineering/building-effective-agents](https://www.anthropic.com/engineering/building-effective-agents)
 - **Academic evidence on context ("Lost in the Middle"):** [arxiv.org/abs/2307.03172](https://arxiv.org/abs/2307.03172)
 
-Filling the context window beyond what is needed degrades retrieval quality, not just efficiency. *"Lost in the Middle"* shows that models consistently underperform on content placed in the middle of long contexts. Prioritize short, relevant, and verifiable context over volume. A useful heuristic: keep active context below ~40% of the window for complex reasoning tasks.
+Filling the context window beyond what is needed degrades retrieval quality, not just efficiency. *"Lost in the Middle"* shows that models consistently underperform on content placed in the middle of long contexts — the performance curve is U-shaped, with the worst results in the center. Prioritize short, relevant, and verifiable context over volume; avoid loading content the agent doesn't need for the current task.
 
 ![Progressive Disclosure pattern diagram](/images/2026/agentic-engineering-progressive-disclosure.png)
 
@@ -113,6 +113,8 @@ Beyond `name` and `description`, these fields make your skill more predictable a
 - **`argument-hint`**: documents the expected argument format.
 - **`context: fork` + `agent`**: runs in an isolated sub-agent for long or specialized tasks.
 - **`model`**: sets the model used when the skill is active (e.g., `claude-opus-4-6`).
+
+Note: `allowed-tools` is part of the open Agent Skills standard. All other fields above are Claude Code-specific extensions and may not be available in other runtimes.
 
 Skill content also supports dynamic substitutions:
 
@@ -307,7 +309,7 @@ This section is a practical checklist for getting productive with agents, skills
 - **All agents at once:** use [skills.sh](https://skills.sh): installs to one folder, symlinks to Claude Code, Cursor, Codex, and 40+ others automatically.
 - **Rule of thumb:** if it affects the repository's code or rules, keep it in the repository.
 
-**CLAUDE.md / AGENTS.md best practices:** keep it short (under 200 lines); include build, test, and lint commands; document architectural decisions and project conventions; list technical gotchas (e.g., strict mode, import rules); avoid theory; what the linter already enforces doesn't need to live here.
+**CLAUDE.md / AGENTS.md best practices:** keep it short (200 lines is a widely-used community heuristic, not an official limit); include build, test, and lint commands; document architectural decisions and project conventions; list technical gotchas (e.g., strict mode, import rules); avoid theory; what the linter already enforces doesn't need to live here.
 
 > **Note:** `.claude/commands/` still works as a simpler alternative: a single `.md` file with no folder structure. Skills are recommended since they support supporting files, scripts, and invocation control.
 
