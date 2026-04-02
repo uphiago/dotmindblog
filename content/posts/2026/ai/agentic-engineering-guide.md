@@ -48,7 +48,7 @@ Unlike a standalone prompt, a **Skill** is a modular, reusable, and deterministi
 
 To guarantee interoperability across the dozens of platforms that support the Agent Skills standard, we adopt an architecture based on **Context Isolation** and **Safe Execution**.
 
-This solves the "Functional Hallucination" problem: research on tool-augmented language models — including Toolformer (Meta AI, 2023) and Anthropic's published work on building effective agents — shows that models grounded in well-defined tools make significantly fewer logical errors.
+This solves the "Functional Hallucination" problem: research on tool-augmented language models (including Toolformer, Meta AI 2023, and Anthropic's published work on building effective agents) shows that models grounded in well-defined tools make significantly fewer logical errors.
 
 ### The Agentic Stack
 
@@ -80,7 +80,7 @@ This pattern aligns with Anthropic's official recommendations for context manage
 - **Anthropic Engineering - Building effective agents:** [anthropic.com/engineering/building-effective-agents](https://www.anthropic.com/engineering/building-effective-agents)
 - **Academic evidence on context ("Lost in the Middle"):** [arxiv.org/abs/2307.03172](https://arxiv.org/abs/2307.03172)
 
-Filling the context window beyond what is needed degrades retrieval quality, not just efficiency. *"Lost in the Middle"* shows that models consistently underperform on content placed in the middle of long contexts — the performance curve is U-shaped, with the worst results in the center. Prioritize short, relevant, and verifiable context over volume; avoid loading content the agent doesn't need for the current task.
+Filling the context window beyond what is needed degrades retrieval quality, not just efficiency. *"Lost in the Middle"* shows that models consistently underperform on content placed in the middle of long contexts: the performance curve is U-shaped, with the worst results in the center. Prioritize short, relevant, and verifiable context over volume; avoid loading content the agent doesn't need for the current task.
 
 ![Progressive Disclosure pattern diagram](/images/2026/agentic-engineering-progressive-disclosure.png)
 

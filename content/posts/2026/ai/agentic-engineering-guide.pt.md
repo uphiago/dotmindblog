@@ -48,7 +48,7 @@ Diferente de um prompt isolado, uma **Skill** é uma unidade funcional modular, 
 
 Para garantir interoperabilidade entre as dezenas de plataformas que suportam o padrão Agent Skills, adotamos uma arquitetura baseada em **Isolamento de Contexto** e **Execução Segura**.
 
-Isso resolve o problema da "Alucinação Funcional": pesquisas sobre modelos aumentados com ferramentas — incluindo Toolformer (Meta AI, 2023) e o trabalho publicado pela Anthropic sobre construção de agentes eficazes — mostram que modelos ancorados em ferramentas bem definidas cometem significativamente menos erros lógicos.
+Isso resolve o problema da "Alucinação Funcional": pesquisas sobre modelos aumentados com ferramentas (incluindo Toolformer, Meta AI 2023, e o trabalho publicado pela Anthropic sobre construção de agentes eficazes) mostram que modelos ancorados em ferramentas bem definidas cometem significativamente menos erros lógicos.
 
 ### O "Stack" Agêntico
 
@@ -80,7 +80,7 @@ Esse padrão está alinhado com as recomendações oficiais da Anthropic para ge
 - **Anthropic Engineering - Building effective agents:** [anthropic.com/engineering/building-effective-agents](https://www.anthropic.com/engineering/building-effective-agents)
 - **Evidência acadêmica sobre contexto ("Lost in the Middle"):** [arxiv.org/abs/2307.03172](https://arxiv.org/abs/2307.03172)
 
-Preencher a janela além do necessário degrada a qualidade da recuperação, não só a eficiência. *"Lost in the Middle"* demonstra que modelos têm pior desempenho com conteúdo posicionado no meio de contextos longos — a curva de performance é em U, com os piores resultados no centro. Priorize contexto curto, relevante e verificável em vez de volume; evite carregar conteúdo que o agente não precisa para a tarefa atual.
+Preencher a janela além do necessário degrada a qualidade da recuperação, não só a eficiência. *"Lost in the Middle"* demonstra que modelos têm pior desempenho com conteúdo posicionado no meio de contextos longos: a curva de performance é em U, com os piores resultados no centro. Priorize contexto curto, relevante e verificável em vez de volume; evite carregar conteúdo que o agente não precisa para a tarefa atual.
 
 ![Diagrama do padrão Progressive Disclosure](/images/2026/agentic-engineering-progressive-disclosure.png)
 
