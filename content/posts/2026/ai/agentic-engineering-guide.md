@@ -56,7 +56,9 @@ To build truly effective agents that understand your organization's context, we 
 
 1. **MCP (Model Context Protocol):** The **Data Access** layer. Answers "What tools and data can I access?" (e.g., connecting to Postgres or Jira).
 2. **Agent Skills:** The **Know-How** layer. Answers "How should I perform this task?" (e.g., the company's Code Review methodology).
-3. **AGENTS.md:** The **Project Context** layer. Answers "What are the rules for this specific project?" (e.g., use React with Tailwind).
+3. **AGENTS.md / CLAUDE.md:** The **Project Context** layer. Answers "What are the rules for this specific project?" (e.g., use React with Tailwind). In Claude Code, this file is `CLAUDE.md`; in Codex and OpenCode, `AGENTS.md`.
+
+The competitive gap between AI coding approaches is rarely the model. It's the execution harness: the agent loop, permission model, tool system, and layered memory around it. Improving orchestration and governance consistently outperforms switching models.
 
 ---
 
@@ -77,6 +79,8 @@ This pattern aligns with Anthropic's official recommendations for context manage
 - **Claude Docs - Long context prompting tips:** [platform.claude.com/docs/en/build-with-claude/prompt-engineering/long-context-tips](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/long-context-tips)
 - **Anthropic Engineering - Building effective agents:** [anthropic.com/engineering/building-effective-agents](https://www.anthropic.com/engineering/building-effective-agents)
 - **Academic evidence on context ("Lost in the Middle"):** [arxiv.org/abs/2307.03172](https://arxiv.org/abs/2307.03172)
+
+Filling the context window beyond what is needed degrades retrieval quality, not just efficiency. *"Lost in the Middle"* shows that models consistently underperform on content placed in the middle of long contexts. Prioritize short, relevant, and verifiable context over volume. A useful heuristic: keep active context below ~40% of the window for complex reasoning tasks.
 
 ![Progressive Disclosure pattern diagram](/images/2026/agentic-engineering-progressive-disclosure.png)
 
@@ -148,11 +152,12 @@ Static documentation and examples (One-shot learning).
 
 ### Shared Foundations Across Runtimes
 
-Regardless of the tool, all Agent Skills-compatible runtimes follow the same pillars: **MCP + Skills + Plan → Execute → Verify loop**.
+Regardless of the tool, all Agent Skills-compatible runtimes follow the same pillars: **MCP + Skills + Research → Plan → Execute → Verify loop**.
 
-1. **Planning (Plan):** The agent understands context and current state via project memory and local rules (e.g., `AGENTS.md`, `CLAUDE.md`, `project-memory` skills).
-2. **Execution (Execute):** The agent uses tools and scripts (`scripts/`) to apply changes deterministically.
-3. **Verification (Verify):** The agent validates the result with tests, checks, and quality criteria before completing the task.
+1. **Research:** The agent maps the current state — reads context files, project rules, and relevant code before touching anything.
+2. **Planning (Plan):** The agent breaks the work into small, verifiable steps, defining acceptance criteria before implementing.
+3. **Execution (Execute):** The agent uses tools and scripts (`scripts/`) to apply changes deterministically.
+4. **Verification (Verify):** The agent validates the result with tests, checks, and quality criteria before completing the task.
 
 What differs between tools is mainly the **configuration/orchestration experience** (where to declare agents, memory, and integrations): not the operational principles.
 
@@ -301,6 +306,8 @@ This section is a practical checklist for getting productive with agents, skills
 - **Personal (Claude Code):** `~/.claude/skills/<name>/SKILL.md` (available across all projects)
 - **All agents at once:** use [skills.sh](https://skills.sh): installs to one folder, symlinks to Claude Code, Cursor, Codex, and 40+ others automatically.
 - **Rule of thumb:** if it affects the repository's code or rules, keep it in the repository.
+
+**CLAUDE.md / AGENTS.md best practices:** keep it short (under 200 lines); include build, test, and lint commands; document architectural decisions and project conventions; list technical gotchas (e.g., strict mode, import rules); avoid theory — what the linter already enforces doesn't need to live here.
 
 > **Note:** `.claude/commands/` still works as a simpler alternative: a single `.md` file with no folder structure. Skills are recommended since they support supporting files, scripts, and invocation control.
 

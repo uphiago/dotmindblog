@@ -56,7 +56,9 @@ Para criar agentes realmente eficazes que entendam o contexto da sua organizaç�
 
 1. **MCP (Model Context Protocol):** A camada de **Acesso a Dados**. Responde "Quais ferramentas e dados posso acessar?" (ex: conectar ao Postgres ou Jira).
 2. **Agent Skills:** A camada de **Know-How**. Responde "Como devo realizar esta tarefa?" (ex: metodologia de Code Review da empresa).
-3. **AGENTS.md:** A camada de **Contexto do Projeto**. Responde "Quais são as regras deste projeto específico?" (ex: usar React com Tailwind).
+3. **AGENTS.md / CLAUDE.md:** A camada de **Contexto do Projeto**. Responde "Quais são as regras deste projeto específico?" (ex: usar React com Tailwind). No Claude Code, esse arquivo é o `CLAUDE.md`; no Codex e OpenCode, `AGENTS.md`.
+
+A diferença competitiva entre abordagens de IA coding raramente está no modelo. Está no harness de execução: o loop do agente, o modelo de permissões, o sistema de ferramentas e a memória em camadas. Melhorar orquestração e governança consistentemente supera a troca de modelos.
 
 ---
 
@@ -77,6 +79,8 @@ Esse padrão está alinhado com as recomendações oficiais da Anthropic para ge
 - **Claude Docs - Long context prompting tips:** [platform.claude.com/docs/en/build-with-claude/prompt-engineering/long-context-tips](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/long-context-tips)
 - **Anthropic Engineering - Building effective agents:** [anthropic.com/engineering/building-effective-agents](https://www.anthropic.com/engineering/building-effective-agents)
 - **Evidência acadêmica sobre contexto ("Lost in the Middle"):** [arxiv.org/abs/2307.03172](https://arxiv.org/abs/2307.03172)
+
+Preencher a janela além do necessário degrada a qualidade da recuperação, não só a eficiência. *"Lost in the Middle"* demonstra que modelos têm pior desempenho consistente com conteúdo posicionado no meio de contextos longos. Priorize contexto curto, relevante e verificável em vez de volume. Uma heurística útil: mantenha o contexto ativo abaixo de ~40% da janela para tarefas de raciocínio complexo.
 
 ![Diagrama do padrão Progressive Disclosure](/images/2026/agentic-engineering-progressive-disclosure.png)
 
@@ -148,11 +152,12 @@ Documentação estática e exemplos (One-shot learning).
 
 ### Fundamentos Compartilhados entre Runtimes
 
-Independente da ferramenta, todos os runtimes compatíveis com Agent Skills seguem os mesmos pilares: **MCP + Skills + Loop Plan → Execute → Verify**.
+Independente da ferramenta, todos os runtimes compatíveis com Agent Skills seguem os mesmos pilares: **MCP + Skills + Loop Research → Plan → Execute → Verify**.
 
-1. **Planejamento (Plan):** O agente entende contexto e estado atual via memória de projeto e regras locais (ex: `AGENTS.md`, `CLAUDE.md`, skills de `project-memory`).
-2. **Execução (Execute):** O agente usa ferramentas e scripts (`scripts/`) para aplicar mudanças de forma determinística.
-3. **Verificação (Verify):** O agente valida o resultado com testes, checks e critérios de qualidade antes de encerrar a tarefa.
+1. **Pesquisa (Research):** O agente mapeia o estado atual — lê arquivos de contexto, regras do projeto e código relevante antes de tocar em qualquer coisa.
+2. **Planejamento (Plan):** O agente quebra o trabalho em passos pequenos e verificáveis, definindo critérios de aceite antes de implementar.
+3. **Execução (Execute):** O agente usa ferramentas e scripts (`scripts/`) para aplicar mudanças de forma determinística.
+4. **Verificação (Verify):** O agente valida o resultado com testes, checks e critérios de qualidade antes de encerrar a tarefa.
 
 O que muda entre as ferramentas é principalmente a **experiência de configuração/orquestração** (onde declarar agentes, memória e integrações), e não os princípios operacionais.
 
@@ -301,6 +306,8 @@ Esta seção é um checklist prático para começar a produzir com agentes, skil
 - **Pessoal (Claude Code):** `~/.claude/skills/<nome>/SKILL.md` (disponível em todos os projetos)
 - **Todos os agentes de uma vez:** use [skills.sh](https://skills.sh): instala em uma pasta, cria symlinks para Claude Code, Cursor, Codex e mais de 40 outros automaticamente.
 - **Regra prática:** se afeta código/regras do repositório, mantenha no próprio repositório.
+
+**Boas práticas para `CLAUDE.md` / `AGENTS.md`:** mantenha curto (abaixo de 200 linhas); inclua comandos de build, teste e lint; registre decisões arquiteturais e convenções do projeto; liste gotchas técnicos (ex: strict mode, regras de import); evite teoria — o que o linter já impõe não precisa viver aqui.
 
 > **Nota:** `.claude/commands/` ainda funciona como alternativa mais simples: um único arquivo `.md` sem estrutura de pasta. Skills são recomendadas pois suportam arquivos de suporte, scripts e controle de invocação.
 
