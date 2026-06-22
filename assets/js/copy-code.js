@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (postCopyBtn) {
     const filePath = postCopyBtn.getAttribute('data-file-path');
     if (filePath) {
-      const rawUrl = `https://raw.githubusercontent.com/uphiago/dotmindblog/main/${filePath}`;
+      const rawUrl = `https://raw.githubusercontent.com/uphiago/dotmindblog/main/content/${filePath}`;
       const iconCopy = postCopyBtn.innerHTML;
       postCopyBtn.addEventListener('click', () => {
         postCopyBtn.disabled = true;
