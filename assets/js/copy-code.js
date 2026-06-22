@@ -36,30 +36,27 @@ document.addEventListener("DOMContentLoaded", () => {
   // Copy entire post as Markdown
   const postCopyBtn = document.querySelector('.copy-post-btn');
   if (postCopyBtn) {
-    const rawB64 = postCopyBtn.getAttribute('data-raw-content');
-    if (rawB64) {
+    const filePath = postCopyBtn.getAttribute('data-file-path');
+    if (filePath) {
+      const rawUrl = `https://raw.githubusercontent.com/uphiago/dotmindblog/main/${filePath}`;
+      const iconCopy = postCopyBtn.innerHTML;
       postCopyBtn.addEventListener('click', () => {
-        try {
-          const rawText = decodeURIComponent(atob(rawB64).split('').map(c =>
-            '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)
-          ).join(''));
-          navigator.clipboard.writeText(rawText).then(() => {
-            postCopyBtn.querySelector('span').textContent = 'Copied!';
+        postCopyBtn.disabled = true;
+        fetch(rawUrl)
+          .then(r => r.text())
+          .then(text => navigator.clipboard.writeText(text))
+          .then(() => {
+            postCopyBtn.innerHTML = svgCopied;
             postCopyBtn.classList.add('copied');
-          }).catch(() => {
-            postCopyBtn.querySelector('span').textContent = 'Failed';
+          })
+          .catch(() => { postCopyBtn.innerHTML = svgFail; })
+          .finally(() => {
+            postCopyBtn.disabled = false;
+            setTimeout(() => {
+              postCopyBtn.innerHTML = iconCopy;
+              postCopyBtn.classList.remove('copied');
+            }, 1500);
           });
-          setTimeout(() => {
-            postCopyBtn.querySelector('span').textContent = 'Copy Markdown';
-            postCopyBtn.classList.remove('copied');
-          }, 1500);
-        } catch (e) {
-          console.error(e);
-          postCopyBtn.querySelector('span').textContent = 'Error';
-          setTimeout(() => {
-            postCopyBtn.querySelector('span').textContent = 'Copy Markdown';
-          }, 1500);
-        }
       });
     }
   }

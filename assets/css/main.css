@@ -1001,23 +1001,19 @@ ul.footer-menu>li {
 .copy-post-btn {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
-    border: 1px solid var(--border-color, #333);
-    border-radius: 6px;
-    padding: 4px 10px;
-    font-size: 0.75em;
-    color: var(--text-color, #aaa);
+    border: none;
+    border-radius: 4px;
+    padding: 3px 5px;
+    color: var(--text-color, #666);
     background: transparent;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: color 0.2s;
 }
 
 .copy-post-btn:hover {
-    border-color: var(--link-color, #4caf50);
     color: var(--link-color, #4caf50);
 }
 
 .copy-post-btn.copied {
-    border-color: #4caf50;
     color: #4caf50;
 }
