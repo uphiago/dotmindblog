@@ -1,7 +1,6 @@
 baseURL = "https://dotmindblog.vercel.app/"
 defaultContentLanguage = "en"
 disqusShortname = ""
-languageCode = "en-us"
 theme = "anubis2"
 title = "Dotmind it"
 
@@ -80,10 +79,10 @@ weight = 4
 
 [languages]
 [languages.en]
-languageName = "English"
+label = "English"
 
 [languages.pt]
-languageName = "Portuguese"
+label = "Portuguese"
 
 [[languages.pt.menu.main]]
 identifier = "home"
@@ -110,7 +109,7 @@ url = "/posts/"
 weight = 4
 
 [languages.pt.params]
-languageCode = "pt-br"
+locale = "pt-br"
 
 [taxonomies]
 author = "authors"
@@ -160,7 +159,6 @@ maxAge = "720h"
 
 [module]
 [[module.mounts]]
-excludeFiles = ['posts/_drafts/**']
 source = 'content'
 target = 'content'
 
