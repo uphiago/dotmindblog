@@ -993,17 +993,14 @@ ul.footer-menu>li {
     }
 }
 
-/* Copy entire post button */
-.post-copy-row {
-    margin-top: 0.4em;
-}
-
-.copy-post-btn {
+/* Copy entire post button */.copy-post-btn {
     display: inline-flex;
     align-items: center;
+    vertical-align: middle;
+    margin-left: 6px;
     border: none;
     border-radius: 4px;
-    padding: 3px 5px;
+    padding: 2px 4px;
     color: var(--text-color, #666);
     background: transparent;
     cursor: pointer;

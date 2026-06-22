@@ -10,20 +10,19 @@
     <article class="post h-entry">
         <div class="post-header">
             <header>
-                <h1 class="p-name post-title{{ if .Params.favorite }} favorite{{end}}{{ if .Params.draft }} draft{{end}}">{{ trim .Title  " " | markdownify }}</h1>
-                {{ partial "post-language-switcher.html" . }}
-            </header>
-            {{ partial "post-info.html" . }}
-            {{ if .File }}
-            <div class="post-copy-row">
+                <h1 class="p-name post-title{{ if .Params.favorite }} favorite{{end}}{{ if .Params.draft }} draft{{end}}">{{ trim .Title  " " | markdownify }}
+                {{ if .File }}
                 <button class="copy-post-btn" data-file-path="{{ .File.Path }}" title="Copy entire post as Markdown">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" stroke="currentColor" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke="currentColor" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
                         <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
                     </svg>
                 </button>
-            </div>
-            {{ end }}
+                {{ end }}
+                </h1>
+                {{ partial "post-language-switcher.html" . }}
+            </header>
+            {{ partial "post-info.html" . }}
         </div>
         {{ partial "toc.html" .}}
         <div class="content e-content">
