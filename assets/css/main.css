@@ -118,23 +118,31 @@ a:active {
 }
 
 a.skip-main {
-    left: -999px;
     position: absolute;
-    top: auto;
+    top: -100px;
+    left: -100px;
     width: 1px;
     height: 1px;
     overflow: hidden;
-    z-index: -999;
+    opacity: 0;
 }
 
 a.skip-main:focus,
 a.skip-main:active {
-    left: auto;
-    top: 0px;
+    position: fixed;
+    top: 8px;
+    left: 8px;
     width: auto;
     height: auto;
-    overflow: auto;
-    z-index: 999;
+    overflow: visible;
+    opacity: 1;
+    z-index: 9999;
+    padding: 8px 16px;
+    background: var(--bg-color, #fff);
+    color: var(--link-color, #4caf50);
+    border-radius: 4px;
+    font-size: 0.9em;
+}
     padding: 4px 6px 4px 6px;
     text-decoration: underline;
     border: none;
