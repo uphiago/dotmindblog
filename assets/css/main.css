@@ -992,3 +992,32 @@ ul.footer-menu>li {
         max-width: 10em;
     }
 }
+
+/* Copy entire post button */
+.post-copy-row {
+    margin-top: 0.4em;
+}
+
+.copy-post-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid var(--border-color, #333);
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 0.75em;
+    color: var(--text-color, #aaa);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.copy-post-btn:hover {
+    border-color: var(--link-color, #4caf50);
+    color: var(--link-color, #4caf50);
+}
+
+.copy-post-btn.copied {
+    border-color: #4caf50;
+    color: #4caf50;
+}
