@@ -1,0 +1,25 @@
+content/posts/2026/ai/pentest-recon.md
+  s_367624849be038::t_87296a57120298 4
+content/posts/2026/ai/agentic-engineering-guide.md
+  s_367624849be038::t_123cb9abda25aa 4
+content/posts/2025/linux/secure-boot-kernel.md
+  s_367624849be038::t_2493768c2657f4 4
+content/posts/2025/linux/distros/graphics-components.md
+  s_367624849be038::t_cb94c2b5a9853d 4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.11",
+  "base_commit_sha": "8abd0cd4d3e65f8128f98adcee5f0e001b1a7c8c",
+  "prompts": {},
+  "sessions": {
+    "s_367624849be038": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_10deae073ffeu16N7PrtvkPbRY",
+        "model": "deepseek-v4-pro"
+      },
+      "human_author": "uphiago <hollyvolks@hotmail.com>"
+    }
+  }
+}
