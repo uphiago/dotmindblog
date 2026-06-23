@@ -1,6 +1,7 @@
 +++
 author = "uphiago"
 title = "Skills Stack, MCP, and Project Context"
+slug = "agentic-engineering"
 date = 2026-04-02T00:00:00-03:00
 description = "A practical guide to building interoperable agents across any AI runtime."
 tags = [

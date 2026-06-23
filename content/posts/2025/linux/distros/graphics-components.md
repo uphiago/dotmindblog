@@ -1,6 +1,7 @@
 +++
 author = "uphiago"
 title = "DE, WM, X11 and Wayland"
+slug = "linux-graphics"
 date = 2025-05-01T00:27:00-03:00
 description = "DE, WM, X11 and Wayland on Linux"
 
