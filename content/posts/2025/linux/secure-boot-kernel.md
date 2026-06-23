@@ -1,5 +1,5 @@
 +++
-author = "iceteash"
+author = "uphiago"
 title = "Signing Modules in UEFI Environments"
 date = 2025-03-27T12:10:31-03:00
 description = "Set up Secure Boot on Linux and learn how to sign kernel modules with your own MOK key."
@@ -12,7 +12,7 @@ tags = [
   "kernel",
   "debian",
 ]
-authors = ["iceteash"]
+authors = ["uphiago"]
 draft = false
 +++
 <!-- Integrating Custom Kernel Modules with Secure Boot  -->

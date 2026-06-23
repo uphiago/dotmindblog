@@ -1,5 +1,5 @@
 +++
-author = "iceteash"
+author = "uphiago"
 title = "Assinando Módulos de Kernel em Ambientes UEFI"
 date = 2025-03-27T12:10:31-03:00
 description = "Configure o Secure Boot no Linux e aprenda a assinar módulos do kernel com sua própria chave MOK."
@@ -12,7 +12,7 @@ tags = [
   "kernel",
   "debian",
 ]
-authors = ["iceteash"]
+authors = ["uphiago"]
 draft = false
 +++
 <!-- Integração de módulos customizados com Secure Boot  -->

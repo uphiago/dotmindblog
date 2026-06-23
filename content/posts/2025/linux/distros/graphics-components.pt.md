@@ -1,5 +1,5 @@
 +++
-author = "iceteash"
+author = "uphiago"
 title = "DE, WM, X11 e Wayland"
 date = 2025-05-01T00:27:00-03:00
 description = "DE, WM, X11 e Wayland no Linux"
@@ -11,7 +11,7 @@ tags = [
   "kernel",
   "debian",
 ]
-authors = ["iceteash"]
+authors = ["uphiago"]
 draft = false
 +++
 <!--more-->

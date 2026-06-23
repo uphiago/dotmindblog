@@ -3,7 +3,7 @@ title = "About"
 description = "Dotmind it"
 date = "2025-05-01"
 aliases = ["about-us"]
-author = ["iceteash"]
+author = ["uphiago"]
 toc = false
 +++
 

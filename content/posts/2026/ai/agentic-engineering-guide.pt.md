@@ -1,5 +1,5 @@
 +++
-author = "iceteash"
+author = "uphiago"
 title = "Stack de Skills, MCP e Contexto de Projeto"
 date = 2026-04-02T00:00:00-03:00
 description = "Guia prático para construir agentes interoperáveis em qualquer runtime de IA."
@@ -12,7 +12,7 @@ tags = [
   "prompt-engineering",
   "claude",
 ]
-authors = ["iceteash"]
+authors = ["uphiago"]
 draft = false
 +++
 
