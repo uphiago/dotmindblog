@@ -1,0 +1,20 @@
+content/posts/2026/ai/hermes-agent-recon.md
+  s_9d6b26015d42f7::t_596bfd672935d2 28,36,38,42-51,84-115,134,150,152-157,159,161-176,186-194,196-204,210-223
+  s_9d6b26015d42f7::t_855ef7097e7613 224
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "48a927087d21081b23671ceae8e612736335087e",
+  "prompts": {},
+  "sessions": {
+    "s_9d6b26015d42f7": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_1060f9af0ffe5fAaIQRtSwckUQ",
+        "model": "deepseek-v4-pro"
+      },
+      "human_author": "uphiago <hollyvolks@hotmail.com>"
+    }
+  }
+}
